@@ -1,0 +1,31 @@
+% This file was created with JabRef 2.10.
+% Encoding: UTF8
+
+
+@Unpublished{pluess,
+  Title                    = {Global {S}ystem for {M}obile {C}ommunications},
+  Author                   = {Jonas Plüss},
+
+  Owner                    = {Marc},
+  Timestamp                = {2016.06.15}
+}
+
+@Book{Photovoltaik_Engineering,
+  Title                    = {Photovoltaik Engineering: Handbuch für Planung, Entwicklung und Anwendung},
+  Author                   = {Andreas Wagner},
+  Publisher                = {Springer-Verlag},
+  Year                     = {2009},
+
+  Owner                    = {Marc},
+  Timestamp                = {2015.11.05}
+}
+
+@Book{Photovoltaik_Dissertation,
+  Title                    = {Technisch-wirtschaftliche Bewertung photovoltaischer Stromversorgungssysteme, Dissertation an der Martin-Luther-Universität Halle-Wittenberg},
+  Author                   = {Andreas Wagner},
+  Year                     = {1995},
+
+  Owner                    = {Marc},
+  Timestamp                = {2015.11.23}
+}
+
