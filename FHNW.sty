@@ -1,0 +1,157 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{FHNW}
+
+\RequirePackage[toc,page]{appendix}
+\RequirePackage{ae}
+\RequirePackage{lscape}
+\RequirePackage{tabularx}
+\RequirePackage{todonotes}
+\RequirePackage{multirow}
+\RequirePackage{amsmath}
+\RequirePackage{mathrsfs}
+\RequirePackage{multicol}
+\RequirePackage{listings}
+\RequirePackage{color}
+\RequirePackage{ngerman}				% neue deutsche Rechtschreibung
+\RequirePackage[ngerman]{babel}			% "Table of Contents" --> "Inhaltsverzeichnis"
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}				% Fontkodierung auf T1-Format
+\RequirePackage{graphicx}				% Bilder
+\RequirePackage{fancyhdr}				% Kopf- und Fusszeilen
+\RequirePackage{lastpage}				% Anzahl gesamte Seiten
+\RequirePackage{hyperref}				% f\"ur Hyperlinks
+\RequirePackage{array}					% f\"ur Tabellen (tabular Umgebung)
+\RequirePackage{listings}				% Quellcodeausgabe
+\RequirePackage{supertabular}			% f\"ur Tabellen \"uber mehrere Seiten
+\RequirePackage{verbatim}	
+\RequirePackage{xcolor}
+\RequirePackage{cite}
+\RequirePackage{paralist}
+
+
+\usepackage[left=1in,right=1in,top=.5in,bottom=1in,includeheadfoot]{geometry}
+
+\parindent 0pt							% kein Einzug bei 1. Zeile eines paragraphs
+\parskip 15pt							% 5pt Abstand zwischen den einzelnen Abs??tzen
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Header/Footer
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\fancyhdrplain}{
+	\fancypagestyle{plain}{%
+		\fancyhf{}
+
+% Kopfzeile
+		\fancyhead{}
+		\renewcommand{\headrulewidth}{0pt}	% Trennlinie 
+%		\fancyhead[L]{\nouppercase{\thechapter.\ \leftmark}}			% Kopfzeile links \includegraphics{images/fhnw_logo}
+%		\fancyhead[R]{\nouppercase{\shorttitel}}	% Kopfzeile rechts
+%		\renewcommand{\headwidth}{17cm} %Breite der Kopf- und Fusszeile (21cm-2*2cm)
+%		\renewcommand{\headrulewidth}{0.5pt}	% Trennlinie Kopfzeile
+
+%Fusszeile
+		\fancyfoot[L]{\doctype}						% Fusszeile rechts
+		\fancyfoot[R]{\shorttitel}		% Fusszeile links
+		\cfoot{\thepage{}/\pageref{lastBericht}}							% Fusszeile Mitte
+%		\renewcommand{\footrulewidth}{0.5pt}	% Trennlinie Fusszeile
+%		\footskip40pt									% Abstand Textk??rper Fusszeile
+	}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Header/Footer
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fancypagestyle{plain}{%
+	\fancyhf{}
+	\fancyhead{}
+	\fancyfoot{}
+	\renewcommand{\headrulewidth}{0pt}	% Trennlinie 
+	\renewcommand{\footrulewidth}{0pt}	% Trennlinie 
+	\cfoot{\thepage{}}
+	\fancyfoot[L]{\doctype}
+	\fancyfoot[R]{\shorttitel}
+}
+
+\RequirePackage{ifthen}
+
+%
+% Paket f??r Farben im PDF
+%
+\RequirePackage{color}
+
+%
+% Paket f??r Links innerhalb des PDF Dokuments
+%
+\definecolor{LinkColor}{rgb}{0,0,0.5}
+
+\hypersetup{colorlinks=true,% Definition der Links im PDF File
+   linkcolor=black,%
+   citecolor=black,%
+   filecolor=black,%
+   menucolor=black,%
+   pagecolor=black,%
+   urlcolor=LinkColor}
+%
+%	Kleinerer Abstand bei Kapitelanfang
+%
+\makeatletter
+\def\@makechapterhead#1{%
+  %%%%\vspace*{50\p@}% %%% removed!
+  {\parindent \z@ \raggedright \sffamily
+   \huge\bfseries \thechapter\quad #1
+   \par\nobreak
+    \interlinepenalty\@M
+    \vskip 20\p@
+  }}
+\def\@makeschapterhead#1{%
+  %%%%%\vspace*{50\p@}% %%% removed!
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries  #1\par\nobreak
+    \vskip 20\p@
+  }}
+\makeatother
+
+\newcommand{\AlgoName}[1]{\renewcommand{\givenAlgoName}{#1}}
+\newcommand{\givenAlgoName}{\todo{REQUIRED!}}
+
+\newcommand{\AlgoInput}[1]{\renewcommand{\givenAlgoInput}{#1}}
+\newcommand{\givenAlgoInput}{\todo{REQUIRED!}}
+
+\newcommand{\AlgoOutput}[1]{\renewcommand{\givenAlgoOutput}{#1}}
+\newcommand{\givenAlgoOutput}{\todo{REQUIRED!}}
+
+\newcommand{\Algo}[1]{\renewcommand{\givenAlgo}{#1}}
+\newcommand{\givenAlgo}{\todo{REQUIRED!}}
+
+\newenvironment{compactitemize}
+{ \begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}     }
+{ \end{itemize}                  } 
+
+\newenvironment{algorithm}
+ {\begin{flushleft}}
+ {{\Large\textbf{Algorithmus - \givenAlgoName}}
+ \\[2em]\hrule
+ \textbf{Input:}\\
+ \begin{tabularx}{\textwidth}{ l X }
+ 	\givenAlgoInput%
+ 	\\\hline
+ \end{tabularx}
+ 
+ \textbf{Output:}\\
+ \begin{tabularx}{\textwidth}{ l X }
+ 	\givenAlgoOutput%
+ 	\\\hline
+ \end{tabularx}\\[1em]
+ 
+ \textbf{Algorithmus:}
+ \begin{compactenum}
+  	\givenAlgo
+ \end{compactenum}
+ \end{flushleft}
+ \newpage
+ }
+ 
