@@ -1,0 +1,31 @@
+\subsection{Berechnungen zur Batterie}
+
+Bei der Batterie sind vor allem der maximale Kurzschlussstrom sowie die maximale Verlustleistung von Interesse, da diese für die Sicherung und die Kühlung relevant sind.
+
+Mittels $\frac{dU}{dI}$-Messung konnte der Innenwiderstand der Batterie bestimmt werden. Dabei wurde eine Messung im Leerlauf und eine bei einem Strom von ca. $50$ A durchgeführt, wobei diese Messung für zwölf in Serie geschaltete Zellen durchgeführt wurde. Die Messung ergab einen Innenwiderstand von $20$ m$\Omega$, deswegen wird zur Sicherheit mit folgenden Werten gerechnet:
+\begin{itemize}
+	\item $15$ m$\Omega$ als schlimmster Fall für den Kurzschluss (maximaler Kurzschlussstrom)
+	\item $24$ m$\Omega$ als schlimmster Fall für die Verlustleistung (maximale Abwärme)
+\end{itemize}
+
+Da jeweils drei Stränge zu 12 Zellen parallel geschaltet sind ergibt sich ein Widerstand von:
+\begin{equation*}
+	R_B=\frac{1}{\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}}=\quad 5\text{ m}\Omega\text{ bzw. } 8\text{ m}\Omega
+\end{equation*}
+
+Die Abwärme berechnet sich gemäss der Formel $P=I^2\cdot R$ (für diese Berechnungen wird der Wert von $8$ m$\Omega$ benützt), dies soll zuerst für einen konstanten Ladestrom von $10$ A berechnet werden:
+\begin{equation*}
+	P_{V,Laden}=\left(10\text{ A}\right)^2\cdot8\text{ m}\Omega=\quad\underline{0.8\text{ mW}}
+\end{equation*}
+
+Für den maximalen Fahrstrom ergibt sich eine Abwärme von:
+\begin{equation*}
+	P_{V,Max}=\left(100\text{ A}\right)^2\cdot8\text{ m}\Omega=\quad\underline{80\text{ W}}
+\end{equation*}
+
+Der schlimmste Fall eines Kurzschlusses ist ein Kurzschluss direkt an den Klemmen der Batterie. In diesem Fall wird der Stromfluss nur durch die Spannung der Batterie beschränkt. Im schlimmsten Fall muss mit der Ladeschlussspannung und einem kleinen Innenwiderstand der Batterie gerechnet werden, der Kurzschlussstrom berechnet sich gemäss $I=\frac{U}{R}$ zu:
+\begin{equation*}
+	I_k=\frac{12\cdot 4.2\text{ V}}{5\text{ m}\Omega}=\quad\underline{10\ 800\text{ A}}
+\end{equation*}
+
+\newpage

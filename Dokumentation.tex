@@ -35,7 +35,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Titelseite
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{chapters/000_Titelseite}
+\input{chapters/0_Titelseite}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Abstract
@@ -43,7 +43,7 @@
 \pagenumbering{gobble}
 {\pagestyle{plain}{
 	\setcounter{tocdepth}{2}
-	\input{chapters/010_Abstract}
+	\input{chapters/000_Abstract}
 }}
 
 \clearpage
@@ -68,30 +68,36 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Einleitung
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\clearpage{\pagestyle{empty}\cleardoublepage}
-\input{chapters/020_Einleitung}
-%\clearpage{\pagestyle{empty}\cleardoublepage}
 
-\include{chapters/Batterie}
-\include{chapters/Stufenschalter}
-\include{chapters/Steuerplatine}
-
-\input{chapters/Schaltvorgaenge}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Schlussfolgerung
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\clearpage{\pagestyle{empty}\cleardoublepage}
-\input{chapters/100_Schlussfolgerung}
-%\clearpage{\pagestyle{empty}\cleardoublepage}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Quellenverzeichnis
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\clearpage{\pagestyle{empty}\cleardoublepage}
+\input{chapters/100_Einleitung}
 \clearpage{\pagestyle{empty}\cleardoublepage}
-\bibliographystyle{IEEEtran}
-\bibliography{Bibliographie}
+
+\include{chapters/210_Geschichte}
+\input{chapters/220_Blei}
+\input{chapters/230_Laden}
+\input{chapters/240_Alternativen}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+\input{chapters/311_LiIon}
+\input{chapters/312_Aufbau}
+\input{chapters/313_BMS}
+\input{chapters/314_Berechnungen}
+\input{chapters/320_Stufenschalter}
+\input{chapters/331_Steuerplatine}
+\input{chapters/332_Beleuchtung}
+\input{chapters/341_Gashebel}
+\input{chapters/342_Bremse}
+\input{chapters/343_Kurve}
+\input{chapters/350_Laden}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+\input{chapters/410_Batterie}
+\input{chapters/420_FU}
+\input{chapters/430_Laden}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+\input{chapters/500_Schluss}
+\clearpage{\pagestyle{empty}\cleardoublepage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Abbildungsverzeichnis
@@ -106,13 +112,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\clearpage{\pagestyle{empty}\cleardoublepage}
 %\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
-\cleardoublepage
 \appendix
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\bibliographystyle{IEEEtran}
+\bibliography{Bibliographie}
 %\pagenumbering{Roman}
 %\fancypagestyle{plain}{\fancyhf{}
   %\renewcommand\headrulewidth{0pt}\fancyfoot[C]{\thepage\ / \pageref{LastPage}}}
 \pagestyle{plain}
-\input{chapters/120_Anhang}
+
 \newpage
 
 
