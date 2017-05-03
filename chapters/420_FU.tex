@@ -5,7 +5,14 @@ Im Gegensatz zum Detroit, der eine klassische Gleichstrommaschine verwendet, ist
 
 Im klassischen Fall werden Synchronmaschinen nicht als Motor, sondern in Kraftwerken als Generator verwendet. Der Asynchronmotor hingegen ist die Standartmaschine am dreiphasigen Netz (Drehstrom), wie es in der Schweiz vorhanden ist. Durch das Aufkommen von Stromrichtern, die es einfach ermöglichen Wechselspannung in Gleichspannung und umgekehrt umzuwandeln, und folglich auch Wechselspannung einer Frequenz in Wechselspannung einer anderen Frequenz (über den Zwischenschritt der Gleichspannung) wurde beiden Maschinentypen ein weiteres Anwendungsgebiet eröffnet, nämlich bei drehzahlvariablen Antrieben.
 
-Ein solcher Stromrichter ist auch im Peugeot eingebaut. Da aus der Batterie bereits Gleichspannung bezogen wird, entfällt im Vergleich zum Frequenzumrichter die erste Stufe der Gleichrichtung. Ein Beispiel für einen Stromrichter, wie er im Peugeot verwendet wird, ist in Abbildung \todo{Bild Stromrichter} gegeben:
+Ein solcher Stromrichter ist auch im Peugeot eingebaut. Da aus der Batterie bereits Gleichspannung bezogen wird, entfällt im Vergleich zum Frequenzumrichter die erste Stufe der Gleichrichtung. Ein Beispiel für einen Stromrichter, wie er im Peugeot verwendet wird, ist in Abbildung \ref{Bruecke} gegeben:
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=1.00\textwidth]{images/Bruecke.PNG}
+	\caption{Aufbau einer dreiphasigen Brücke}
+	\label{fig:Bruecke}
+\end{figure}
 
 Die sechs Transistoren dienen dabei als Schalter, können also nur ein- oder ausgeschaltet sein. In jedem senkrechten Pfad ist nur jeweils ein Schalter eingeschaltet, da es ansonsten zu einem Kurzschluss kommen würde. Durch die beiden Schalter kann der jeweilige Abgang also entweder auf die positive oder die negative Spannung der Batterie gelegt werden. Wird dies genügend schnell durchgeführt und der Abgang anschliessend gemittelt (dies kann durch die Induktivität des Motors angenommen werden), so kann dabei jede beliebige Spannungsform erreicht werden. Ein einfaches Beispiel für das Resultat dieser Schaltung kann die Nachbildung des Drehstromnetzes, wie wir es vom schweizerischen Landesnetz kennen, sein. Mit diesem sogenannten Drehfeld kann der Motor in Bewegung gesetzt werden. In Abbildung \ref{fig:Phasenspannungen} ist ein sogenannter Dreiphasendrehstrom dargestellt. Die Spannungen der einzelnen Phasen sind dabei um $120^\circ$ phasenverschobene Sinusfunktionen:
 
