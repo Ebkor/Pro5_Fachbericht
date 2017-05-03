@@ -7,7 +7,14 @@ Im klassischen Fall werden Synchronmaschinen nicht als Motor, sondern in Kraftwe
 
 Ein solcher Stromrichter ist auch im Peugeot eingebaut. Da aus der Batterie bereits Gleichspannung bezogen wird, entfällt im Vergleich zum Frequenzumrichter die erste Stufe der Gleichrichtung. Ein Beispiel für einen Stromrichter, wie er im Peugeot verwendet wird, ist in Abbildung \todo{Bild Stromrichter} gegeben:
 
-Die sechs Transistoren dienen dabei als Schalter, können also nur ein- oder ausgeschaltet sein. In jedem senkrechten Pfad ist nur jeweils ein Schalter eingeschaltet, da es ansonsten zu einem Kurzschluss kommen würde. Durch die beiden Schalter kann der jeweilige Abgang also entweder auf die positive oder die negative Spannung der Batterie gelegt werden. Wird dies genügend schnell durchgeführt und der Abgang anschliessend gemittelt (dies kann durch die Induktivität des Motors angenommen werden), so kann dabei jede beliebige Spannungsform erreicht werden. Ein einfaches Beispiel für das Resultat dieser Schaltung kann die Nachbildung des Drehstromnetzes, wie wir es vom schweizerischen Landesnetz kennen, sein. Mit diesem sogenannten Drehfeld kann der Motor in Bewegung gesetzt werden. In Abbildung \todo{Bild Phasenspannungen} ist ein sogenannter Dreiphasendrehstrom dargestellt. Die Spannungen der einzelnen Phasen sind dabei um $120^\circ$ phasenverschobene Sinusfunktionen:
+Die sechs Transistoren dienen dabei als Schalter, können also nur ein- oder ausgeschaltet sein. In jedem senkrechten Pfad ist nur jeweils ein Schalter eingeschaltet, da es ansonsten zu einem Kurzschluss kommen würde. Durch die beiden Schalter kann der jeweilige Abgang also entweder auf die positive oder die negative Spannung der Batterie gelegt werden. Wird dies genügend schnell durchgeführt und der Abgang anschliessend gemittelt (dies kann durch die Induktivität des Motors angenommen werden), so kann dabei jede beliebige Spannungsform erreicht werden. Ein einfaches Beispiel für das Resultat dieser Schaltung kann die Nachbildung des Drehstromnetzes, wie wir es vom schweizerischen Landesnetz kennen, sein. Mit diesem sogenannten Drehfeld kann der Motor in Bewegung gesetzt werden. In Abbildung \ref{fig:Phasenspannungen} ist ein sogenannter Dreiphasendrehstrom dargestellt. Die Spannungen der einzelnen Phasen sind dabei um $120^\circ$ phasenverschobene Sinusfunktionen:
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=1.00\textwidth]{images/Phasenspannungen.PNG}
+	\caption{Phasenspannungen und verkettete Spannungen am Beispiel des $400$ VAC/$50$ Hz-Drehstromnetzes \cite{phasen}}
+	\label{fig:Phasenspannungen}
+\end{figure}
 
 Drehfeldmaschinen bieten gegenüber Gleichstrommaschinen einen weiteren Vorteil: Wird eine Ausgangsfrequenz des Stromrichters eingestellt, so dreht sich die Maschine ebenfalls mit dieser Frequenz (Synchronmaschine) beziehungsweise aufgrund des Schlupfes um einige Prozent langsamer (Asynchronmaschine). Versucht nun der Motor, durch aufgenommene Leistung an der Welle, schneller zu drehen als das Feld, so wird er automatisch zum Generator und bremst dabei das Fahrzeug. Dabei muss dieser Vorgang für beide Motorentypen unterschieden werden.
 
@@ -23,6 +30,6 @@ Sämtliche hier vorgestellten Vorgänge benötigen ein hohes Mass an Regelung. Z
 Auch Gleichstrommaschinen, wie die im Detroit verbaute, können als Generator benutzt werden. Beim Detroit war dies jedoch trotzdem nicht möglich. Für genauere Informationen sei auf das Kapitel \ref{bremse} verwiesen.
 %Natürlich kann auch eine Gleichstrommaschine als Generator benutzt werden. Zu diesem Zweck muss die induzierte Spannung (siehe Kapitel \ref{gm}) grösser werden als die Batteriespannung. Da sich dadurch aber auch die Stromrichtung umdreht, wird bei der Reihenschlussmaschine das Erregerfeld ebenfalls gekehrt, was die Nutzung als Generator verhindert. Für die Nutzung als Generator wäre also eine fremderregte Maschine benötigt worden. Dies wäre beim Detroit schaltungstechnisch möglich gewesen, aufgrund der stark variierenden Drehzahlen wäre jedoch ebenfalls ein Stromrichter nötig gewesen, um die Spannung des Generators an die Batteriespannung anzupassen.
 
-Für weitere, ausführlichere Informationen zu Drehfeldmaschinen und die dazugehörigen Stromrichter sei auf die Literatur verwiesen. \todo{Literatur}
+Für weitere, ausführlichere Informationen zu Drehfeldmaschinen und die dazugehörigen Stromrichter sei auf die Literatur \cite{elektrischeantriebe} verwiesen.
 
 \newpage
