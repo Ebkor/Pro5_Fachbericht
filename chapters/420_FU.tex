@@ -5,18 +5,18 @@ Im Gegensatz zum Detroit, der eine klassische Gleichstrommaschine verwendet, ist
 
 Im klassischen Fall werden Synchronmaschinen nicht als Motor, sondern in Kraftwerken als Generator verwendet. Der Asynchronmotor hingegen ist die Standartmaschine am dreiphasigen Netz (Drehstrom), wie es in der Schweiz vorhanden ist. Durch das Aufkommen von Stromrichtern, die es einfach ermöglichen Wechselspannung in Gleichspannung und umgekehrt umzuwandeln, und folglich auch Wechselspannung einer Frequenz in Wechselspannung einer anderen Frequenz (über den Zwischenschritt der Gleichspannung) wurde beiden Maschinentypen ein weiteres Anwendungsgebiet eröffnet, nämlich bei drehzahlvariablen Antrieben.
 
-Ein solcher Stromrichter ist auch im Peugeot eingebaut. Da aus der Batterie bereits Gleichspannung bezogen wird, entfällt im Vergleich zum Frequenzumrichter die erste Stufe der Gleichrichtung. Ein Beispiel für einen Stromrichter, wie er im Peugeot verwendet wird, ist in Abbildung \ref{Bruecke} gegeben:
+Ein solcher Stromrichter ist auch im Peugeot eingebaut. Da aus der Batterie bereits Gleichspannung bezogen wird, entfällt im Vergleich zum Frequenzumrichter die erste Stufe der Gleichrichtung. Ein Beispiel für einen Stromrichter, wie er im Peugeot verwendet wird, ist in Abbildung \ref{fig:Bruecke} gegeben.
 
-\begin{figure}[h]
+\begin{figure}[p]
 	\centering
 		\includegraphics[width=1.00\textwidth]{images/Bruecke.PNG}
 	\caption{Aufbau einer dreiphasigen Brücke}
 	\label{fig:Bruecke}
 \end{figure}
 
-Die sechs Transistoren dienen dabei als Schalter, können also nur ein- oder ausgeschaltet sein. In jedem senkrechten Pfad ist nur jeweils ein Schalter eingeschaltet, da es ansonsten zu einem Kurzschluss kommen würde. Durch die beiden Schalter kann der jeweilige Abgang also entweder auf die positive oder die negative Spannung der Batterie gelegt werden. Wird dies genügend schnell durchgeführt und der Abgang anschliessend gemittelt (dies kann durch die Induktivität des Motors angenommen werden), so kann dabei jede beliebige Spannungsform erreicht werden. Ein einfaches Beispiel für das Resultat dieser Schaltung kann die Nachbildung des Drehstromnetzes, wie wir es vom schweizerischen Landesnetz kennen, sein. Mit diesem sogenannten Drehfeld kann der Motor in Bewegung gesetzt werden. In Abbildung \ref{fig:Phasenspannungen} ist ein sogenannter Dreiphasendrehstrom dargestellt. Die Spannungen der einzelnen Phasen sind dabei um $120^\circ$ phasenverschobene Sinusfunktionen:
+Die sechs Transistoren dienen dabei als Schalter, können also nur ein- oder ausgeschaltet sein. In jedem senkrechten Pfad ist nur jeweils ein Schalter eingeschaltet, da es ansonsten zu einem Kurzschluss kommen würde. Durch die beiden Schalter kann der jeweilige Abgang also entweder auf die positive oder die negative Spannung der Batterie gelegt werden. Wird dies genügend schnell durchgeführt und der Abgang anschliessend gemittelt (dies kann durch die Induktivität des Motors angenommen werden), so kann dabei jede beliebige Spannungsform erreicht werden. Ein einfaches Beispiel für das Resultat dieser Schaltung kann die Nachbildung des Drehstromnetzes, wie wir es vom schweizerischen Landesnetz kennen, sein. Mit diesem sogenannten Drehfeld kann der Motor in Bewegung gesetzt werden. In Abbildung \ref{fig:Phasenspannungen} ist ein sogenannter Dreiphasendrehstrom dargestellt. Die Spannungen der einzelnen Phasen sind dabei um $120^\circ$ phasenverschobene Sinusfunktionen.
 
-\begin{figure}[h]
+\begin{figure}[p]
 	\centering
 		\includegraphics[width=1.00\textwidth]{images/Phasenspannungen.PNG}
 	\caption{Phasenspannungen und verkettete Spannungen am Beispiel des $400$ VAC/$50$ Hz-Drehstromnetzes \cite{phasen}}
@@ -27,7 +27,6 @@ Drehfeldmaschinen bieten gegenüber Gleichstrommaschinen einen weiteren Vorteil:
 
 Bei \textbf{Asynchronmaschinen} dreht sich funktionsbedningt der Rotor immer etwas langsamer als das Feld, diese Differenz wird auch Schlupf genannt. Ist die Maschine im Nennbetrieb, so kann die Vereinfachung getroffen werden, dass das abgegebene Moment proportional zum Schlupf ist. Folglich ist also bei gleicher Drehzahl kein Moment mehr an der Welle abgreifbar. Wird die mechanische Drehzahl grösser als die sogenannte Synchronfrequenz (kein Schlupf), so wird der Schlupf negativ und folglich auch das Moment an der Welle. Die Maschine nimmt also mechanische Leistung auf und gibt diese als elektrische Leistung ab.
 
-\colorbox{red}{Stimmt das so?}
 \textbf{Synchronmaschinen} funktionieren anders als Asynchronmaschinen. Der Name kommt daher, dass sie stets mit der selben Drehzahl wie das Feld drehen. Ähnlich wie beim Schlupf der Asynchronmaschine gibt es auch hier eine das Moment beeinflussende Grösse. Im Motorbetrieb läuft der Rotor dem Statorfeld hinterher. Der Winkelversatz ist dabei verantwortlich für das abgegebene Moment (beziehungsweise umgekehrt, das Moment bestimmt den Winkelversatz). Wird dieser Winkelversatz null, der Stator läuft also exakt mit dem Rotorfeld mit, so ist auch das abgegebene Moment null. Wenn der Rotor dem Drehfeld voraus eilt, so ändert sich auch hier die Richtung des elektrischen Energieflusses.
 
 Die so erzeugte Energie ist in beiden Fällen eine dreiphasige Wechselspannung. Mit Hilfe des Stromrichters wird dadurch wieder eine konstante Gleichspannung, mit welcher beim Bremsen die Batterie aufgeladen werden kann (dies wird auch als Rekuperation bezeichnet). Dadurch kann zur Bremsung des Fahrzeuges einfach die Frequenz unterhalb der Motorendrehzahl gehalten werden (Asynchronmaschine) beziehungsweise, bildlich gesprochen, "`kurz gewartet werden"', bis der Rotor dem Drehfeld voreilt (Synchronmaschine).
