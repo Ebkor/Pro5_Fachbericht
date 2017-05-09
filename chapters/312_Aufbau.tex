@@ -1,1 +1,21 @@
 \subsection{Aufbau der Batterie mit Schutzschaltung}
+Die beiden originalen Bleibatterien des Detroits hatten einen Nennspannung von $42$ V, was 21 in Serie geschalteten Zellen entspricht. Diese Spannung sollte mit den Lithium Akkus grob erreicht werden, wobei eine Abweichung von $\pm 10$ \% vertreten werden kann. Im Idealfall wäre es dabei möglich, die Zellen in den bereits bestehenden Viererrahmen mit einer Nennspannung von $4\cdot 3.7$ V$=14.8$ V zu belassen.
+
+Mit drei in Serie geschalteten Viererrahmen ergibt sich eine Spannung von $3\cdot 4\cdot 3.7$ V$=44.8$ V, was die Bedingung sehr gut erfüllt. Somit können sämtliche Zellen in den Viererrahmen belassen werden, sodass im Folgenden nur noch die Viererrahmen behandelt werden. Zuerst soll aber Tabelle \ref{tab:bat_vergl} einen Vergleich über die Spannungen der beiden Batterien geben:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Batterietyp}              & \textbf{Bleiakkumulator} & \textbf{Lithium-Ionen-Akkumulator} \\ \hline
+\textbf{Nennspannung Einzelzelle} & $2.00$ V                            & $3.70$ V                                    \\ \hline
+\textbf{Anzahl Serieschaltung}    & 21                                  & 12                                          \\ \hline
+\textbf{Minimalspannung Batterie} & $21\cdot1.75$ V$=36.75$ V           & $12\cdot2.8$ V$=33.6$ V                     \\ \hline
+\textbf{Nennspannung Batterie}    & $21\cdot2.00$ V$=42.00$ V           & $12\cdot3.7$ V$=44.40$ V                    \\ \hline
+\textbf{Maximalspannung Batterie} & $21\cdot2.4$ V$=50.40$ V            & $12\cdot4.1$ V$=49.2$ V                     \\ \hline
+\end{tabular}
+\caption{Vergleich des originalen Bleiakkumulators mit dem neuen Lithium-Ionen-Akkumulator}
+\label{tab:bat_vergl}
+\end{table}
+
+Interessanterweise sind sowohl Lade- als auch Entladeschlussspannung der neuen Batterie etwas tiefer als die vergleichbaren Werte des Bleiakkus, obwohl die Nennspannung höher ist. Dies liegt an der wesentlich flacheren Entladekurve des Lithium-Ionen-Akkus im Vergleich zum Bleiakku. Mit diesen Werten kann aber gesagt werden, dass die Spannungen der neuen Batterie sehr gut zu denen des Originals passen.
