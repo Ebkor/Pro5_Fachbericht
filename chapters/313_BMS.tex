@@ -1,1 +1,21 @@
 \subsection{Das Batteriemanagementsystem}
+
+Als Batteriemanagementsystem (im Folgenden BMS genannt) wird das EMUS BMS des litauischen Herstellers Elektromotus verwendet \cite{emus}. Um dessen Funktion verstehen zu können wird zuerst über den Aufbau und die Funktion berichtet, anschliessend soll auf die im Programm gesetzten Parameter eingegangen werden. Die Betrachtung erfolgt dabei nur für eine Batterie, wobei die zweite Batterie identisch beschaltet ist. Für ausführlichere Informationen zum BMS sei auf dessen Dokumentation \cite{bms} verwiesen.
+
+\paragraph{Aufbau}
+Das eingesetzte Batteriemanagementsystem besteht aus mehreren Teilen: \begin{itemize}
+	\item Ein Steuergerät
+	\item Ein Zellmodul mit Temperatursensor pro Zelle, insgesamt also 12
+	\item Zwei Isolationsadapter zur Kommunikation
+	\item Ein Strommessmodul
+\end{itemize}
+
+Das \textbf{Steuergerät} ist das Gehirn des BMS. Es verarbeitet sämtliche Informationen der Sensoren und bestimmt damit den Ladezustand der Batterie. Mit diesen Informationen können ebenfalls die Schaltzustände für das Ladegerät sowie für den Hauptschalter bestimmt werden. Ausserdem regelt das Steuergerät die Balancierströme, um sämtliche Zellen auf dem selben Potential zu halten.
+
+Die \textbf{Zellmodule} werden auf jeder Zelle montiert. Sie messen dabei die Spannung und die Temperatur der Einzelzelle. Bei Bedarf wird über den Shuntwiderstand der Balancierstrom eingeschaltet. Die Kommunikation erfolgt dabei seriell durch alle Zellmodul hindurch, es ist also keine direkte Verbindung vom Zellmodul zum Steuergerät erforderlich.
+
+Die \textbf{Isolationsadapter} sorgen dafür, dass die Signale der Zellmodule galvanisch getrennt an das Steuergerät übertragen werden können. Diese galvanische Trennung sorgt dafür, dass nicht mit hohen Spannungen zum Steuergerät gefahren werden muss und dieses folglich einfacher aufgebaut werden kann. Die galvanische Trennung erfolgt mit Optokopplern.
+
+Das \textbf{Strommessmodul} misst, wie der Name bereits sagt, den Strom. Die Messung erfolgt dabei mittels einem Hallsensor, so dass auch hier ein potentialfreies Signal vorliegt. Die stromführende Leitung wird dabei durch den Sensor geführt, wobei der Hallsensor am Ende das Magnetfeld misst.
+
+\paragraph{Konfiguration}

@@ -13,15 +13,17 @@ Da jeweils drei Stränge zu 12 Zellen parallel geschaltet sind ergibt sich ein W
 	R_B=\frac{1}{\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}}=\quad 5\text{ m}\Omega\text{ bzw. } 8\text{ m}\Omega
 \end{equation*}
 
-Die Abwärme berechnet sich gemäss der Formel $P=I^2\cdot R$ (für diese Berechnungen wird der Wert von $8$ m$\Omega$ benützt), dies soll zuerst für einen konstanten Ladestrom von $10$ A berechnet werden:
+Die Abwärme berechnet sich gemäss der Formel $P=I^2\cdot R$ (für diese Berechnungen wird der Wert von $8$ m$\Omega$ benützt), dies soll zuerst für einen konstanten Ladestrom von $15$ A berechnet werden:
 \begin{equation*}
-	P_{V,Laden}=\left(10\text{ A}\right)^2\cdot8\text{ m}\Omega=\quad\underline{0.8\text{ mW}}
+	P_{V,Laden}=\left(15\text{ A}\right)^2\cdot8\text{ m}\Omega=\quad\underline{1.8\text{ W}}
 \end{equation*}
 
 Für den maximalen Fahrstrom ergibt sich eine Abwärme von:
 \begin{equation*}
 	P_{V,Max}=\left(100\text{ A}\right)^2\cdot8\text{ m}\Omega=\quad\underline{80\text{ W}}
 \end{equation*}
+
+Bei der Ladung kann die Abwärme der Batterie als irrelevant angesehen werden. Auch bei grosser Belastung entsteht keine grosse Wärme, trotzdem können durch das Batteriemanagementsystem bei Bedarf Lüfter eingeschaltet werden, um die Batterien zu kühlen. Die sehr geringe Eigenerwärmung der Zellen konnten bei einem Versuch bestätigt werden, bei dem eine Einzelzelle ($3.7$ V, $50$ Ah) ungefähr eine halbe Stunde mit einem Strom von $30$ A belastet wurde und sich nicht fühlbar erwärmte.
 
 Der schlimmste Fall eines Kurzschlusses ist ein Kurzschluss direkt an den Klemmen der Batterie. In diesem Fall wird der Stromfluss nur durch die Spannung der Batterie beschränkt. Im schlimmsten Fall muss mit der Ladeschlussspannung und einem kleinen Innenwiderstand der Batterie gerechnet werden, der Kurzschlussstrom berechnet sich gemäss $I=\frac{U}{R}$ zu:
 \begin{equation*}
