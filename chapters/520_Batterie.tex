@@ -1,0 +1,32 @@
+\section{Test der Batterie}
+An der Batterie wurde getestet, ob sie sich so verhält wie gewünscht. Dazu gehört ebenfalls die Steuerplatine, da diese die Informationen von und zur Batterie verarbeitet. Das BMS selbst wurde dabei nicht getestet, da diese Tests bereits vom Hersteller durchgeführt wurden. Es wurde lediglich die korrekte Funktion an der Batterie überprüft.
+
+\subsection{Steuerplatine}
+Um die korrekte Funktion der Steuerplatine sicherzustellen, wurde diese in drei Schritten aufgebaut. Als erstes wurde die Schaltung aufgebaut und im Simulationsprogramm LtSpice überprüft. Anschliessend wurde ein Prototyp gebaut, an welchem die Signale eingespiesen wurden und die Ausgänge vermessen wurden. Als auch dies funktionierte wurde eine saubere Platine bestellt, welche nach der Bestückung ebenfalls getestet wurde.
+
+Da die einzelnen Schaltungspfade gut voneinander trennbar sind, konnten sie einzeln getestet werden. Dabei wurden die folgenden Punkte überprüft: \begin{itemize}
+	\item Die $12$ V-Einspeisung wird beim Anschluss von $230$ VAC unterbrochen
+	\item An den Einschalt-Anschlüssen liegt bei vorhandener Speisespannung die korrekte Spannung an
+	\item Beide Ladegeräte können einzeln ein- und ausgeschaltet werden
+	\item Der Hauptschalter wird nur eingeschaltet, wenn beide BMS dies erlauben
+	\item Die Lüftergruppen können einzeln ein- und ausgeschaltet werden
+	\item Am Ladezustandsausgang liegt immer die kleinere der beiden Spannungen an
+	\item Das BMS wird auch während dem Ladevorgang mit Spannung versorgt
+	\item Der Anschluss von $230$ VAC wird an das BMS übermittelt
+\end{itemize}
+
+Durch diese Tests konnte sichergestellt werden, dass die Steuerplatine wie gewünscht funktioniert. Dabei mussten jedoch Anpassungen gemacht werden, da zuerst davon ausgegangen wurde, dass das Batteriemanagementsystem mit einer Spannung von $24$ VDC arbeitet. Da dies jedoch, aufgrund einer anderen Bezugsquelle, noch geändert hat, wurde der $24$ V Spannungswandler überbrückt.
+
+\subsection{Einzelzellen}
+Um Fehler von Beginn an zu realisieren, wurden vor der Verschaltung die einzelnen Zellen getestet. Zu diesem Zweck wurde an jeder Zelle die Spannung gemessen. Da die Zellen vorgängig alle komplett geladen waren wäre eine defekte Zelle durch eine niedrigere Spannung aufgefallen.
+
+Damit die einzelnen Zellen, die jeweils parallel geschaltet werden, beim Zusammenhängen keine grossen Ströme fliessen lassen, wurden diese über eine längere Zeit mit $1\ \Omega$-Widerständen ausgeglichen. Dadurch wurden die Ausgleichsströme begrenzt und die Spannungen der Zellen konnten sich langsam angleichen.
+
+\subsection{Zellenverschaltung}
+Die Zellenverschaltung an sich ist sehr einfach, wodurch auch die entsprechenden Tests einfach wurden. Es wurde überprüft, ob die Batterien die korrekte Spannung haben. Ausserdem wurde bereits vorgängig an Einzelzellen überprüft, ob sich diese bei starker Belastung erwärmen, was jedoch nicht nachgewiesen werden konnte.
+
+Nach dem Einbau ins Gehäuse wurden sämtliche Anschlüsse auf ihren Sitz überprüft, anschliessend erfolgte eine optische Prüfung nach dem Vier-Augen-Prinzip. Die bei diesen Vorgängen gefundenen Fehler wurden sofort behoben.
+
+
+
+\newpage
