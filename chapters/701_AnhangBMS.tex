@@ -1,0 +1,162 @@
+\chapter{Parameter BMS}
+\section*{Data interfaces}
+\subsection*{Serial}
+\begin{tabular}{p{11cm}p{2cm}}
+	In Active State & - \\
+	In Sleep State & - \\
+	Broadcast on RS232/USB & Nein
+\end{tabular}
+
+\subsection*{CAN}
+\begin{tabular}{p{11cm}p{2cm}}
+	Enable CAN & Nein \\
+	Speed & - \\
+	Periodic Data Broadcast & Nein \\
+	Broadcast Each Cell Value & Nein \\
+	Use ENeintended 29bit ID & Nein \\
+	Send to RS232/USB & Nein \\
+	CAN ID Base & - \\
+	Device CAN ID Base & -
+\end{tabular}
+
+\subsection*{Cell communication}
+\begin{tabular}{p{11cm}p{2cm}}
+	Serial & Ja \\
+	CAN & Nein
+\end{tabular}
+
+\section*{CAN Cell Group Module configuration}
+Keine Konfigurationen
+
+\section*{Charging process}
+\subsection*{Charger Parameters}
+\begin{tabular}{p{11cm}p{2cm}}
+	Number of Chargers & 1 \\
+	CAN Base ID & - \\
+	Min PWM Output & - \\
+	MaNein PWM Output & -
+\end{tabular}
+\subsection*{Charging Stage Duration Parameters}
+\begin{tabular}{p{11cm}p{2cm}}
+	MaNein pre-charge Stage Duration & 0 \\
+	MaNein Main Charge Stage Duration & 0 \\
+	MaNein Balancing Stage Duration & 300
+\end{tabular}
+\subsection*{Cell Charging Parameters}
+Diese Parameter wurden von den Zellen übernommen \cite{lev50}\\
+\begin{tabular}{p{11cm}p{2cm}}
+	Fully Charged Voltage & $4.10$ V \\
+	Allowed Disbalance & $0.02$ V \\
+	Early Balancing Treshold & $3.60$ V \\
+	Charge restart voltage & $3.60$ V \\
+	Pre-charge Treshold & $2.80$ V
+\end{tabular}
+\subsection*{Cell Charging Parameter}
+Diese Parameter wurden vom Ladegerät übernommen \cite{ladegeraet}\\
+\begin{tabular}{p{11cm}p{2cm}}
+	Fast Charging Current & $15$ A \\
+	Slow Charging Current & $15$ A \\
+	Pre-charge Current & $7.5$ A \\
+	Charging Finished Current & $2.5$ A
+\end{tabular}
+
+\section*{Protections}
+\begin{tabular}{p{11cm}p{2cm}}
+	No Cell Communication & Ja \\
+	Cell Under-Voltage Enable & Ja \\
+	Cell Under-Voltage Activate at & $2.70$ V \\
+	Cell Under-Voltage Deactivate at & $2.80$ V \\
+	Cell Under-Voltage Act. delay & $20$ s \\
+	Cell Under-Voltage Deact. delay & $180$ s \\
+	Discharge Over-Current Enable & Ja \\
+	Discharge Over-Current Activate at & $160$ A \\
+	Discharge Over-Current Act. delay & $20$ s \\
+	Cell Module Over Heat Enable & Ja \\
+	Cell Module Over Heat Activate at & $60^\circ$C \\
+	Cell Module Over Heat Deactivate at & $55^\circ$C \\
+	Cell Module Over Heat Act. delay & $5$ s \\
+	Cell Module Over Heat Deact. delay & $20$ s \\
+	Cell Over Heat Enable & Ja \\
+	Cell Over Heat Activate at & $55^\circ$C \\
+	Cell Over Heat Deactivate at & $50^\circ$C \\
+	Cell Over Heat Act. delay & $20$ s \\
+	Cell Over Heat Deact. delay & $180$ s
+\end{tabular}
+
+\section*{Load power reductions}
+\begin{tabular}{p{11cm}p{2cm}}
+	Low Cell Voltage power reduction Enable & Nein \\
+	Low Cell Voltage power reduction Activate at & - \\
+	Low Cell Voltage power reduction Deactivate at & - \\
+	Low Cell Voltage power reduction Act. delay & - \\
+	Low Cell Voltage power reduction Deact. delay & - \\
+	High Discharge Current power reduction Enable & Nein \\
+	High Discharge Current power reduction Activate at & - \\
+	High Discharge Current power reduction Deactivate at & - \\
+	High Discharge Current power reduction Act. Delay & - \\
+	High Discharge Current power reduction Deact. Delay & - \\
+	High Cell Module Temperature power reduction Enable & Nein \\
+	High Cell Module Temperature power reduction Activate at & - \\
+	High Cell Module Temperature power reduction Deactivate at & - \\
+	High Cell Module Temperature power reduction Act. delay & - \\
+	High Cell Module Temperature power reduction Deact. delay & - \\
+	High Cell Temperature power reduction Enable & Nein \\
+	High Cell Temperature power reduction Activate at & - \\
+	High Cell Temperature power reduction Deactivate at & - \\
+	High Cell Temperature power reduction Act. Delay & - \\
+	High Cell Temperature power reduction Deact. Delay & - \\
+\end{tabular}
+
+\section*{Current measurement}
+\begin{tabular}{p{11cm}p{2cm}}
+	Sensor type & Noch zu ermitteln \\
+	L Calibration Value & Noch zu ermitteln \\
+	H Calibration Value & Noch zu ermitteln \\
+	Deadzone & $0.1$ A \\
+	Reverse Direction & Nein
+\end{tabular}
+
+\section*{SOC estimation}
+\subsection*{Battery Pack}
+\begin{tabular}{p{11cm}p{2cm}}
+	Number of Overall Cells & 12 \\
+	Number of Cells Strings & 1 \\
+	Maximum Balancing Current & $5$ \% \\
+	Capacity & $150$ Ah
+\end{tabular}
+
+\subsection*{State of Charge (SoC) parameters}
+\begin{tabular}{p{11cm}p{2cm}}
+	Reduce SOC at Under-Voltage & Nein \\
+	SOC at Low Volt. Warn.: & -
+\end{tabular}
+
+\section*{Heater And Fan Control}
+\begin{tabular}{p{11cm}p{2cm}}
+	Fan On Temperature & $40^\circ$C \\
+	Minimum Charging Temperature & -100 \\
+	Climate Control Enable & Nein \\
+	Normal Temperature & - \\
+	Charging Temperature & - \\
+	Minimum SOC & - \\
+	Max duration when not charging & -
+\end{tabular}
+
+\section*{DC/DC converter control}
+Diese Einstellungen werden nicht benötigt, da diese Funktion nicht benötigt wird \\
+\begin{tabular}{p{11cm}p{2cm}}
+	Active State Treshold & - \\
+	Passive State Treshold & -
+\end{tabular}
+
+\section*{Pin mapping}
+Diese Parameter werden bei der Installation des BMS ermittelt
+
+\section*{Display Unit}
+Da kein Bildschirm eingesetzt wird, werden diese Einstellungen nicht benötigt \\
+\begin{tabular}{p{11cm}p{4cm}}
+	Contrast & - \\
+	Sleep after & - \\
+	Temperature units & Celsius, $^\circ$ C \\
+	Display mode & Electric vehicle
+\end{tabular}

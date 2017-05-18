@@ -1,1 +1,30 @@
 \section{Das neue Ladegerät}
+Um die Batterien zu Laden wurden zwei neue Ladegeräte installiert. Dies hat den Grund, dass die beiden Batterien unabhängig voneinander geladen werden sollen. Dabei wurde ausserdem die Bedingung gestellt, dass das Fahrzeug an einer Steckdose $230$ VAC/$10$ A geladen werden kann. Das reduziert den maximalen Eingangsstrom pro Ladegerät auf $5$ A, sodass man (mit einem optimalen Wirkungsgrad und ohne Blindleistung) die maximale Ladeleistung berechnen kann:
+\begin{equation*}
+	P_{max}=U\cdot I=5\text{ A}\cdot230\text{ V}=1150\text{ W}
+\end{equation*}
+Diese Betrachtung ist jedoch mit idealen Bauteilen. Um diese Bedingung trotzdem einzuhalten, wurde ein Netzgerät mit einer Ausgangsleistung von $700$ W gewählt, dessen Eingangsspannung bei $220$ VAC maximal $4.5$ A beträgt. So ist bei einer nominalen Spannung von $48$ V ein Ladestrom von $15$ A möglich, was eine Ladezeit von ungefähr 12 Stunden für eine Komplettladung ermöglichen sollte \cite{ladegeraet}.
+
+\paragraph{Ladeverfahren}
+Das Ladegerät lädt die Batterien mit dem sogenannten "`\textbf{C}onstant \textbf{C}urrent/\textbf{C}onstant \textbf{V}oltage (CCCV)"' Verfahren. Der Ladevorgang kann so grob in zwei Phasen unterteilt werden:
+
+In der ersten Phase wird die Batterie mit einem \textbf{konstantem Strom} geladen, das Lädegerät fungiert dabei als Stromquelle. Durch den konstanten Strom wird die maximale Ladeleistung begrenzt, wodurch thermische Überlastungen der Batterie oder des Ladegerätes vermieden werden können. Falls die Batteriespannung zu Beginn sehr tief ist, die Batterie also tiefentladen ist, wird die Ladung mit einem kleineren Strom begonnen. Durch das Laden steigt die Zellspannung der Zellen an, wodurch sich auch die Spannung der Batterie erhöht. Diese Phase wird beendet, wenn die Spannung an der Batterie auf die Ladeschlussspannung angestiegen ist.
+
+In der zweiten Phase wird mit einer \textbf{konstanten Spannung} geladen. Dabei dient das Ladegerät als Spannungsquelle, die Klemmenspannung der Batterie bleibt dabei konstant. Dabei steigt die Ladung der Zellen weiter, wodurch sich der Strom reduziert. Diese Phase wird beibehalten, bis der Strom unter einen definierten Wert fällt. Beim verwendeten Netzgerät ist dies $\frac{1}{6}$ des Nennstromes, also $\frac{1}{6}\cdot 15\text{ A}=2.5\text{ A}$.
+
+Nach Beendigung der zweiten Phase gilt die Batterie als vollgeladen und der Ladezustand wird beendet. Das Ladegerät überwacht nun lediglich die Zellspannung, wobei beim Unterschreiten einer bestimmten Spannung die fehlende Ladung wieder ergänzt wird. Für die Ladekurven sei auf die Bedienungsanleitung des Netzgerätes \cite{ladegeraet} und Abbildung \ref{fig:liion_akku_kurve} verwiesen.
+
+\paragraph{Vorzeitiger Abbruch des Ladevorgangs}
+Der Ladevorgang wird durch das Batteriemanagementsystem überwacht. Dieses kann, über ein Relais, die Stromzufuhr zum Ladegerät und damit den Ladevorgang vorzeitig abbrechen. Dies kann aus folgenden Gründen geschehen: \begin{itemize}
+	\item Die Spannung einer Einzelzelle überschreitet die maximale Zellspannung
+	\item Die Temperatur einer Zelle überschreitet die Maximaltemperatur
+	\item Der Ladestrom überschreitet den maximalen Zellenstrom, dies deutet auf einen Defekt des Ladegerätes hin
+	\item Es wird trotz aktivem Ladegerät kein Ladestrom vom BMS gemessen
+	\item Defekt an einer Einzelzelle
+\end{itemize}
+Das BMS überwacht die Batterien auch nach dem Ausschalten des Ladegerätes und kann so, beispielsweise nach dem Abkühlen der Zellen, den Ladevorgang wieder starten.
+
+\paragraph{Balanciervorgang}
+Aufgrund minimaler Unterschiede ist es möglich, dass sich die Zellen ungleichmässig laden. Bei den parallel geschalteten Zellen kann dies nicht passieren, da diese durch die Parallelverdrahtung auf dem selben Potential gehalten werden. Bei den Seriellverdrahteten Zellen ist dies jedoch sehr gut möglich.
+
+Auf den Modulen des Batteriemanagementsystems befinden sich deswegen sogenannte Balancierwiderstände. Dies sind Widerstände, die Einzelzellen Entladen können, um so die Spannung der Einzelzellen auszugleichen. Diese werden vom Batteriemanagementsystem angesteuert und arbeiten in zwei Phasen. In der ersten Phase wird bereits vor dem Ende des Ladeverfahrens die Ladung der Zellen mit einer höheren Spannung verringert, nach Abschluss der Ladung werden alle Zellen an die geringste Zellspannung angepasst. Im Normalbetrieb, wenn sich die Zellen nur minimal unterscheiden, sollten diese Ausgleichsvorgänge aber sehr minim sein. Es wird dadurch vor allem ein Aufschaukeln dieses Effektes vorgebeugt.
