@@ -1,7 +1,7 @@
 \subsection{Berechnungen zur Batterie}
 Bei der Batterie sind vor allem der maximale Kurzschlussstrom sowie die maximale Verlustleistung von Interesse, da diese für die Sicherung und die Kühlung relevant sind.
 
-Mittels $\frac{dU}{dI}$-Messung konnte der Innenwiderstand der Batterie bestimmt werden. Dabei wurde eine Messung im Leerlauf und eine bei einem Strom von ca. $50$ A durchgeführt, wobei diese Messung für zwölf in Serie geschaltete Zellen durchgeführt wurde. Die Messung ergab einen Innenwiderstand von $20$ m$\Omega$, deswegen wird zur Sicherheit mit folgenden Werten gerechnet:
+Mittels $\frac{dU}{dI}$-Messung konnte der Innenwiderstand der Batterie bestimmt werden. Dabei wurde eine Messung im Leerlauf und eine bei einem Strom von ca. $50$ A durchgeführt, wobei diese Messung für zwölf in Serie geschaltete Zellen ohne Parallelschaltung durchgeführt wurde. Die Messung ergab einen Innenwiderstand von $20$ m$\Omega$ (dies korreliert mit der Herstellerangabe von $1.8$ m$\Omega$ pro Zelle \cite{lev50}), deswegen wird zur Sicherheit mit folgenden Werten gerechnet:
 \begin{itemize}
 	\item $15$ m$\Omega$ als schlimmster Fall für den Kurzschluss (maximaler Kurzschlussstrom)
 	\item $24$ m$\Omega$ als schlimmster Fall für die Verlustleistung (maximale Abwärme)
@@ -24,7 +24,7 @@ Für den maximalen Fahrstrom ergibt sich eine Abwärme von:
 
 Bei der Ladung kann die Abwärme der Batterie als irrelevant angesehen werden. Auch bei grosser Belastung entsteht keine grosse Wärme, trotzdem können durch das Batteriemanagementsystem bei Bedarf Lüfter eingeschaltet werden, um die Batterien zu kühlen. Die sehr geringe Eigenerwärmung der Zellen konnten bei einem Versuch bestätigt werden, bei dem eine Einzelzelle ($3.7$ V, $50$ Ah) ungefähr eine halbe Stunde mit einem Strom von $30$ A belastet wurde und sich nicht fühlbar erwärmte.
 
-Der schlimmste Fall eines Kurzschlusses ist ein Kurzschluss direkt an den Klemmen der Batterie. In diesem Fall wird der Stromfluss nur durch die Spannung der Batterie beschränkt. Im schlimmsten Fall muss mit der Ladeschlussspannung und einem kleinen Innenwiderstand der Batterie gerechnet werden, der Kurzschlussstrom berechnet sich gemäss $I=\frac{U}{R}$ zu:
+Der schlimmste Fall eines Kurzschlusses ist ein Kurzschluss direkt an den Klemmen der Batterie. In diesem Fall wird der Stromfluss nur durch den Innenwiderstand der Batterie beschränkt. Im schlimmsten Fall muss mit der Ladeschlussspannung und einem kleinen Innenwiderstand der Batterie gerechnet werden, der Kurzschlussstrom berechnet sich gemäss $I=\frac{U}{R}$ zu:
 \begin{equation*}
 	I_k=\frac{12\cdot 4.2\text{ V}}{5\text{ m}\Omega}=\quad\underline{10\ 800\text{ A}}
 \end{equation*}
