@@ -5,11 +5,11 @@ Als Batterie für den Detroit sollten die modernen Lithium-Ionen-Akkumulatoren d
 
 \subsection{Funktion von Lithium-Ionen-Akkumulatoren} \label{kap_liion}
 
-Lithium-Ionen-Akkumulatoren sind in der heutigen Zeit der Standard. Das heisst in allen neuartigen Handys, Mobiltelefonen aber auch in Fahrzeugen werden diese verbaut, wobei immer mehr auf Blei-Akkus verzichtet wird. Die Technologie um die Lithium-Ionen Akkus ist jedoch im Vergleich zu Blei-Batterien sehr jung, genauer gesagt ca. 50 Jahre alt, und hinter den effizienten Akkus liegt eine aufwändige Ladetechnik. Nachfolgend wird kurz die Funktionsweise und die Lade- / Entladekurve der Lithium-Ionen-Akkus erläutert.
+Lithium-Ionen-Akkumulatoren sind in der heutigen Zeit der Standard. Das heisst in allen neuartigen Handys, Mobiltelefonen aber auch in Fahrzeugen werden diese verbaut, wobei immer mehr auf Blei-Akkus verzichtet wird. Doch gibt es trotzdem Bereiche in welchen Blei-Batterien immer noch ihre Anwendungen findet, wie zum Beispiel eine Starterbatterie in einem Auto. Die Technologie um die Lithium-Ionen Akkus ist jedoch im Vergleich zu Blei-Batterien sehr jung, genauer gesagt ca. 50 Jahre alt, und hinter den effizienten Akkus liegt eine aufwändige Ladetechnik. Nachfolgend wird kurz die Funktionsweise und die Lade- / Entladekurve der Lithium-Ionen-Akkus erläutert.
 
 \paragraph{Aufbau/Grundfunktion}
-Der Name Lithium-Ionen-Akkumulator kommt von den Lithiumionen, die frei zwischen den beiden Elektroden wandern. Durch einen Separator sind die beiden Elektroden von direktem Kontakt geschützt. Die positive Elektrode besteht aus Lithium-Metalloxiden wie zum Beispiel LiCoO$_2$, LiNiO$_2$ oder LiMn$_2$O$_4$ und die negative aus Graphit. Wichtig ist, dass die Elektrolytlösung frei von Wasser ist, damit es nicht mit dem Lithium reagiert.
-Grundsätzlich funktioniert der Akku so, dass im Ladevorgang positiv geladene Lithiumionen von der positiven zur negativen Elektrode übergehen und an der Kathode hängen bleiben. Gleichzeitig liefert der Ladestrom die Elektronen über eine von aussen angelegte Verbindung. Beim Entladevorgang funktioniert wieder das umgekehrte. Die Elektronen fliessen über den äusseren Stromkreis zur positiven Elektrode. Der Aufbau und die Grundfunktion sind in Figur \ref{fig:liion_akku} dargestellt \cite{liion_akku_aufbau_funktion2}:
+Der Name Lithium-Ionen-Akkumulator kommt von den Lithiumionen, die frei zwischen den beiden Elektroden wandern. Durch einen Separator sind die beiden Elektroden von direktem Kontakt geschützt. Die positive Elektrode besteht aus Lithium-Metalloxiden wie zum Beispiel LiCoO$_2$, LiNiO$_2$ oder LiMn$_2$O$_4$ und die negative aus Graphit. Wichtig ist, dass die Elektrolytlösung frei von Wasser ist, damit sie nicht mit dem Lithium reagiert.
+Grundsätzlich funktioniert der Akku so, dass während dem Ladevorgang positiv geladene Lithiumionen von der positiven zur negativen Elektrode übergehen und an der Kathode hängen bleiben. Gleichzeitig liefert der Ladestrom die Elektronen über eine von aussen angelegte Verbindung. Beim Entladevorgang ist die Funktion genau umgekehrt. Die Elektronen fliessen über den äusseren Stromkreis zur positiven Elektrode. Der Aufbau und die Grundfunktion sind in Figur \ref{fig:liion_akku} dargestellt \cite{liion_akku_aufbau_funktion2}:
 
 \begin{figure}[h!]
 	\centering
@@ -21,20 +21,27 @@ Grundsätzlich funktioniert der Akku so, dass im Ladevorgang positiv geladene Li
 \newpage
 
 \paragraph{Lade-/Entladekurve}
-Die typischen Lade-/Entladekurven sind nachfolgend in Abbildung \ref{fig:liion_akku_kurve} aufgeführt:
+Die typischen Lade-/Entladekurven sind nachfolgend in Abbildungen \ref{fig:liion_akku_ladekurve} und \ref{fig:liion_akku_entladekurve} aufgeführt:
 
 \begin{figure}[h!]
-    \subfigure[Ladekurve \cite{liion_ladekurve}]
-    {\includegraphics[width=0.49\textwidth]{images/liion_ladekurve.jpg}}
-    \subfigure[Entladekurve \cite{liion_entladekurve}]
-    {\includegraphics[width=0.49\textwidth]{images/liion_entladekurve.jpg}}
-\caption{Lade-/Entladekurve Lithium-Ionen-Akkumulator}
-\label{fig:liion_akku_kurve}
+	\centering
+\includegraphics[width=1.0\textwidth]{images/liion_ladekurve.jpg}
+	\caption{Ladekurve Lithium-Ionen-Akkumulator \cite{liion_ladekurve}}
+\label{fig:liion_akku_ladekurve}
 \end{figure}
 
-Es ist zu sehen, dass die Batteriespannung innert kurzer Zeit stark ansteigt. Anschliessend ist die Steigung flacher jedoch einigermassen linear. Am Ende sinkt dann der Strom und die Spannung bleibt konstant bis 100\% der Kapazität erreicht wird.
-Das nahezu selbe funktioniert beim Entladevorgang jedoch einfach umgekehrt. Die Spannung ist über einen weiten Zeitraum linear und erst am Ende bricht sie zusammen.
-Zu erwähnen ist noch, dass es sich bei den beiden Figuren in Abbildung \ref{fig:liion_akku_kurve} um unterschiedliche Verschaltungen der Batterien handelt. Aus diesem Grund sind auch die Spannungen unterschiedlich, jedoch bleibt die Form der Kurven gleich. Diese Kurve hat somit zwei Stufen: Zuerst wird der Strom begrenzt, damit die thermische Belastung verhindert wird. Danach wird die Spannung begrenzt, damit diese nicht weiter steigt und die Batterien zerstören könnte.
+\begin{figure}[h!]
+	\centering
+\includegraphics[width=1.0\textwidth]{images/liion_entladekurve.jpg}
+	\caption{Entladekurve Lithium-Ionen-Akkumulator \cite{liion_entladekurve}}
+\label{fig:liion_akku_entladekurve}
+\end{figure}
+
+\newpage
+
+Beim Ladevorgang ist zu sehen, dass die Batteriespannung innert kurzer Zeit stark ansteigt. Anschliessend ist die Steigung flacher jedoch einigermassen linear. Am Ende wird der Ladestrom reduziert, wobei die Spannung konstant bleibt bis 100\% der Kapazität erreicht wird.
+Das nahezu selbe funktioniert beim Entladevorgang jedoch einfach umgekehrt. Die Spannung ist über einen weiten Zeitraum linear und erst am Ende bricht sie zusammen. Ein ähnliche jedoch gespiegelte Kurve kann beim Entladevorgang beobachtet werden.
+Zu erwähnen ist noch, dass es sich bei den beiden Figuren in den Abbildungen \ref{fig:liion_akku_ladekurve} und \ref{fig:liion_akku_entladekurve} um unterschiedliche Verschaltungen der Batterien handelt und somit auch um unterschiedliche Ladebereiche. Aus diesem Grund sind auch die Spannungen unterschiedlich, jedoch bleibt die Form der Kurven gleich. Diese Kurve hat somit zwei Stufen: Zuerst wird der Strom begrenzt, damit die thermische Belastung verhindert wird. Danach wird die Spannung begrenzt, damit diese nicht weiter steigt und die Batterien zerstören könnte. Beim Laden wird sie nach oben begrenzt, da sich der Akku sonst aufbläht. Beim Entladen wird die Spannung nach unten begrenzt, da sonst Tiefentladung entstehen könnte. Wobei der Strom immer durch die Anwendung begrenzt werden sollte, da der Innenwiderstand sehr klein ist.
 
 \newpage
 
@@ -52,15 +59,15 @@ Die Energiedichte ist sehr gering. Das heisst es braucht ein grosses Volumen und
 
 \paragraph{Vorteil Lithium-Ionen}
 
-Der Akku besitzt eine sehr hohe Energiedichte, was auch für das geringe Gewicht der Akkumulatoren verantwortlich ist. Ebenfalls sind die Akkumulatoren sehr lange haltbar und müssen selten ausgetauscht werden. Auch ist es möglich diese über Monate aufzubewahren ohne grosse Einbussen in der Kapazität zu bemerken.
+Der Akku besitzt eine sehr hohe Energiedichte, was auch für das geringe Gewicht der Akkumulatoren verantwortlich ist. Ebenfalls sind die Akkumulatoren sehr lange haltbar und müssen selten ausgetauscht werden. Auch ist es möglich diese über Monate aufzubewahren ohne grosse Einbussen in der Ladung zu bemerken.
 
 \paragraph{Nachteil Lithium-Ionen}
 
-Eine aufwändige Ladetechnik und Batteriemanagementsystem, kurz BMS, wird benötigt, da die Batterien sehr heikel gegenüber Über- und Unterspannung und auch Übertemperatur reagieren. Somit kommen zusätzliche Kosten hinzu.
+Eine aufwändige Ladetechnik und ein Batteriemanagementsystem, kurz BMS, wird benötigt, da die Batterien sehr heikel gegenüber Über- und Unterspannung und auch Übertemperatur reagieren. Somit kommen zusätzliche Kosten hinzu.
 
 \paragraph{Lade-/Entladekurven}
 
-Beide Kurven (siehe Abbildungen \ref{fig:pb_akku_kurve} und \ref{fig:liion_akku_kurve}) verhalten sich unterschiedlich. So sind Blei-Akkus wie schon beschrieben bei beiden Kurven im Mittelteil linear und am Anfang jeweils steil. Dagegen besitzen Lithium-Ionen-Batterien jeweils im Ladevorgang innert kurzer Zeit einen starken Anstieg, der nachher wieder abflacht und im Entladevorgang zuerst flach sinkt, um dann am Ende stark abzufallen.
+Beide Kurven (siehe Abbildungen \ref{fig:pb_akku_kurve} und \ref{fig:liion_akku_ladekurve}/\ref{fig:liion_akku_entladekurve}) verhalten sich unterschiedlich, jedoch trotzdem ähnlich. Beide Akkus werden mit dem CCCV-Verfahren (Constant-Current, Constant-Voltage)-Verfahren geladen. Das bedeutet beim Laden konstanter Strom bis ein kritischer Punkt in der Spannung erreicht wird. Dann wird die Spannung konstant gehalten um den Strom zu reduzieren. Das gleiche passiert beim Entladevorgang, einfach umgekehrt. Zu erwähnen ist, dass Lithium-Ionen hier extrem empfindlich sind wobei mit Blei-Akkus ein wenig gespielt werden kann ohne, dass diese zerstört werden.
 
 \newpage
 
@@ -83,4 +90,4 @@ Temperaturbereich ideal  & 15-40$^\circ$C                                       
 
 \paragraph{Fazit}
 
-Beide Akkutypen haben ihre Vor- und Nachteile und es kommt stark auf die Anwendung der Batterie an. Für Starterbatterien in einem normalen Auto kann ohne Probleme eine billige Blei-Batterie verwendet werden. Wenn jedoch wie in unserem Fall ein Fahrzeug nur mit Akkumulatoren läuft ist es sinnvoll auf das Gewicht bzw. Lebensdauer und nicht auf den Preis zu achten und somit sind Lithium-Ionen-Batterien hier definitiv richtig am Platz.
+Beide Akkutypen haben ihre Vor- und Nachteile und es kommt stark auf die Anwendung der Batterie an. Für Starterbatterien in einem normalen Auto kann ohne Probleme eine günstige Blei-Batterie verwendet werden, da diese ohne Probleme kurzzeitig einen hohen Startstrom liefern kann. Wenn jedoch wie in unserem Fall ein Fahrzeug nur mit Akkumulatoren läuft ist es sinnvoll auf das Gewicht bzw. Lebensdauer und nicht auf den Preis zu achten und somit sind Lithium-Ionen-Batterien hier definitiv richtig am Platz.
