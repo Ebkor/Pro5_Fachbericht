@@ -50,13 +50,15 @@ Dabei sind auch die jeweils parallelen Zellen miteinander verbunden, sodass alle
 
 Beide Batterien sind jeweils in einer Metallbox aufgebaut. Ebenfalls in dieser Metallbox sind das Steuergerät des zugehörigen Batteriemanagementsystemes, eine Sicherung sowie eine Diode eingebaut. Die Sicherung, eine eigentlich für das Wechselspannungsnetz gebaute Niederspannungs-Hochleistungssicherung, ist vom Hersteller ebenfalls für Gleichspannung spezifiziert, jedoch mit deutlich geringeren Maximalwerten. Dies wird auch durch \cite{siba} gestützt. Die Ursache des niedrigeren Ausschaltstromes liegt am fehlenden Nulldurchgang des Stromes, bei welchem ein Lichtbogen abreissen kann. Der Lichtbogen muss also durch die Distanz und die Füllung gelöscht werden können. Vorteile dieses Sicherungstyps sind, dass sie einfach entfernt werden kann und damit die Stromzufuhr sauber unterbricht. Ebenfalls sprechen die einfache Beschaffbarkeit und der niedrige Preis von Sicherungen für diesen Typ.
 
-Die Diode dient dazu, Ausgleichsströme bei der parallelen Verschaltung der Batterie zu verhindern. Sie ist so in Serie zur Batterie eingebaut, dass der Strom nur in die Entladerichtung fliessen kann. Somit ist es nicht möglich, dass die Batterie mit höherem Potential die Batterie mit niedrigerem Potential auflädt. Es wird jedoch die Batterie mit höherem Potential zu Beginn stärker belastet, wodurch die Ladungen ebenfalls angeglichen werden. Die Ladegeräte sind noch vor den Dioden angeschlossen, da diese sonst keinen Ladestrom fliessen lassen könnten. Dieser Aufbau ist in Abbildung \ref{fig:versch_bat} ersichtlich: \newpage
+Die Diode dient dazu, Ausgleichsströme bei der parallelen Verschaltung der Batterie zu verhindern. Sie ist so in Serie zur Batterie eingebaut, dass der Strom nur in die Entladerichtung fliessen kann. Somit ist es nicht möglich, dass die Batterie mit höherem Potential die Batterie mit niedrigerem Potential auflädt. Es wird jedoch die Batterie mit höherem Potential zu Beginn stärker belastet, wodurch die Ladungen ebenfalls angeglichen werden. Die Ladegeräte sind noch vor den Dioden angeschlossen, da diese sonst keinen Ladestrom fliessen lassen könnten.
+
+Im Gehäuse eingebaut sind ebenfalls drei Lüfter. Bei hoher Batterietemperatur werden diese vom Batteriemanagementsystem eingeschaltet und sorgen dafür, dass kühle Luft in das Gehäuse eingeblasen wird. Dabei wird die Luft am Diodenkühlkörper vorbei geführt, der zusätzlich über einen eigenen, dauernd eingeschalteten Lüfter verfügt.
+
+Die Verschaltung der Batterien ist in der Abbildung \ref{fig:versch_bat} ersichtlich:
 
 \begin{figure}[h!]
 	\centering
 		\includegraphics[width=0.45\textwidth]{images/BAT.PNG}
-	\caption{Verschaltung der Batterie}
+	\caption{Verschaltung Batterie}
 	\label{fig:versch_bat}
 \end{figure}
-
-Im Gehäuse eingebaut sind ebenfalls drei Lüfter. Bei hoher Batterietemperatur werden diese vom Batteriemanagementsystem eingeschaltet und sorgen dafür, dass kühle Luft in das Gehäuse eingeblasen wird. Dabei wird die Luft am Diodenkühlkörper vorbei geführt, der zusätzlich über einen eigenen, dauernd eingeschalteten Lüfter verfügt.

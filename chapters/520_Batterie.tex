@@ -29,5 +29,35 @@ Nach dem Einbau ins Gehäuse wurden sämtliche Anschlüsse auf ihren Sitz überp
 
 Die Funktion des Ladegeräts wurde ebenfalls getestet, indem eine Batterie über einen Lastwiderstand entladen wurde. Dabei wurde bewusst eine ungleichmässige Entladung durchgeführt, um ebenfalls die Balancierfunktion beim anschliessenden Ladeprozess zu überprüfen. Erst danach wurden die Batterien ins Fahrzeug eingebaut.
 
+\color{blue}Für den Test wurde ein Aufbau gemäss Abbildung \todo{Bild} gewählt:
+
+Wie man sofort erkennt, ist dabei nur eine Batterie vorhanden. Dies wurde so gewählt, da beide Batterien unabhängig voneinander betrieben werden sollten, also auch keinen Einfluss auf einander haben. Die Wahl einer Batterie vereinfachte ausserdem die Abführung der Leistung über einen Lastwiderstand (für den maximalen Strom beträgt die Leistung bei vollgeladener Batterie immerhin $12\cdot4.2$ V$\cdot 150$ A$=7\ 560$ W).
+
+Der folgende Abschnitt zeigt die Tests, welche ausgeführt wurden, unterteilt in verschiedene Kategorien. Dahinter steht jeweils \textit{kursiv}, welches Resultat erwartet wurde. Dabei wurde die Testreihe prinzipiell für die beiden Batterien wiederholt, wobei viele Tests nur für eine Batterie durchgeführt werden mussten, da damit eher die Schaltung als die Batterie selbst getestet wurden.
+
+\paragraph{Sicherheit:} \begin{itemize}
+	\item Der Notaus wird im Betrieb betätigt: \textit{Das $12$ V-Netz fällt aus, wodurch der Hauptschalter die Stromzufuhr zur Last unterbricht.}
+	\item Eine Batterieerwärmung wird mit einem Föhn simuliert: \textit{Zuerst sollten sich die Lüfter einschalten, um die Kühlung der Batterie zu verbessern. Hilft dies nicht (weitere Erhitzung mit dem Föhn), so sollte das Fahrzeug ausgeschaltet werden.}
+	\item Mit einer Wärmebildkamera wird die Batterie unter Last untersucht: \textit{Warme Stellen, welche auf schlechte Kontakte hindeuten, fallen auf.}
+	\item Über einen alten Schütz wird ein Kurzschluss mit möglichst geringem Widerstand simuliert, wobei eine Zerstörung des Schützes bewusst in Kauf genommen wird: \textit{Die Sicherung als Verschleisteil kann den Kurzschluss auslöschen.}
+\end{itemize}
+
+\paragraph{Schaltung:} \begin{itemize}
+	\item Das $230$ VAC-Netz wird angeschlossen: \textit{Das $12$ VDC-System fällt - ausser beim BMS - aus, folglich wird auch der Hauptschalter geöffnet.}
+	\item Das alte Voltmeter der Batterie wird angeschlossen: \textit{Die Anzeige der verbleibenden Ladung ist proportional zur verbleibenden Batteriekapazität.}
+	\item Eine Überlast im $12$ VDC-Netz wird simuliert: \textit{Es muss bekannt sein, welche Auswirkungen dies hat. Fällt ev. der Hauptschalter aus?\todo{welche?}}
+	\item Die Temperatur des Diodengehäuses wird unter Volllast gemessen, um damit einen Rückschluss auf die Diodentemperatur zu ziehen: \textit{Bei zu hoher Temperatur wird ein zusätzlicher Lüfter für den Diodenkühlkörper montiert. \todo{nötig?}}
+	\item Unter Volllast (inklusive Induktivität) wird der Hauptschalter geöffnet: \textit{Eine saubere Abschaltung muss in jedem Fall garantiert sein, auch mit einer induktiven Last wie sie ein Motor darstellt.}
+	\item Die Batterie wird nach einer Ladung komplett entladen: \textit{Der im Batteriemanagementsystem ausgelesene Kapazitätswert gibt an, welche reale Kapazität mit den gesetzten Spannungsgrenzen verfügbar ist.}
+\end{itemize}
+
+\paragraph{Batteriemanagement-System:} \begin{itemize}
+	\item Vor dem Ladevorgang wird eine einzelne Zelle etwas tiefer entladen: \textit{Das Batteriemanagementsystem stellt die gleichmässige Ladung aller Zellen mittels Balancing wieder her.}
+	\item Das Ende des Ladezyklus wird erfasst: \textit{Das Batteriemanagementsystem verhindert ein Überladen der Zellen.}
+	\item Die Batterie wird möglichst tief entladen: \textit{Das Batteriemanagementsystem öffnet den Hauptschalter, um so eine Tiefentladung der Batterie zu verhindern.}
+	\item Überprüfung der Spannungs- und Strommessung: \textit{Die Genauigkeit dieser Messung, welche vorab als genügend genau angenommen werden kann, wird überprüft, um spätere Fehler von vornherein ausschliessen zu können.}
+	\item Nach den Tests wird das Batteriemanagementsystem mit dem Computer verbunden: \textit{Die ausgelesenen Daten werden auf Plausibilität hin überprüft.}
+\end{itemize}\color{black}
+
 
 \newpage
