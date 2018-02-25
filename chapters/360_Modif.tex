@@ -1,0 +1,84 @@
+\section{Modifizierte Baugruppen}
+
+\textcolor{blue}{
+Im Zuge des Umbaus mussten Anpassungen an einigen Baugruppen vorgenommen werden. Dabei wurde immer grossen Wert darauf gelegt, möglichst wenig vom Originalzustand abzuweichen. Die durchgeführten Anpassungen werden in diesem Kapitel erläutert.}
+
+\subsection{Originaler Hauptschalter}\textcolor{blue}{
+Der originale Hauptschalter des Detroits befindet sich auf der Sitzbank unter dem Fahrersitz und besteht aus Hebel, der einen Kupferkontakt zwischen zwei Schienenstücke drückt. Dieser Hebel ist mechanisch mit der Standbremse gekoppelt, sodass bei betätigter Standbremse kein Stromkreis geschlossen werden kann.}
+
+\textcolor{blue}{Dieser Schaltmechanismus ist leider nicht mehr voll funktionsfähig, da der Hebel nicht mehr genügend Kraft ausüben kann, um einen sauberen Kontakt zu gewähren (die Standbremse funktioniert jedoch weiterhin mit voller Kraft). Auch mit einem Nachspannen der Feder konnte die Kraft nicht genügend erhöht werden, um einen sauberen Kontakt sicher herzustellen.}
+
+\textcolor{blue}{Da im Zuge des Umbaus sowieso ein moderner gasisolierter Hauptschalter eingebaut wurde, wurde der originale Hauptschalter nicht mehr benötigt. Er könnte also theoretisch ausgebaut und überbrückt werden. Es wurde aber bewusst entschieden, das Originalteil im Fahrzeug angeschlossen zu lassen. Um trotzdem die elektrische Verbindung zwischen den beiden Kontakten zu gewähren, wurde innerhalb des Gehäuses des alten Schalters eine Kupferbrücke zwischen den beiden Anschlussstellen hergestellt, wie Abbildung \ref{fig:Bruecke_HS} zeigt:}\todo{Bild anpassen}
+
+\begin{figure}[h!]
+\begin{minipage}{0.49\textwidth}
+\includegraphics[width=\textwidth]{images/Bruecke_HS.png}
+\end{minipage}\begin{minipage}{0.49\textwidth}
+\includegraphics[width=\textwidth]{images/Bruecke_HS.png}
+\end{minipage}
+\caption{\textcolor{blue}{Die Kupferbrücke als CAD-Zeichnung (links) sowie eingebaut im originalen Hauptschaltergehäuse}}%
+\label{fig:Bruecke_HS}%
+\end{figure}
+
+\textcolor{blue}{Mit dieser Kupferbrücke konnten die Kontaktprobleme des originalen Hauptschalters behoben werden.}
+
+
+\subsection{Shunt}
+\textcolor{blue}{Ein Shunt ist ein definierter Widerstand, über dem die Spannung gemessen wird, und daraus auf den Strom zurück geschlossen werden kann. Auch im Detroit war ein solcher Shunt zur Strommessung eingebaut. Bei einem früheren Umbau des Fahrzeuges wurden einige Gewinde aufgebohrt, sodass am Ende mehrere unterschiedliche Grössen vorhanden waren. Im Zuge des aktuellen Umbaus sollten diese vereinheitlicht werden. Unglücklicherweise wurde dabei der Shunt beschädigt, welcher aufgrund der benötigten Genauigkeit als Messglied nicht repariert werden kann. Aus diesem Grund wurde ein neuer Shunt gebaut.}
+
+\textcolor{blue}{Um den Widerstandswert des Shuntes zu erhalten, muss die Empfindlichkeit des Anzeigegerätes bekannt sein. Aus diesem Grund wurde ein Abgleich mit der Skalenanzeige durchgeführt, mit folgendem Ergebnis:}
+\begin{equation*}\begin{aligned}
+	100\text{ A}\ &\rightarrow\ 75.6\text{ mV}\\
+	50\text{ A}\ &\rightarrow\ 38.1\text{ mV}
+\end{aligned}\end{equation*}
+\textcolor{blue}{Wie man sieht, passen die Werte sehr gut zusammen. Damit lässt sich nun ein Widerstandswert für den Shunt bestimmen, wie Formel \ref{eq:rshunt} zeigt:}
+
+\begin{equation}
+R_{Shunt}=\frac{U}{I}=\frac{75.6\text{ mV}}{100\text{ A}}\approx\quad\underline{0.75\text{ m}\Omega}
+\label{eq:rshunt}
+\end{equation}
+
+\textcolor{blue}{Zusammen mit diesem Widerstandswert lässt sich die maximale Abwärme des Shunts bestimmen. Dabei wird als Maximalstrom $150$ A angenommen, wie es auf dem alten Shunt eingeprägt war. \ref{eq:shunt_pv} zeigt die Berechnung der Verlustwärme für den maximalen Strom sowie einen angenommenen durchschnittlichen Strom von $80$ A:}
+
+\begin{equation}\begin{aligned}
+	P_{v,max}&=I_{max}^2\cdot R_{Shunt}=\left(150\text{ A}\right)^2\cdot0.75\text{ m}\Omega=\quad\underline{16.9\text{ W}}\\[6pt]
+	P_{v,nom}&=I_{nom}^2\cdot R_{Shunt}=\left(80\text{ A}\right)^2\cdot0.75\text{ m}\Omega=\quad\underline{4.8 \text{ W}}
+\label{eq:shunt_pv}
+\end{aligned}\end{equation}
+
+\textcolor{blue}{Daraus resultieren einige Anforderungen an den Shunt bzw. das Material, aus welchem er gefertigt ist:} \begin{itemize}
+	\item \textcolor{blue}{Der Werkstoff muss Temperaturbeständig sein, insbesondere sollte keine Korrosion oder physikalische Veränderung bei erhöhter Temperatur auftreten}
+	\item \textcolor{blue}{Die Verlustwärme muss abgeführt werden können, es sollte also eine Bauform mit grosser Oberfläche gewählt werden}
+	\item \textcolor{blue}{Um einen stabilen Shunt bauen zu können sollte die Querschnittsfläche gross sein, was einen hohen spezifischen Widerstand bedingt}
+	\item \textcolor{blue}{Der Werkstoff muss -- um die gewünschte Form herstellen zu können -- gut bearbeitbar sein}
+	\item \textcolor{blue}{Die Anschlussblöcke sollten vom Widerstandswert her irrelevant sein gegenüber dem Shunt, weswegen sie massiv aus Kupfer vorzusehen sind}
+	\item \textcolor{blue}{Die Genauigkeit muss nicht besonders hoch sein, da das Ablesen an einem analogen Instrument erfolgt und nur als Richtwert dient, auch eine nicht allzu grosse Nichtlinearität bei Temperaturänderung kann toleriert werden}
+\end{itemize}
+
+\textcolor{blue}{Aufgrund der genannten Bedingungen wurde ein rostfreier Stahl 1.4301 \cite{4301} gewählt. Dieser Werkstoff ist sehr robust, sowohl mechanisch als auch chemisch, hat einen hohen spezifischen Widerstand von $0.73\ \frac{\Omega\cdot\text {mm}}{\text{m}}$ und ist als Stahl gut bearbeitbar. Die Länge des Widerstandselementes wird beinahe beibehalten. Es wird eine ursprüngliche Länge von 2 Zoll ($50.8$ mm) vermutet, die Länge des neuen Shunts beträgt $50$ mm. Damit kann die benötigte Querschnittsfläche bestimmt werden, gezeigt in \ref{eq:shunt_a}:}
+
+\begin{equation}
+	A_{Shunt}=\frac{\rho\cdot l_{Shunt}}{R_{Shunt}}=\frac{0.73\ \frac{\Omega\cdot\text{mm}}{\text{m}}\cdot 0.05\text{ m}}{0.75\text{ m}\Omega}=\quad\underline{48.67\text{ mm}^2}
+\label{eq:shunt_a}
+\end{equation}
+
+\textcolor{blue}{Mit diesem Sollwert für den Querschnitt wurde ein Shuntelement und ein kompletter Widerstand erstellt. Für die Bauteile befinden sich die 2D-Ableitungen im Anhang unter \ref{app:2d}. Folgend soll Abbildung \ref{fig:shunt} noch den fertigen Shunt zeigen, wie er am Computer erstellt wurde:}
+
+\begin{figure}[h!]
+\begin{minipage}{0.49\textwidth}
+\includegraphics[width=\textwidth]{images/Shunt.png}
+\end{minipage}\begin{minipage}{0.49\textwidth}
+\includegraphics[width=\textwidth]{images/Shunt_komplett.png}
+\end{minipage}
+\caption{\textcolor{blue}{Das Widerstandselement alleine (links) beziehungsweise mit den Montageblöcken aus Kupfer (rechts). Die grüne Schraubverbindung dient dem Abgreifen der Spannung am Shunt}}%
+\label{fig:shunt}%
+\end{figure}
+
+\subsection{Verkabelung}
+\textcolor{blue}{Für die neuen Batterien, welche sich beide im Heck befinden, mussten neue Starkstromleitungen verlegt werden. Prinzipiell wurde aber nur neu verlegt, was neu gemacht werden musste. Konnte auf die bestehenden Leitungen zurück gegriffen, so wurden diese benutzt.}
+
+\textcolor{blue}{Um einen Ansatz für die Dimensionierung zu haben, wurde auf die Niederspannungsinstallationsnorm (NIN) von 2010 \cite{NIN} zurückgegriffen. Diese ist zwar für Hausinstallationen gedacht, wobei dabei die selben Probleme wie z.B. Erwärmung von Leitungen auftreten. Dabei wurde die Verlegeart \textit{B2 Kabel in Rohr auf Holzwand} gewählt, da die Leitungen eine doppelte Isolation (Kabel) aufweisen sollten, in Rohren verlegt sind und an einigen Stellen auf Holz verlegt sind, was den ungünstigsten Fall darstellt. \todo{fertig schreiben, Querschnitt?}}
+
+\textcolor{blue}{Die Schwachstromverkabelung beinhaltet hauptsächlich die Kommunikationsleitungen zwischen Batterie im Heck und Steuerung in der Frontklappe. Hier wurde auf ein Telefonkabel vom Typ U72 2x4x0.8 \cite{u72} zurück gegriffen. Dieses Kabel hat die benötigte Aderzahl, weitere kritische Anforderungen waren nicht gestellt. Auch diese Leitung wurde zum Schutz in einem Kunststoffrohr verlegt.}
+
+\textcolor{blue}{Lichtverkabelung....}
