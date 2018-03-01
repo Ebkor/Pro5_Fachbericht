@@ -14,6 +14,7 @@
 \usepackage[nottoc,numbib]{tocbibind}
 \usepackage{subfigure}
 \usepackage[ngerman]{babel}
+\usepackage{enumitem}
 
 \newcommand{\titel}{Detroit Electric Car}
 \newcommand{\shorttitel}{Yanick Frei, Marc Müller}
@@ -25,7 +26,7 @@
 \newcommand{\ort}{Windisch}
 \newcommand{\dozent}{Urs Jäger}
 \newcommand{\betreuer}{Felix Jenni}
-\newcommand{\version}{1.0}
+\newcommand{\version}{2.0}
 
 \title{\titel}
 \author{\autorA  \and \AutorB \and \AutorC \and \AutorD \and \AutorE}
@@ -51,7 +52,11 @@
 
 \clearpage
 \pagestyle{plain}
-\pagenumbering{Roman}
+\pagenumbering{roman}
+\setcounter{page}{2}
+\include{chapters/002_Deklaration}
+\include{chapters/003_Persoenlich}
+\include{chapters/004_Danksagung}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 
 
