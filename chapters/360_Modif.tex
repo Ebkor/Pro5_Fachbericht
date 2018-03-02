@@ -4,11 +4,11 @@
 Im Zuge des Umbaus mussten Anpassungen an einigen Baugruppen vorgenommen werden. Dabei wurde immer grossen Wert darauf gelegt, möglichst wenig vom Originalzustand abzuweichen. Die durchgeführten Anpassungen werden in diesem Kapitel erläutert.
 
 \subsection{Originaler Hauptschalter}
-Der originale Hauptschalter des Detroits befindet sich auf der Sitzbank unter dem Fahrersitz und besteht aus Hebel, der einen Kupferkontakt zwischen zwei Schienenstücke drückt. Dieser Hebel ist mechanisch mit der Standbremse gekoppelt, sodass bei betätigter Standbremse kein Stromkreis geschlossen werden kann.
+Der originale Hauptschalter des Detroits befindet sich auf der Sitzbank unter dem Fahrersitz und besteht aus einem Hebel, der einen Kupferkontakt zwischen zwei Schienenstücke drückt. Dieser Hebel ist mechanisch mit der Standbremse gekoppelt, sodass bei betätigter Standbremse kein Stromkreis geschlossen werden kann.
 
 Dieser Schaltmechanismus ist leider nicht mehr voll funktionsfähig, da der Hebel nicht mehr genügend Kraft ausüben kann, um einen sauberen Kontakt zu gewähren (die Standbremse funktioniert jedoch weiterhin mit voller Kraft). Auch mit einem Nachspannen der Feder konnte die Kraft nicht genügend erhöht werden, um einen sauberen Kontakt sicher herzustellen.
 
-{Da im Zuge des Umbaus sowieso ein moderner gasisolierter Hauptschalter eingebaut wurde, wurde der originale Hauptschalter nicht mehr benötigt. Er könnte also theoretisch ausgebaut und überbrückt werden. Es wurde aber bewusst entschieden, das Originalteil im Fahrzeug angeschlossen zu lassen. Um trotzdem die elektrische Verbindung zwischen den beiden Kontakten zu gewähren, wurde innerhalb des Gehäuses des alten Schalters eine Kupferbrücke zwischen den beiden Anschlussstellen hergestellt, wie Abbildung \ref{fig:Bruecke_HS} zeigt:
+Da im Zuge des Umbaus sowieso ein moderner gasisolierter Hauptschalter eingebaut wurde, wurde der originale Hauptschalter nicht mehr benötigt. Er könnte also theoretisch ausgebaut und überbrückt werden. Es wurde aber bewusst entschieden, das Originalteil im Fahrzeug angeschlossen zu lassen. Um trotzdem die elektrische Verbindung zwischen den beiden Kontakten zu gewähren, wurde innerhalb des Gehäuses des alten Schalters eine Kupferbrücke zwischen den beiden Anschlussstellen hergestellt, wie Abbildung \ref{fig:Bruecke_HS} zeigt:
 
 \begin{figure}[h!]
 \begin{minipage}{0.49\textwidth}
@@ -24,9 +24,9 @@ Mit dieser Kupferbrücke konnten die Kontaktprobleme des originalen Hauptschalte
 
 
 \subsection{Shunt}
-Ein Shunt ist ein definierter Widerstand, über dem die Spannung gemessen wird, und daraus auf den Strom zurück geschlossen werden kann. Auch im Detroit war ein solcher Shunt zur Strommessung eingebaut. Bei einem früheren Umbau des Fahrzeuges wurden einige Gewinde aufgebohrt, sodass am Ende mehrere unterschiedliche Grössen vorhanden waren. Im Zuge des aktuellen Umbaus sollten diese vereinheitlicht werden. Unglücklicherweise wurde dabei der Shunt beschädigt, welcher aufgrund der benötigten Genauigkeit als Messglied nicht repariert werden kann. Aus diesem Grund wurde ein neuer Shunt gebaut.
+Ein Shunt ist ein definierter Widerstand, über dem die Spannung gemessen wird, und daraus auf den Strom zurück geschlossen werden kann. Auch im Detroit war ein solcher Shunt zur Strommessung eingebaut. Bei einem früheren Umbau des Fahrzeuges wurden einige Gewinde aufgebohrt, sodass am Ende mehrere unterschiedliche Grössen vorhanden waren. Im Zuge des aktuellen Umbaus sollten diese vereinheitlicht werden. Unglücklicherweise wurde dabei der Shunt beschädigt, welcher aufgrund der benötigten Genauigkeit als Messglied nicht repariert werden kann. Aus diesem Grund wurde ein neuer Shunt angefertigt.
 
-Um den Widerstandswert des Shuntes zu erhalten, muss die Empfindlichkeit des Anzeigegerätes bekannt sein. Aus diesem Grund wurde ein Abgleich mit der Skalenanzeige durchgeführt, mit folgendem Ergebnis:
+Um den Widerstandswert des Shuntes zu erhalten, muss die Empfindlichkeit des Anzeigegerätes bekannt sein. Aus diesem Grund wurde ein Abgleich mit der Skalenanzeige durchgeführt, was zu folgendem Ergebnis führte:
 \begin{equation*}\begin{aligned}
 	100\text{ A}\ &\rightarrow\ 75.6\text{ mV}\\
 	50\text{ A}\ &\rightarrow\ 38.1\text{ mV}
@@ -38,7 +38,7 @@ R_{Shunt}=\frac{U}{I}=\frac{75.6\text{ mV}}{100\text{ A}}\approx\quad\underline{
 \label{eq:rshunt}
 \end{equation}
 
-Zusammen mit diesem Widerstandswert lässt sich die maximale Abwärme des Shunts bestimmen. Dabei wird als Maximalstrom $150$ A angenommen, wie es auf dem alten Shunt eingeprägt war. \ref{eq:shunt_pv} zeigt die Berechnung der Verlustwärme für den maximalen Strom sowie einen angenommenen durchschnittlichen Strom von $80$ A:
+Zusammen mit diesem Widerstandswert lässt sich die maximale Abwärme des Shunts bestimmen. Dabei wird als Maximalstrom $150$ A angenommen, wie es auf dem alten Shunt eingeprägt war. Formel \ref{eq:shunt_pv} zeigt die Berechnung der Verlustwärme für den maximalen Strom sowie einen angenommenen durchschnittlichen Strom von $80$ A:
 
 \begin{equation}\begin{aligned}
 	P_{v,max}&=I_{max}^2\cdot R_{Shunt}=\left(150\text{ A}\right)^2\cdot0.75\text{ m}\Omega=\quad\underline{16.9\text{ W}}\\[6pt]
@@ -47,15 +47,15 @@ Zusammen mit diesem Widerstandswert lässt sich die maximale Abwärme des Shunts
 \end{aligned}\end{equation}
 
 Daraus resultieren einige Anforderungen an den Shunt bzw. das Material, aus welchem er gefertigt ist: \begin{itemize}
-	\item Der Werkstoff muss Temperaturbeständig sein, insbesondere sollte keine Korrosion oder physikalische Veränderung bei erhöhter Temperatur auftreten
-	\item Die Verlustwärme muss abgeführt werden können, es sollte also eine Bauform mit grosser Oberfläche gewählt werden
-	\item Um einen stabilen Shunt bauen zu können sollte die Querschnittsfläche gross sein, was einen hohen spezifischen Widerstand bedingt
-	\item Der Werkstoff muss -- um die gewünschte Form herstellen zu können -- gut bearbeitbar sein
-	\item Die Anschlussblöcke sollten vom Widerstandswert her irrelevant sein gegenüber dem Shunt, weswegen sie massiv aus Kupfer vorzusehen sind
-	\item Die Genauigkeit muss nicht besonders hoch sein, da das Ablesen an einem analogen Instrument erfolgt und nur als Richtwert dient, auch eine nicht allzu grosse Nichtlinearität bei Temperaturänderung kann toleriert werden
+	\item Der Werkstoff muss temperaturbeständig sein, insbesondere sollte keine Korrosion oder physikalische Veränderung bei erhöhter Temperatur auftreten.
+	\item Die Verlustwärme muss abgeführt werden können. Es sollte also eine Bauform mit grosser Oberfläche gewählt werden.
+	\item Um einen stabilen Shunt bauen zu können, sollte die Querschnittsfläche gross sein, was einen hohen spezifischen Widerstand erfordert.
+	\item Der Werkstoff muss -- um die gewünschte Form herstellen zu können -- gut bearbeitbar sein.
+	\item Die Anschlussblöcke sollten vom Widerstandswert her irrelevant sein gegenüber dem Shunt, weswegen sie massiv aus Kupfer vorzusehen sind.
+	\item Die Genauigkeit muss nicht besonders hoch sein, da das Ablesen an einem analogen Instrument erfolgt und nur als Richtwert dient. Auch eine nicht allzu grosse Nichtlinearität bei Temperaturänderung ist tolerierbar.
 \end{itemize}
 
-Aufgrund der genannten Bedingungen wurde ein rostfreier Stahl 1.4301 \cite{4301} gewählt. Dieser Werkstoff ist sehr robust, sowohl mechanisch als auch chemisch, hat einen hohen spezifischen Widerstand von $0.73\ \frac{\Omega\cdot\text {mm}}{\text{m}}$ und ist als Stahl gut bearbeitbar. Die Länge des Widerstandselementes wird beinahe beibehalten. Es wird eine ursprüngliche Länge von 2 Zoll ($50.8$ mm) vermutet, die Länge des neuen Shunts beträgt $50$ mm. Damit kann die benötigte Querschnittsfläche bestimmt werden, gezeigt in \ref{eq:shunt_a}:
+Aufgrund der genannten Bedingungen wurde ein rostfreier Stahl 1.4301 \cite{4301} gewählt. Dieser Werkstoff ist sehr robust, sowohl mechanisch als auch chemisch, hat einen hohen spezifischen Widerstand von $0.73 \frac{\Omega \cdot \text{mm}^2}{\text{m}}$ und ist als Stahl gut bearbeitbar. Die Länge des Widerstandselementes wird beinahe beibehalten. Es wird eine ursprüngliche Länge von 2 Zoll ($50.8$ mm) vermutet. Die Länge des neuen Shunts beträgt $50$ mm. Damit kann die benötigte Querschnittsfläche bestimmt werden, gezeigt in Formel \ref{eq:shunt_a}:
 
 \begin{equation}
 	A_{Shunt}=\frac{\rho\cdot l_{Shunt}}{R_{Shunt}}=\frac{0.73\ \frac{\Omega\cdot\text{mm}}{\text{m}}\cdot 0.05\text{ m}}{0.75\text{ m}\Omega}=\quad\underline{48.67\text{ mm}^2}
@@ -75,9 +75,9 @@ Mit diesem Sollwert für den Querschnitt wurde ein Shuntelement und ein komplett
 \end{figure}
 
 \subsection{Verkabelung}
-Für die neuen Batterien, welche sich beide im Heck befinden, mussten neue Starkstromleitungen verlegt werden. Prinzipiell wurde aber nur neu verlegt, was neu gemacht werden musste. Konnte auf die bestehenden Leitungen zurück gegriffen, so wurden diese benutzt.
+Für die neuen Batterien, welche sich beide im Heck befinden, mussten neue Starkstromleitungen verlegt werden. Prinzipiell wurde aber nur neu verlegt, was neu gemacht werden musste. Konnte auf die bestehenden Leitungen zurück gegriffen werden, so wurden diese benutzt.
 
-Um einen Ansatz für die Dimensionierung zu haben, wurde auf die Niederspannungsinstallationsnorm (NIN) von 2010 \cite{NIN} zurückgegriffen. Diese ist zwar für Hausinstallationen gedacht, wobei dabei die selben Probleme wie z.B. Erwärmung von Leitungen auftreten. Dabei wurde die Referenz-Verlegeart \textit{B1 Aderleitung in Rohr auf Holzwand} gewählt, da die Leitungen in Rohren verlegt sind und an einigen Stellen auf Holz verlegt sind, was den ungünstigsten Fall darstellt. Der Maximalstrom des Fahrzeuges ($150$ A) beträgt beinahe die in den Normen auffindbare Normsicherungsgrösse von $160$ A, für welche die Norm einen Querschnitt von $70$ mm$^2$ vorsieht. Folglich wurden die Leitungen mit diesem Querschnitt gewählt. Als weiterer Vergleich können die originalen Leitungen herangezogen werden, welche einen etwas dünner sind, womit der gewählte Querschnitt sicherlich ausreichend ist.
+Um einen Ansatz für die Dimensionierung zu haben, wurde auf die Niederspannungsinstallationsnorm (NIN) von 2010 \cite{NIN} zurückgegriffen. Diese ist zwar für Hausinstallationen gedacht, wobei dabei die selben Probleme wie z.B. Erwärmung von Leitungen auftreten. Dabei wurde die Referenz-Verlegeart \textit{B1 Aderleitung in Rohr auf Holzwand} gewählt, da die Leitungen in Rohren und an einigen Stellen auf Holz verlegt sind, was den ungünstigsten Fall darstellt. Der Maximalstrom des Fahrzeuges ($150$ A) beträgt beinahe die in den Normen auffindbare Normsicherungsgrösse von $160$ A, für welche die Norm einen Querschnitt von $70$ mm$^2$ vorsieht. Folglich wurden die Leitungen mit diesem Querschnitt gewählt. Als weiterer Vergleich können die originalen Leitungen herangezogen werden, welche einen etwas dünner sind, womit der gewählte Querschnitt sicherlich ausreichend ist.
 
 Das selbe Vorgehen wurde für die Ladekabel gewählt, wobei hier eine andere Referenzverlegeart gewählt wurde: \textit{B2 Kabel in Rohr auf Holzwand}. Hier beträgt der Ladestrom während der Konstantstrom-Ladephase $19.7$ A, die Norm schreibt für $20$ A einen Querschnitt von $2.5$ mm$^2$ vor. Die Tests haben allerdings eine starke Erwärmung der Leitung gezeigt, weswegen hier mit $4$ mm$^2$ ein grösserer Querschnitt gewählt wurde.
 
@@ -85,6 +85,6 @@ Die Schwachstromverkabelung beinhaltet hauptsächlich die Kommunikationsleitunge
 
 Die 12V-Verkabelung wurde teils erneuert und teils so belassen wie sie ursprünglich war. Zentraler Knotenpunkt ist das hunderjährige Sicherungsbrett gezeigt in Abbildung \ref{fig:Sicherungsbrett}.
 
-Eingespeist wird das ganze durch ein 5x2.5mm$^2$ Kabel direkt vom DC/DC-Wandler, der sich in der Steuerungsbox befindet und das ganze 12V-Netz versorgt. Ebenfalls wird mit dem selben Kabel der Not-Aus-Schalter eingeschlauft, der wenn nötig das gesamte Fahrzeug spannungslos machen kann. Dieser Not-Aus-Schalter befindet sich in der Fahrerkabine unterhalb des Sitzes. Die Verkabelung der Hupe, Vorderlichter, Meterlicht und Innenbeleuchtung wurde auf dem alten Stand belassen. Die Blinkerschaltung erhält ein neues Kabel 5x1mm$^2$ vom Sicherungsbrett resp. Blinkrelais und musste an der Seitenwand zum Drehschalter geführt werden. Beim Kabel zu den Blinker handelt es sich um ein 3x1mm$^2$ wobei die Adernfarben braun und blau jeweils rechts und links bedeuten und grün-gelb dem Rückleiter entspricht. Für das Rücklicht, was ein Stand- und ein Bremslicht beinhaltet, wurde ein 3x0.75mm$^2$ Kabel verwendet. Zusätzlich wurde ebenfalls ein 2x0.75mm$^2$ verwendet um den Endschalter mit dem Bremslicht zu verbinden.
+Eingespeist wird das ganze durch ein 2.5mm$^2$ Kabel direkt vom DC/DC-Wandler, der sich in der Steuerungsbox befindet und das ganze 12V-Netz versorgt. Ebenfalls wird mit dem selben Kabel der Not-Aus-Schalter eingeschlauft, der wenn nötig das gesamte Fahrzeug spannungslos machen kann. Dieser Not-Aus-Schalter befindet sich in der Fahrerkabine unterhalb der Sitzbank. Die Verkabelung der Hupe, Vorderlichter, Meterlicht und Innenbeleuchtung wurde auf dem alten Stand belassen. Die Blinkerschaltung erhält ein neues Kabel 5x1mm$^2$ vom Sicherungsbrett resp. Blinkrelais und musste an der Seitenwand zum Drehschalter geführt werden. Beim Kabel zu den Blinker handelt es sich um ein 3x1mm$^2$ wobei die Adernfarben braun und blau jeweils rechts und links bedeuten und grün-gelb dem Rückleiter entspricht. Für das Rücklicht, was ein Stand- und ein Bremslicht beinhaltet, wurde ein 3x0.75mm$^2$ Kabel verwendet. Zusätzlich wurde ebenfalls ein 2x0.75mm$^2$ verwendet um den Endschalter mit dem Bremslicht zu verbinden.
 
 \color{black}
