@@ -32,6 +32,17 @@ Die Signale des BMS sind zu schwach, um damit direkt ein Relais oder die Lüfter
 
 Vom BMS her wird ein Signal zur Verfügung gestellt, welches das erste Ladegerät ein- beziehungsweise ausschaltet. Dieses Signal wird an den Gateanschluss des Transistors angeschlossen. Damit sich dieser nicht zu schnell auflädt, ist der Widerstand $R_7$ in Serie dazu geschaltet. Ein kleinerer Widerstand würde zwar eine höhere Schaltgeschwindigkeit erlauben, dies ist jedoch hier nicht nötig. Der Widerstand $R_8$ sorgt dafür, dass der Gateanschluss in jedem Fall ein Bezugspotential hat. Bei fehlendem Eingangssignal wird das Gate also hochohmig geerdet.
 
+\color{blue}
+Bei den Tests hat sich gezeigt, dass die gewählte Schaltung nicht funktioniert. Es wurde vermutet, dass das Invertieren des Signals im BMS ebenfalls den Signalpegel invertiert, was sich als falsch herausstellte, da nur der logische Wert invertiert wurde. Aus diesem Grund wurde eine vorgeschaltete Inverterstufe realisiert, welche die jeweils drei Signale pro BMS vorgängig invertiert, um sie so der Schaltung nutzbar zu machen. Diese Schaltung wurde mit einem Schmitt-Trigger realisiert, wobei auch hier die Geschwindigkeit keine wichtige Rolle spielt. Abbildung \ref{fig:Inverter} zeigt das Schema eines Inverters, für den Aufbau wurde ein sechsfach-Baustein verwendet:
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=1.00\textwidth]{Inverter.png}
+	\caption{Die Inverterschaltung, welche sechs mal verwendet wurde}
+	\label{fig:Inverter}
+\end{figure}
+\color{black}
+
 \paragraph{Blau: Ladezustand}
 Da beide Batterien von unabhängigen Batteriemanagementsystemen überwacht werden, können sie auch einen unterschiedlichen Ladezustand aufweisen. Es ist deswegen zweckmässig, den jeweils tieferen Ladestand anzeigen zu lassen, um damit den schlechtesten Fall abzudecken. Diese Signale werden vom BMS in Form eines $5$ kHz PWM-Signales zur Verfügung gestellt. Die Idee des Herstellers ist, dass dieses Signal direkt auf ein analoges Messgerät eingespeist wird, dessen Massenträgheit das Signal glättet. Da beim Detroit lediglich ein Anzeigegerät zur Verfügung steht, müssen diese Signale bereits vorzeitig verglichen werden.
 
@@ -41,4 +52,4 @@ Der Transistor $Q_1$ kann mit dem Signal von $U_{7A}$ direkt angesteuert werden.
 
 Es steht nun eine Spannung zur Verfügung, welche dem jeweils tieferen der beiden geglätteten PWM-Signalen entspricht. Da das verwendete Voltmeter jedoch verhältnismässig niederohmig ist, wird mit dem Operationsverstärker $U_{7C}$ und dem MOSFET $Q_9$ eine Spannungsfolgerschaltung gebildet. Der Operationsverstärker vergleicht dabei sein Eingangssignal mit der Spannung, welche am Ausgang des Spannungsfolgers anliegt.
 
-Auch bei dieser Schaltung müssen die MOSFETs nur vergleichsweise langsam schalten. Aus diesem Grund wurde für deren Anschluss die selbe Schaltung wie bei den Treiberstufen gewählt. Lediglich beim Spannungsfolger wurde davon abgewichen. Da der Spannungsteiler der beiden Widerstände $R_{27}$ und $R_{28}$ die Spannung nicht verfälschen soll, ist der Gateanschluss über das Voltmeter mit Masse verbunden. Die Idee dahinter ist, dass bei ausgeschaltetem Eingangssignal der Innenwiderstand des Messgerätes im Vergleich zu $R_{28}$ klein ist, also sowieso nicht ins Gewicht fällt. Bei Funktion der Schaltung existiert der Spannungsteiler aber praktisch nicht, da über dem Widerstand lediglich eine sehr kleine Spannung anliegt. \todo{Inverter ergänzen}
+Auch bei dieser Schaltung müssen die MOSFETs nur vergleichsweise langsam schalten. Aus diesem Grund wurde für deren Anschluss die selbe Schaltung wie bei den Treiberstufen gewählt. Lediglich beim Spannungsfolger wurde davon abgewichen. Da der Spannungsteiler der beiden Widerstände $R_{27}$ und $R_{28}$ die Spannung nicht verfälschen soll, ist der Gateanschluss über das Voltmeter mit Masse verbunden. Die Idee dahinter ist, dass bei ausgeschaltetem Eingangssignal der Innenwiderstand des Messgerätes im Vergleich zu $R_{28}$ klein ist, also sowieso nicht ins Gewicht fällt. Bei Funktion der Schaltung existiert der Spannungsteiler aber praktisch nicht, da über dem Widerstand lediglich eine sehr kleine Spannung anliegt.
