@@ -1,5 +1,5 @@
 \chapter{Parameter BMS}\label{anh_bms}
-\textcolor{blue}{Nachfolgend sind die Parameter, welche im BMS eingestellt werden können, aufgelistet. Ist dahinter ein zweiter Eintrag in \textit{kursiv}, so wurde dieser Wert nach}
+\textcolor{blue}{Nachfolgend sind die Parameter, welche im BMS eingestellt werden können, aufgelistet. Ist dahinter ein zweiter Eintrag in \textit{kursiv}, so wurde dieser Wert nachträglich editiert, die Begründungen dazu sind am Ende dieses Abschnittes zu finden. Der \textit{kurisve} Wert bezeichnet dabei den neuen Wert.}
 \section*{Data interfaces}
 \subsection*{Serial}
 \begin{tabular}{p{11cm}p{2cm}}
@@ -41,7 +41,7 @@ Keine Konfigurationen
 \begin{tabular}{p{11cm}p{2cm}}
 	Max pre-charge Stage Duration & 0 \\
 	Max Main Charge Stage Duration & 0 \\
-	Max Balancing Stage Duration & 300
+	Max Balancing Stage Duration & 300 \textcolor{blue}{\textit{6000 $^{1)}$}}
 \end{tabular}
 \subsection*{Cell Charging Parameters}
 Diese Parameter wurden von den Zellen übernommen \cite{lev50}\\
@@ -54,15 +54,15 @@ Diese Parameter wurden von den Zellen übernommen \cite{lev50}\\
 \end{tabular}
 \subsection*{Cell Charging Parameter}
 Diese Parameter wurden vom Ladegerät übernommen \cite{ladegeraet}\\
-\begin{tabular}{p{11cm}p{2cm}}
-	Fast Charging Current & $15$ A \\
-	Slow Charging Current & $15$ A \\
-	Pre-charge Current & $7.5$ A \\
-	Charging Finished Current & $2.5$ A
+\begin{tabular}{p{11cm}p{3cm}}
+	Fast Charging Current & $15$ A \textcolor{blue}{\textit{25 A $^{2)}$}}\\
+	Slow Charging Current & $15$ A \textcolor{blue}{\textit{25 A $^{2)}$}}\\
+	Pre-charge Current & $7.5$ A \textcolor{blue}{\textit{25\% $^{3)}$}}\\
+	Charging Finished Current & $2.5$ A \textcolor{blue}{\textit{25\% $^{3)}$}}
 \end{tabular}
 
 \section*{Protections}
-\begin{tabular}{p{11cm}p{2cm}}
+\begin{tabular}{p{11cm}p{3cm}}
 	No Cell Communication & Ja \\
 	Cell Under-Voltage Enable & Ja \\
 	Cell Under-Voltage Activate at & $2.70$ V \\
@@ -70,8 +70,9 @@ Diese Parameter wurden vom Ladegerät übernommen \cite{ladegeraet}\\
 	Cell Under-Voltage Act. delay & $20$ s \\
 	Cell Under-Voltage Deact. delay & $180$ s \\
 	Discharge Over-Current Enable & Ja \\
-	Discharge Over-Current Activate at & $160$ A \\
-	Discharge Over-Current Act. delay & $20$ s \\
+	Discharge Over-Current Activate at & $160$ A \textcolor{blue}{\textit{150 A $^{4)}$}} \\
+	Discharge Over-Current Act. delay & $20$ s \textcolor{blue}{\textit{10 s $^{5)}$}}\\
+	Discharge Over-Current Deact- delay & $20$ s \\
 	Cell Module Over Heat Enable & Ja \\
 	Cell Module Over Heat Activate at & $60^\circ$C \\
 	Cell Module Over Heat Deactivate at & $55^\circ$C \\
@@ -110,20 +111,20 @@ Diese Parameter wurden vom Ladegerät übernommen \cite{ladegeraet}\\
 
 \section*{Current measurement}
 \begin{tabular}{p{11cm}p{4cm}}
-	Sensor type & Noch zu ermitteln \\
-	L Calibration Value & Noch zu ermitteln \\
-	H Calibration Value & Noch zu ermitteln \\
+	Sensor type & \textcolor{blue}{Emus BMS Gen2 Dual Range Current Sensor} \\
+	L Calibration Value & \textcolor{blue}{Siehe Bauteil} \\
+	H Calibration Value & \textcolor{blue}{Siehe Bauteil} \\
 	Deadzone & $0.1$ A \\
-	Reverse Direction & Nein
+	Reverse Direction & Nein \textcolor{blue}{\textit{Ja} $^{6)}$}
 \end{tabular}
 
 \section*{SOC estimation}
 \subsection*{Battery Pack}
-\begin{tabular}{p{11cm}p{2cm}}
+\begin{tabular}{p{11cm}p{3cm}}
 	Number of Overall Cells & 12 \\
 	Number of Cells Strings & 1 \\
-	Maximum Balancing Current & $5$ \% \\
-	Capacity & $150$ Ah
+	Maximum Balancing Current & $5$\% \textcolor{blue}{\textit{85\% $^{7)}$}} \\
+	Capacity & $150$ Ah \textcolor{blue}{\textit{70 Ah $^{8)}$}}
 \end{tabular}
 
 \subsection*{State of Charge (SoC) parameters}
@@ -151,7 +152,24 @@ Diese Einstellungen werden nicht benötigt, da diese Funktion nicht benötigt wi
 \end{tabular}
 
 \section*{Pin mapping}
-Diese Parameter werden bei der Installation des BMS ermittelt
+\color{blue}
+\begin{tabular}{p{4cm}p{11cm}}
+	Input 1 & PF14 Current Sensor Input \\
+	Input 2 & PF14 Current Sensor Input \\
+	Input 3 & PF14 Current Sensor Input \\
+	Input 4 & PF14 Current Sensor Input \\
+	AC Sense & PF3 Charger Mains AC Sense Input \\
+	Ign. In & PF4 Ignition Key Input \\
+	Fast Chg. & PF0 No Function \\
+	Charger & PF10 Charger Enable Output \\
+	Heater & PF13 Battery Fan Output \\
+	Bat. Low & PF12 Battery Contactor Output \\
+	Buzzer & PF0 No Function \\
+	Chg. Ind. & PF0 No Function \\
+	Speed In & PF0 No Function \\
+	SoC Out & PF11 State of Charge Output
+\end{tabular}
+\color{black}
 
 \section*{Display Unit}
 Da kein Bildschirm eingesetzt wird, werden diese Einstellungen nicht benötigt \\
@@ -161,3 +179,24 @@ Da kein Bildschirm eingesetzt wird, werden diese Einstellungen nicht benötigt \
 	Temperature units & Celsius, $^\circ$ C \\
 	Display mode & Electric vehicle
 \end{tabular}
+\newpage
+
+\color{blue}
+\begin{tabular}{p{1cm}p{15cm}}
+$^{1)}$ & Bei den Tests hat sich gezeigt, dass fünf Stunden Balancing nicht in jedem Fall ausreichen, um die Batterie perfekt zu balancen. Mit 100 Stunden sollte dies aber in jedem Fall gewährleistet sein (wäre das Balancing dauernd eingeschaltet könnte in dieser Zeit die komplette Zelle entladen werden)\\[6pt]
+
+$^{2)}$ & Das Ladegerät lädt die volle Batterie mit mehr als den nominalen $15$ A, zu Beginn beinahe $20$ A; mit $25$ A sollte auch in diesem Fall das Ladegerät nicht ausgeschaltet werden\\[6pt]
+
+$^{3)}$ & Diese Einstellung hat sich vom User Manual zur aktuellen Software geändert; neu müssen hier prozentuale Eingaben gemacht werden\\[6pt]
+
+$^{4)}$ & Auf dem Shunt sowie dem Amperemeter wurden jeweils die Angabe \textit{max 150 Amps} gefunden, welche mit diesem Parameter berücksichtigt wird\\[6pt]
+
+$^{5)}$ & Dieser Schutz soll früher ansprechen, da sich im Fehlerfall Bauteile sehr schnell erwärmen; auch $10$ s sollten für die Beschleunigung reichen\\[6pt]
+
+$^{6)}$ & Es hat sich gezeigt, dass die verbaute Richtung nicht der angedachten Richtung des Herstellers entspricht\\[6pt]
+
+$^{7)}$ & Diese Funktion wurde komplett falsch verstanden; ursprünglich wurde davon ausgegangen, dass sich die Prozentangabe auf die Kapazität beziehen, tatsächlich ist es aber das maximale Tastverhältnis beim Balancing; mit dem $5\ \Omega$ Widerstand ergibt sich eine maximale Abwärme (bei 85\%): $P_{bal}=0.85\cdot\frac{\left(4.1\text{ V}\right)^2}{5\ \Omega}=2.86$ W\\[6pt]
+
+$^{8)}$ & Die Kapazität der Batterie ist kleiner als ursprünglich angenommen; für Details siehe \ref{sec:ah}
+\end{tabular}
+\color{black}
