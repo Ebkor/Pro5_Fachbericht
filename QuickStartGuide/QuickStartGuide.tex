@@ -1,4 +1,4 @@
-\documentclass[a5paper,12pt,draft,titlepage]{scrartcl}
+\documentclass[a5paper,12pt]{scrartcl}
 
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
@@ -15,14 +15,41 @@
 \maketitle
 \begin{figure}[h]
 	\centering
-		\includegraphics[width=0.60\textwidth]{Bilder/Titelbild.jpg}
+		\includegraphics[width=0.950\textwidth]{Bilder/Titelbild.jpg}
 \end{figure}
+\newpage
 
 In diesem Dokument soll kurz auf den \textsc{Detroit} eingegangen werden, insbesondere auf dessen Bedienung. Für weitere Informationen, insbesondere fachliche Fragen, sei auf den Fachbericht zum Umbau des Fahrzeuges verwiesen. Wir wünschen nun viel Spass beim Lesen und vor allem beim Fahren!
 
 \tableofcontents \newpage
 
-\section{Informationen zum Fahrzeug}
+\section{Informationen zum Detroit}
+
+\subsection*{Batterie}
+\begin{itemize}
+	\item Baujahr Zellen: 2011
+	\item Batterietyp: Lithium-Ionen
+	\item Anzahl Batterien: 2 (voneinander unabhängig)
+	\item Nennspannung pro Batterie: 44.4 V (12*3.7 V)
+	\item Nennkapazität pro Batterie: \begin{itemize}
+		\item Ursprünglich 150 Ah
+		\item Aktuell 70 Ah (aufgrund Alterung und schonender Ladekurve)
+	\end{itemize}
+	\item Ladezeit: Maximal 12 Stunden
+\end{itemize}
+
+\subsection*{Fahrzeug}
+\begin{itemize}
+	\item Baujahr: 1918
+	\item Antrieb: Gleichstrom-Reihenschlussmotor
+	\item Leistung: 4.5 PS (ca. 3.3 kW)
+	\item Höchstgeschwindigkeit: ???
+	\item Gewicht: ???
+	\item Reichweite: ???
+	\item Bremstyp: Trommelbremse
+\end{itemize}
+
+\newpage
 
 \section{Aufladen den Batterie}
 Das Aufladen der Batterie geschieht in mehreren Schritten (\textit{kursive} Vorgänge werden dabei automatisch von der Batteriesteuerung übernommen):
@@ -37,7 +64,7 @@ Das Aufladen der Batterie geschieht in mehreren Schritten (\textit{kursive} Vorg
 	\item Nach dem Entfernen des Netzkabels wird das 12V-Netz wieder freigegeben, was ein Einschalten des Fahrzeugs ermöglicht.
 \end{enumerate}
 
-Der gesamte Ladevorgang inklusive Balancing sollte im Normalfall höchstens 12 Stunden dauern (bei komplett leerer Batterie). Das Ende der Ladephase kann einfach dadurch erkennt werden, dass beide Ladegeräte in der Front des Fahrzeugs ihre Lüfter abgestellt haben. Wenn möglich sollte ab dann der Balancingphase noch zwei Stunden Zeit gegeben werden. Falls dies nicht möglich ist, kann dies jedoch auch durch eine längere Balancingphase beim nächsten Ladevorgang kompensiert werden.
+Der gesamte Ladevorgang inklusive Balancing sollte im Normalfall höchstens 12 Stunden dauern (bei komplett leerer Batterie). Das Ende der Ladephase kann einfach dadurch erkennt werden, dass beide Ladegeräte in der Front des Fahrzeugs ihre Lüfter abgestellt haben. Wenn möglich sollte ab dann der Balancingphase noch zwei Stunden Zeit gegeben werden. Falls dies nicht möglich ist, kann dies jedoch auch durch eine längere Balancingphase beim nächsten Ladevorgang kompensiert werden. Prinzipiell kann das Ladekabel aber auch bei längeren Abstellphasen eingesteckt lassen, die Ladegeräte werden bei vollen Batterien automatisch ausgeschaltet.
 
 \section{Bewegen des Fahrzeuges}
 
