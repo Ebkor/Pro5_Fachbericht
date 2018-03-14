@@ -6,6 +6,7 @@
 \usepackage{lmodern}
 \usepackage{graphicx}
 \usepackage{xcolor}
+\usepackage{hyperref}
 
 \begin{document}
 
@@ -30,12 +31,12 @@ In diesem Dokument soll kurz auf den \textsc{Detroit Electric} insbesondere auf 
 	\item Baujahr Zellen: 2011
 	\item Batterietyp: Lithium-Ionen
 	\item Anzahl Batterien: 2 (voneinander unabhängig)
-	\item Nennspannung pro Batterie: 44.4 V (12*3.7 V)
+	\item Nennspannung pro Batterie: $44.4$ V (12*3.7 V)
 	\item Nennkapazität pro Batterie: \begin{itemize}
-		\item Ursprünglich 150 Ah
-		\item Aktuell 70 Ah (Alterung und schonende Ladekurve)
+		\item Ursprünglich $150$ Ah
+		\item Aktuell $70$ Ah (Alterung und schonende Ladekurve)
 	\end{itemize}
-	\item Ladezeit: Maximal 12 Stunden
+	\item Ladezeit: Maximal $12$ Stunden
 \end{itemize}
 
 \subsection*{Fahrzeug}
@@ -132,18 +133,18 @@ Für das Fahren des Detroits werden hauptsächlich der Steuerhebel, der Stufenscha
 	\item Zum Anfahren sollte die Fahrstufe eins nur kurzzeitig (höchstens ca. 10 Sekunden) betätigt werden. Dies aus dem Grund, dass bei dieser Stufe (lediglich bei dieser Stufe, aber in beiden Fahrtrichtungen) der Anfahrwiderstand benötigt wird, in welchem Überflüssige Energie in Wärme umgewandelt wird. Eine zu lange Fahrt in dieser Stufe kann den Anfahrwiderstand überhitzen.
 	\item Für Manöver empfiehlt es sich, bei gedrücktem Bremspedal die Fahrstufe eins einzulegen. Mit dem Lösen der Bremse kann nun die Geschwindigkeit reguliert werden. Hier sind regelmässige Pausen (Stufenschalter auf Stufe null) wichtig, um ein Überhitzen des Anfahrwiderstandes zu verhindern.
 	\item Das Zuschalten der Fahrstufen sollte geschehen, wenn die Beschleunigung des Fahrzeuges abnimmt, aber eine höhere Geschwindigkeit gewünscht ist. Da dadurch aber auch die Kraft sinkt ist eine höhere resultierende Geschwindigkeit nicht immer garantiert.
-	\item Die Mechanik des Rückwärtsmodus am Stufenschalter ist etwas abgenutzt. Eigentlich sollte im Rückwärtsmodus lediglich die erste Fahrstufe betätigt werden können, was aber manchmal Probleme bereitet. \textbf{Aus diesem Grund empfehlen wir einen Wechsel der Fahrtrichtung nur bei ausgeschaltetem Schlüsselschalter.}
-	\item Um bei Bergauffahrten den Strom nicht zu gross werden zu lassen ist es wichtig, diese Fahrten im zweiten oder dritten Gang durchzuführen. Dadurch sind aber lediglich geringe Geschwindigkeiten möglich. Dafür ist der Strom pro Batterie aufgrund der Paralellschaltung geringer.
+	\item Die Mechanik des Rückwärtsmodus am Stufenschalter ist etwas abgenutzt. Eigentlich sollte im Rückwärtsmodus lediglich die erste Fahrstufe betätigt werden können, was aber manchmal Probleme bereitet. \textbf{Aus diesem Grund empfehlen wir einen Wechsel der Fahrtrichtung nur bei ausgeschaltetem Not-Aus-Schalter.}
+	\item Um bei Bergauffahrten den Strom nicht zu gross werden zu lassen, ist es wichtig, dass diese Fahrten im zweiten oder dritten Gang durchgeführt werden. Dadurch sind aber lediglich geringe Geschwindigkeiten möglich. Dafür ist der Strom pro Batterie aufgrund der Parallelschaltung geringer.
 	\item Es ist gut möglich, dass während der Fahrt ein Sicherheitsmechanismus der Batterie anspricht (zumeist der Überstromschutz). Dies macht sich durch einen sofortigen Abfall der Kraft bemerkbar. In diesem Fall empfiehlt es sich, mit dem restlichen Schwung an den Strassenrand zu fahren. \textbf{Der Stufenschalter sollte auf die Stufe 0 zurück geschaltet werden, damit das Fahrzeug nicht plötzlich unkontrolliert abfährt.} Nach einem kurzen Moment (je nach Fehlertyp zwischen 20 Sekunden und 3 Minuten) schaltet der Hauptschalter wieder ein und ermöglicht die Weiterfahrt.
 \end{itemize} \newpage
 
 \section{Auslesen des BMS}
-BMS steht für Batteriemanagementsystem, das Überwachungssystem der Batterie. Um dieses Auszulesen wird ein USB-Kabel mit zwei Steckern (Männchen) Typ A sowie einer Version der Software des BMS benötigt (zu finden unter \linebreak\textcolor{blue}{https://www.elektromotus.lt/support/}). Die wichtigsten Punkte sind:
+BMS steht für Batteriemanagementsystem, das Überwachungssystem der Batterie. Um dieses Auszulesen wird ein USB-Kabel mit zwei Steckern (Männchen) Typ A sowie einer Version der Software des BMS benötigt (zu finden unter \linebreak{\color{blue}\url{https://www.elektromotus.lt/support/}}\color{black}). Die wichtigsten Punkte sind:
 
 \begin{itemize}
-	\item Auslesen von Informationen im Fehlerfall. So kann herausgefunden werden, weswegen die Batterie ausgeschaltet wurde. Möglich sind zum Beispiel zu tiefe Entladung, Überhitzung oder Kommunikationsfehler. Dies geschieht links über "Statistics" und dann in der Sparte "Events".
-	\item Die entnommene Energie pro Entladezyklus kann überprüft werden. So kann -- wenn nötig -- die Kapazität zur Berechnung des Ladezustandes angepasst werden. Die Energiemenge ausgelesen wird links unter "Statistics" in der Sparte "Statistics"; die Batteriekapazität angepasst wird unter "Configuration" in der Sparte "Battery Pack".
-	\item Unter "Status" in der Sparte "Cells" findet man die Informationen zu den einzelnen Zellen. So kann die Balancingfunktion überprüft werden, welche eine gleichmässige Spannung an allen Zellen herzustellen versucht.
+	\item Auslesen von Informationen im Fehlerfall. So kann herausgefunden werden, weswegen die Batterie ausgeschaltet wurde. Möglich sind zum Beispiel zu tiefe Entladung, Überhitzung oder Kommunikationsfehler. Dies geschieht links über \grqq Statistics\grqq$~$ und dann in der Sparte \grqq Events\grqq .
+	\item Die entnommene Energie pro Entladezyklus kann überprüft werden. So kann -- wenn nötig -- die Kapazität zur Berechnung des Ladezustandes angepasst werden. Die Energiemenge ausgelesen wird links unter \grqq Statistics\grqq$~$ in der Sparte \grqq Statistics\grqq ; die Batteriekapazität angepasst wird unter \grqq Configuration\grqq$~$ in der Sparte \grqq Battery Pack\grqq .
+	\item Unter \grqq Status\grqq\~ in der Sparte \grqq Cells\grqq$~$ findet man die Informationen zu den einzelnen Zellen. So kann die Balancingfunktion überprüft werden, welche eine gleichmässige Spannung an allen Zellen herzustellen versucht.
 \end{itemize}
 
 \end{document}
