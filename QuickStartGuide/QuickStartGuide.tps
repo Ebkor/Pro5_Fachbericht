@@ -17,8 +17,8 @@ Class=LaTeXView
 Document=QuickStartGuide.tex
 
 [Frame0_View0,0]
-TopLine=40
-Cursor=3423
+TopLine=92
+Cursor=7193
 
 [SessionInfo]
 FrameCount=1

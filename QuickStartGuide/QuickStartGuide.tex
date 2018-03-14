@@ -5,10 +5,10 @@
 \usepackage[ansinew]{inputenc}
 \usepackage{lmodern}
 \usepackage{graphicx}
+\usepackage{xcolor}
 
 \begin{document}
 
-\pagestyle{empty}
 \title{Kurzanleitung \textsc{Detroit Electric Car}}
 \author{Yanick Frei}
 
@@ -20,7 +20,7 @@
 \newpage
 
 In diesem Dokument soll kurz auf den \textsc{Detroit} eingegangen werden, insbesondere auf dessen Bedienung. Für weitere Informationen, insbesondere fachliche Fragen, sei auf den Fachbericht zum Umbau des Fahrzeuges verwiesen. Wir wünschen nun viel Spass beim Lesen und vor allem beim Fahren!
-
+\vspace{2cm}
 \tableofcontents \newpage
 
 \section{Informationen zum Detroit}
@@ -76,6 +76,7 @@ Vor einer Fahrt mit dem Detroit empfehlen wir mehrere Dinge:
 \begin{itemize}
 	\item Vorgängig die Batterie nochmals einige Stunden laden, sodass diese bei Abfahrt sicherlich voll ist.
 	\item Bereitstellen von Feuerlöscher und Pannendreieck.
+	\item Mitnahme von Kabelrolle und Ladekabel, sodass im Falle einer leeren Batterie unkompliziert nachgeladen werden kann.
 	\item Überprüfen des Reifendruckes.
 	\item Einen Freund über die Fahrt informieren, sodass dieser im Notfall als Abschleppservice dienen könnte.
 \end{itemize}
@@ -83,7 +84,31 @@ Vor einer Fahrt mit dem Detroit empfehlen wir mehrere Dinge:
 Die Rolleigenschaften des Detroits können als gut bezeichnet werden. Daher ist es im Falle einer Panne problemlos möglich, das Fahrzeug alleine zum Strassenrand zu schieben (auf ebenem Fahrweg). Dort kann das Fahrzeug zuverlässig mit der Feststellbremse gesichert werden. Auch das Betätigen der Lenkung bei stehendem Fahrzeug ist möglich. \newpage
 
 \section{Bedienelemente des Fahrzeugs}
-tbd \newpage
+\subsection*{Fahrthebel}
+\begin{center}
+	\includegraphics[width=0.80\textwidth]{Bilder/Hebel.JPG}
+\end{center}
+Mit dem Stufenschalter \textcolor{red}{A} können fünf Vorwärts- und eine Rückwärtsstufe geschaltet werden. Mit dem nach vorne Schieben des Hebels werden Stufen zugeschaltet. Wird der Hebel über die niedrigste Stufe hinaus zum Fahrer gezogen, wird die Manöverbremse auf die Bremsbacken der Motorschwungmasse aktiviert. Um vom Vorwärts- in den Rückwärtsmodus zu schalten, muss der Hebel Schräg nach oben eingerastet werden.
+
+Der Steuerhebel \textcolor{red}{B} dient als Steuerrad. Wird der Hebel nach vorne gedrückt, so fährt das Fahrzeug nach links. Wird der Hebel zum Fahrer gezogen, so erfolgt eine Rechtskurve. Geradeaus fährt es sich in gerader Stellung.
+
+Rechts am Stufenschalter befindet sich noch die Hupe \textcolor{red}{C}. Das Drücken dieses Knopfes aktiviert die Hupe.
+
+Beide Hebel können senkrecht nach oben geschwenkt werden, um so ein einfacheres Ein- und Aussteigen zu ermöglichen. \newpage
+
+\subsection*{Bremspedale}
+\begin{center}
+	\includegraphics[width=0.80\textwidth]{Bilder/Pedale.JPG}
+\end{center}
+Das Fahrzeug verfügt über zwei Bremspedale, welche mechanisch als Trommelbremse auf die Hinterräder wirken. Für normale Betriebsbremsungen ist dies das Bremspedal \textcolor{red}{X}, welches direkt eine zum Fussdruck proportionale Bremskraft aufbringt und sich beim Entfernen des Fusses selbstständig wieder löst.
+
+Das zweite schmalere Pedal ist die Feststellbremse \textcolor{red}{Y}. Diese wird zum Sichern des Fahrzeuges verwendet. Dieses Pedal arretiert in mehreren Stufen, welche durch die Klickgeräusche erkannt werden können. Es führt nicht direkt eine Bremsung aus, sondern zieht viel mehr das Bremspedal nach unten, welches dann die Bremsung ausführt. Die Feststellbremse wird durch entfernen des Fusses \textbf{nicht} gelöst! Um die Feststellbremse zu lösen muss der Stufenschalter \textcolor{red}{A} zum Fahrer gezogen werden und gleichzeitig die Feststellbremse gedrückt werden. Dadurch wird auch diese gelöst.
+
+\subsection*{Beleuchtung}
+\begin{center}
+	\includegraphics[width=0.80\textwidth]{Bilder/Licht.JPG}
+\end{center}
+Die  \newpage
 
 \section{Inbetriebnahme des Fahrzeuges}
 Die Inbetriebnahme des Fahrzeugs erfolgt in mehreren Schritten:
@@ -107,11 +132,12 @@ Für das Fahren des Detroits werden hauptsächlich der Steuerhebel, der Stufenscha
 \end{itemize} \newpage
 
 \section{Auslesen des BMS}
-BMS steht für Batteriemanagementsystem, das Überwachungssystem der Batterie. Um dieses Auszulesen wird ein USB-Kabel mit zwei Steckern (Männchen) Typ A sowie einer Version der Software des BMS benötigt (zu finden unter tbd). Die wichtigsten Punkte sind:
+BMS steht für Batteriemanagementsystem, das Überwachungssystem der Batterie. Um dieses Auszulesen wird ein USB-Kabel mit zwei Steckern (Männchen) Typ A sowie einer Version der Software des BMS benötigt (zu finden unter \linebreak\textcolor{blue}{https://www.elektromotus.lt/support/}). Die wichtigsten Punkte sind:
 
 \begin{itemize}
 	\item Auslesen von Informationen im Fehlerfall. So kann herausgefunden werden, weswegen die Batterie ausgeschaltet wurde. Möglich sind zum Beispiel zu tiefe Entladung, Überhitzung oder Kommunikationsfehler. Dies geschieht über...
-	\item 
+	\item Die entnommene Energie pro Entladezyklus kann überprüft werden. So kann -- wenn nötig -- die Kapazität zur Berechnung des Ladezustandes angepasst werden. Die Energiemenge ausgelesen wird unter...; die Batteriekapazität angepasst wird unter...
+	\item Unter ... findet man die Informationen zu den einzelnen Zellen. So kann die Balancingfunktion überprüft werden, welche eine gleichmässige Spannung an allen Zellen herzustellen versucht.
 \end{itemize} \newpage
 
 \section{Bekannte Schwachstellen}
