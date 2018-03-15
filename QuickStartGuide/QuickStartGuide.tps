@@ -11,14 +11,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1164
-NormalPos.bottom=309
+NormalPos.right=1655
+NormalPos.bottom=796
 Class=LaTeXView
 Document=QuickStartGuide.tex
 
 [Frame0_View0,0]
-TopLine=145
-Cursor=10808
+TopLine=0
+Cursor=1599
 
 [SessionInfo]
 FrameCount=1

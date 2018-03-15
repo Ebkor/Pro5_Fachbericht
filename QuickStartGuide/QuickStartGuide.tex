@@ -6,12 +6,13 @@
 \usepackage{lmodern}
 \usepackage{graphicx}
 \usepackage{xcolor}
-\usepackage{hyperref}
+%\usepackage{hyperref}
 
 \begin{document}
 
 \title{Kurzanleitung \textsc{Detroit Electric Car}}
 \author{Yanick Frei, Marc Müller}
+\date{23. März 2018}
 
 \maketitle
 \begin{figure}[h]
@@ -31,7 +32,7 @@ In diesem Dokument soll kurz auf den \textsc{Detroit Electric} insbesondere auf 
 	\item Baujahr Zellen: 2011
 	\item Batterietyp: Lithium-Ionen
 	\item Anzahl Batterien: 2 (voneinander unabhängig)
-	\item Nennspannung pro Batterie: $44.4$ V (12*3.7 V)
+	\item Nennspannung pro Batterie: $44.4$ V (12 x $3.7$ V)
 	\item Nennkapazität pro Batterie: \begin{itemize}
 		\item Ursprünglich $150$ Ah
 		\item Aktuell $70$ Ah (Alterung und schonende Ladekurve)
@@ -43,11 +44,11 @@ In diesem Dokument soll kurz auf den \textsc{Detroit Electric} insbesondere auf 
 \begin{itemize}
 	\item Baujahr: 1918
 	\item Antrieb: Gleichstrom-Reihenschlussmotor
-	\item Leistung: 4.5 PS (ca. 3.3 kW)
+	\item Leistung: $4.5$ PS (ca. $3.3$ kW)
 	\item Anzahl Fahrstufen ("`Gänge"'): 5
-	\item Höchstgeschwindigkeit: 40 km/h
-	\item Gewicht: ???
-	\item Reichweite: ca. 70 km
+	\item Höchstgeschwindigkeit: $40$ km/h
+	\item Gewicht: Unbekannt
+	\item Reichweite: ca. $70$ km
 	\item Bremstyp: Trommelbremse
 \end{itemize}
 
@@ -60,7 +61,7 @@ Das Aufladen der Batterie geschieht in mehreren Schritten (\textit{kursive} Vorg
 \setlength{\itemsep}{10pt}
 	\item Das Fahrzeug wird abgestellt und im Idealfall mit der Handbremse gesichert.
 	\item Der Not-Aus-Schalter wird gedrückt, dadurch wird das Fahrzeug ausgeschaltet. \textit{Diese Aktion wird eigentlich auch vom Fahrzeug automatisch in Schritt 4 durchgeführt. Trotzdem empfehlen wir zusätzlich das manuelle Ausschalten.}
-	\item Das $230$ V-Ladekabel wird eingesteckt und an der Steuerbox der Schalter auf \textsc{Ein} geschaltet.
+	\item Das $230$ V-Ladekabel wird eingesteckt und an der Steuerbox der Schalter auf "`Ein"' geschaltet.
 	\item \textit{Das $12$ V-Netz des Fahrzeuges wird automatisch unterbrochen, womit der Hauptschalter nicht mehr eingeschaltet und losgefahren werden kann. Das soll ein versehentliches Losfahren während dem Laden verhindern.}
 	\item \textit{Sind die Batterien nicht voll, wird automatisch die Ladephase gestartet. Bei komplett entleerter Batterie kann diese Phase bis zu 10 Stunden dauern.}
 	\item \textit{Bereits während der Ladephase beginnt die Balancingphase, welche eine gleichmässige Ladung der Zellen sicherstellt. Diese Phase sollte im Normalfall nicht viel länger dauern als die Ladephase (das finale Balancing kann erst nach dem Vollladen der Zellen durchgeführt werden).}
@@ -78,6 +79,7 @@ Vor einer Fahrt mit dem Detroit empfehlen wir mehrere Dinge:
 	\item Vorgängig die Batterie nochmals einige Stunden laden, sodass diese bei Abfahrt sicherlich voll ist.
 	\item Bereitstellen von Feuerlöscher und Pannendreieck.
 	\item Mitnahme von Kabelrolle und Ladekabel, sodass im Falle einer leeren Batterie unkompliziert nachgeladen werden kann.
+	\item Ebenfalls Mitnahme von einem Laptop mit USB-Kabel, um die Batterien auslesen zu können.
 	\item Überprüfen des Reifendruckes.
 	\item Einen Freund über die Fahrt informieren, sodass dieser im Notfall als Abschleppservice dienen könnte.
 \end{itemize}
@@ -111,7 +113,7 @@ Das zweite schmalere Pedal ist die Feststellbremse \textcolor{red}{Y}. Diese wir
 \end{center}
 Die  Fahrzeugbeleuchtung kann am Lichtbrett eingestellt werden, welches sich links vom Fahrer befindet. Da das originale Lichtbrett übernommen wurde, sind nicht mehr alle Schalter in Gebrauch. Konkret ist die Nummer \textcolor{red}{1} die Frontbeleuchtung, \textcolor{red}{4} ist das Meterlicht (Beleuchtung des Volt- und Amperemeters), \textcolor{red}{5} ist die Innenbeleuchtung und \textcolor{red}{6} ist das Rücklicht, wobei das Bremslicht auch bei ausgeschaltetem Rücklicht funktioniert.
 
-Mit dem Drehschalter auf Nummer \textcolor{red}{7} kann der Blinker aktiviert werden. Dieser hat die gleichen Richtungen wie der Steuerhebel, also nach vorne entspricht nach links und nach hinten entspricht nach rechts. Auch die Blinker funktionieren bei ausgeschalteter Beleuchtung. \newpage
+Mit dem Drehschalter auf Nummer \textcolor{red}{7} kann der Blinker aktiviert werden. Dieser hat die gleichen Richtungen wie der Steuerhebel, also nach vorne entspricht nach links und nach hinten entspricht nach rechts. Die Blinker müssen nach dem Abbiegen manuell wieder ausgeschaltet werden. Auch die Blinker funktionieren bei ausgeschalteter Beleuchtung. \newpage
 
 \section{Inbetriebnahme des Fahrzeuges}
 Die Inbetriebnahme des Fahrzeugs erfolgt in mehreren Schritten:
@@ -139,12 +141,12 @@ Für das Fahren des Detroits werden hauptsächlich der Steuerhebel, der Stufenscha
 \end{itemize} \newpage
 
 \section{Auslesen des BMS}
-BMS steht für Batteriemanagementsystem, das Überwachungssystem der Batterie. Um dieses Auszulesen wird ein USB-Kabel mit zwei Steckern (Männchen) Typ A sowie einer Version der Software des BMS benötigt (zu finden unter \linebreak{\color{blue}\url{https://www.elektromotus.lt/support/}}\color{black}). Die wichtigsten Punkte sind:
+BMS steht für Batteriemanagementsystem, das Überwachungssystem der Batterie. Um dieses Auszulesen wird ein USB-Kabel mit zwei Steckern (Männchen) Typ A sowie einer Version der Software des BMS benötigt (zu finden unter \linebreak\color{blue}https://www.elektromotus.lt/support/\color{black}). Die wichtigsten Punkte sind:
 
 \begin{itemize}
-	\item Auslesen von Informationen im Fehlerfall. So kann herausgefunden werden, weswegen die Batterie ausgeschaltet wurde. Möglich sind zum Beispiel zu tiefe Entladung, Überhitzung oder Kommunikationsfehler. Dies geschieht links über \grqq Statistics\grqq$~$ und dann in der Sparte \grqq Events\grqq .
-	\item Die entnommene Energie pro Entladezyklus kann überprüft werden. So kann -- wenn nötig -- die Kapazität zur Berechnung des Ladezustandes angepasst werden. Die Energiemenge ausgelesen wird links unter \grqq Statistics\grqq$~$ in der Sparte \grqq Statistics\grqq ; die Batteriekapazität angepasst wird unter \grqq Configuration\grqq$~$ in der Sparte \grqq Battery Pack\grqq .
-	\item Unter \grqq Status\grqq\~ in der Sparte \grqq Cells\grqq$~$ findet man die Informationen zu den einzelnen Zellen. So kann die Balancingfunktion überprüft werden, welche eine gleichmässige Spannung an allen Zellen herzustellen versucht.
+	\item Auslesen von Informationen im Fehlerfall. So kann herausgefunden werden, weswegen die Batterie ausgeschaltet wurde. Möglich sind zum Beispiel zu tiefe Entladung, Überhitzung oder Kommunikationsfehler. Dies geschieht links über "`Statistics"' und dann in der Sparte "`Events"'.
+	\item Die entnommene Energie pro Entladezyklus kann überprüft werden. So kann -- wenn nötig -- die Kapazität zur Berechnung des Ladezustandes angepasst werden. Die Energiemenge ausgelesen wird links unter "`Statistics"' in der Sparte "`Statistics"' ; die Batteriekapazität angepasst wird unter "`Configuration"' in der Sparte "`Battery Pack"'.
+	\item Unter "`Status"' in der Sparte "`Cells"' findet man die Informationen zu den einzelnen Zellen. So kann die Balancingfunktion überprüft werden, welche eine gleichmässige Spannung an allen Zellen herzustellen versucht.
 \end{itemize}
 
 \end{document}
