@@ -17,7 +17,7 @@ Die gelb hinterlegten Komponenten bilden die Verbindung zu den weiteren Komponen
 \paragraph{Rot: Spannungsversorgung}
 Die Spannungsversorgung regelt, wie der Name bereits andeutet, die Versorgung der Steuerung mit Spannung. Dabei sind die beiden Fälle für das eingeschaltete Fahrzeug (Zustand "Fahren") sowie für den Zustand "Laden" zu unterscheiden.
 
-Beim Zustand \textbf{Fahren} wird die gesamte Steuerung über den im Fahrzeug eingebauten DC-DC-Wandler versorgt, der ausserdem die Beleuchtung mit Spannung beliefert. In diesem Zustand sind sämtliche Funktionen verfügbar. Ausserdem werden die $24$ V des BMS durch die Diode $D_1$ und den Spannungswander $U_3$ bereitgestellt. Die Dioden sorgen dabei für die Trennung der beiden Spannungswandler.
+Beim Zustand \textbf{Fahren} wird die gesamte Steuerung über den im Fahrzeug eingebauten DC-DC-Wandler versorgt, der ausserdem die Beleuchtung mit Spannung beliefert. In diesem Zustand sind sämtliche Funktionen verfügbar. Ausserdem werden die $24$ V des BMS durch die Diode $D_1$ und den Spannungswandler $U_3$ bereitgestellt. Die Dioden sorgen dabei für die Trennung der beiden Spannungswandler.
 
 Beim \textbf{Laden} ist es wichtig, dass das Fahrzeug nicht eingeschaltet werden kann. Damit wird verhindert, dass versehentlich mit dem noch eingesteckten Fahrzeug losgefahren wird. Dies wird dadurch sichergestellt, dass das Relais $U_4$ beim Anschluss von $230$ VAC automatisch die Spannungszufuhr für die Steuerung unterbricht. Da jedoch auch beim Laden das BMS eingeschaltet sein soll, wird dieses über einen Spannungswandler vom $230$ VAC-Netz versorgt.
 
