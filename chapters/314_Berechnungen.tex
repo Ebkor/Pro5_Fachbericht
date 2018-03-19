@@ -17,7 +17,7 @@ Die Abwärme berechnet sich gemäss der Formel $P=I^2\cdot R$ (für diese Berech
 	P_{V,Laden}=\left(15\text{ A}\right)^2\cdot8\text{ m}\Omega=\quad\underline{1.8\text{ W}}
 \end{equation*}
 
-Für den maximalen Fahrstrom ergibt sich eine Abwärme von:
+Für den Fahrstrom ergibt sich eine Abwärme von:
 \begin{equation*}
 	P_{V,Max}=\left(100\text{ A}\right)^2\cdot8\text{ m}\Omega=\quad\underline{80\text{ W}}
 \end{equation*}
@@ -30,8 +30,8 @@ Der schlimmste Fall eines Kurzschlusses ist ein Kurzschluss direkt an den Klemme
 \end{equation*}
 
 \subsection{Kapazität der Batterie}\label{sec:ah}
-\color{blue}Die Batteriekapazität pro Zelle wird mit $50$ Ah angegeben \cite{lev50}, woraus bei drei parallel geschalteten Zellen eine theoretische Kapazität von $150$ Ah ergibt. Die Messungen über das BMS haben dann aber gezeigt, dass dieser Wert deutlich zu hoch ist. Realistischer erscheint ein ungefähr halb so grosser Wert, womit auch der Energiegehalt der Zellen deutlich geringer ausfällt. Um diese Diskrepanz zu erklären, wurde nach Gründen für den doch deutlichen Unterschied gesucht: \begin{itemize}
-	\item Die Entladeschlussspannung wurde etwas höher gewählt, die Ladeschlussspannung etwas tiefer. Dadurch lässt sich nicht die gesamte Kapazität entnehmen, die Batterie dafür geschont.
+\color{blue}Die Batteriekapazität pro Zelle wird mit $50$ Ah angegeben \cite{lev50}, woraus sich bei drei parallel geschalteten Zellen eine theoretische Kapazität von $150$ Ah ergibt. Die Messungen über das BMS haben dann aber gezeigt, dass dieser Wert deutlich zu hoch ist. Realistischer erscheint ein ungefähr halb so grosser Wert, womit auch der Energiegehalt der Zellen deutlich geringer ausfällt. Um diese Diskrepanz zu erklären, wurde nach Gründen für den doch deutlichen Unterschied gesucht: \begin{itemize}
+	\item Die Entladeschlussspannung wurde etwas höher gewählt, die Ladeschlussspannung etwas tiefer. Dadurch lässt sich nicht die gesamte Kapazität entnehmen, dafür wird die Batterie geschont.
 	\item Die Entladung erfolgte mit einem deutlich höheren Strom als bei der Herstellerangabe, wodurch die Entladeschlussspannung schneller erreicht ist (durch den höheren Spannungsabfall am Innenwiderstand der Batterie).
 	\item Die Batterien altern mit der Zeit. Bei der Batterie selbst wurde kein Datum für deren Erstellung gefunden, jedoch deuten andere Bauteile auf eine Produktion Anfang 2011 hin, wodurch ein Alter von sieben Jahren resultiert.
 	\item Einige Minuten nach dem Beenden der Entladung steigt die Zellenspannung wieder leicht an.
