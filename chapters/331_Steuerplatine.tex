@@ -43,8 +43,10 @@ Bei den Tests hat sich gezeigt, dass die gewählte Schaltung nicht funktioniert.
 \end{figure}
 \color{black}
 
+\newpage
+
 \paragraph{Blau: Ladezustand}
-Da beide Batterien von unabhängigen Batteriemanagementsystemen überwacht werden, können sie auch einen unterschiedlichen Ladezustand aufweisen. Es ist deswegen zweckmässig, den jeweils tieferen Ladestand anzeigen zu lassen, um damit den schlechtesten Fall abzudecken. Diese Signale werden vom BMS in Form eines $5$ kHz PWM-Signales zur Verfügung gestellt. Die Idee des Herstellers ist, dass dieses Signal direkt auf ein analoges Messgerät eingespeist wird, dessen Massenträgheit das Signal glättet. Da beim Detroit lediglich ein Anzeigegerät zur Verfügung steht, müssen diese Signale bereits vorzeitig verglichen werden.
+Da beide Batterien von unabhängigen Batteriemanagementsystemen überwacht werden, können sie auch einen unterschiedlichen Ladezustand aufweisen. Es ist deswegen zweckmässig, den jeweils tieferen Ladestand anzeigen zu lassen, um damit den schlechtesten Fall abzudecken. Diese Signale werden vom BMS in Form eines $5$ kHz PWM-Signales zur Verfügung gestellt. Die Idee des Herstellers ist, dass dieses Signal direkt auf ein analoges Messgerät eingespeist wird, dessen Massenträgheit das Signal glättet. Da beim \textsc{Detroit} lediglich ein Anzeigegerät zur Verfügung steht, müssen diese Signale bereits vorzeitig verglichen werden.
 
 Aus diesem Grund werden die beiden Signale zuerst durch ein eingangsseitiges Tiefpassfilter geglättet. Die Operationsverstärkerstufe $U_{7A}$ vergleicht anschliessend die beiden Signale und gibt ein Signal 0 oder 1 aus, je nachdem, nach welchem Tiefpass eine höhere Spannung anliegt. Um unnötige Schaltvorgänge bei beinahe gleichen Signalen zu verhindern, ist mit Hilfe der beiden Widerstände $R_{19}$ und $R_{20}$ eine Hysterese eingebaut.
 
