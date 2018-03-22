@@ -44,6 +44,8 @@ Auch ausgangsseitig wird die erhaltene Spannung geglättet, da sie ja vom Transf
 \paragraph{Ladung mit Gleichstrom}
 Das interne Netzgerät des Peugeots kann auch umgangen werden. Zu diesem Zweck besitzt der Peugeot einen sogenannten ChaDeMo-Anschluss, mit welchem direkt mittels Gleichstrom die Batterie geladen werden kann \cite{chademo}. Dieser Anschluss überträgt ausser dem Gleichstrom auch die Daten, die zur Kommunikation zwischen Fahrzeug und Ladegerät nötig sind. Neben Einschalt- und Schutzsignalen erfolgt der Datenaustausch über einen CAN-Bus, mit welchem das Fahrzeug der Ladestation den maximalen Ladestrom sowie den Ladezustand angibt.
 
+\newpage
+
 Das Ladegerät kann in diesem Fall aus dem Auto ausgelagert werden, wodurch das Auto selbst unabhängig von der verwendeten Elektrizitätsform an der Eingangsseite wird. Dazu führen die beiden Starkstromleiter direkt von der Buchse zur Batterie, dazwischen ist keine Schaltung verbaut. Lediglich zum bereits angedeuteten Informationsaustausch zwischen dem Fahrzeug (in diesem Fall ausschliesslich dem Batteriemanagementsystem) und der Ladestation führen die Datenleitungen auf weitere Schaltungen. Dieses ChaDeMo-System ist auch für noch höhere Leistungen bis $100$ kW geeignet, wobei die meisten Ladestationen die Leistung auf $50$ kW begrenzen. Dies ist aber, verglichen mit dem internen Ladegerät, immer noch ungefähr die doppelte Leistung.
 
 In beiden Fällen wird die Ladung durch das Batteriemanagementsystem des Peugeots überwacht und gesteuert. Da das ChaDeMo-Ladegerät auf jeden Fall mittels CAN-Bus angesteuert wird, ist anzunehmen, dass auch die Kommunikation mit dem internen Ladegerät über diese Schnittstelle erfolgt.
