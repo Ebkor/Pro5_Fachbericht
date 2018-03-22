@@ -12,11 +12,11 @@ Das eingesetzte Batteriemanagementsystem besteht aus mehreren Teilen: \begin{ite
 
 Das \textbf{Steuergerät} ist das Gehirn des BMS. Es verarbeitet sämtliche Informationen der Sensoren und bestimmt damit den Ladezustand der Batterie. Mit diesen Informationen können ebenfalls die Schaltzustände für das Ladegerät sowie für den Hauptschalter bestimmt werden. Ausserdem regelt das Steuergerät die Balancierströme, um sämtliche Zellen auf dem selben Potential zu halten.
 
-Die \textbf{Zellmodule} werden auf jeder Zelle montiert. Sie messen dabei die Spannung und die Temperatur der Einzelzelle. \textcolor{blue}{Bei Bedarf wird ein Balancierstrom durch den Widerstand eingeschaltet}. Die Kommunikation erfolgt dabei seriell durch alle Zellmodul hindurch. Es ist also keine direkte Verbindung vom Zellmodul zum Steuergerät erforderlich.
+Die \textbf{Zellmodule} werden auf jeder Zelle montiert. Sie messen dabei die Spannung und die Temperatur der Einzelzelle. \textcolor{blue}{Bei Bedarf wird ein Balancierstrom durch den Widerstand eingeschaltet}. Die Kommunikation erfolgt dabei seriell durch alle Zellmodule hindurch. Es ist also keine direkte Verbindung vom Zellmodul zum Steuergerät erforderlich.
 
 Die \textbf{Isolationsadapter} sorgen dafür, dass die Signale der Zellmodule galvanisch getrennt an das Steuergerät übertragen werden können. Diese galvanische Trennung sorgt dafür, dass nicht mit hohen Spannungen zum Steuergerät gefahren werden muss und dieses folglich einfacher aufgebaut werden kann. Die galvanische Trennung erfolgt mit Optokopplern.
 
-Das \textbf{Strommessmodul} misst, wie der Name bereits sagt, den Strom. Die Messung erfolgt dabei mittels einem Hallsensor, so dass auch hier ein potentialfreies Signal vorliegt. Die stromführende Leitung wird dabei durch den Sensor geführt, wobei der Hallsensor am Ende das Magnetfeld misst.
+Das \textbf{Strommessmodul} misst, wie der Name bereits sagt, den Strom. Die Messung erfolgt dabei mittels einem Hallsensor, so dass auch hier ein potentialfreies Signal vorliegt. Die stromführende Leitung wird dabei durch den Sensor geführt, wobei der Hallsensor das Magnetfeld misst.
 
 \paragraph{Konfiguration}
 Das Batteriemanagementsystem muss natürlich auf die verwendete Batterie angepasst werden. Da das BMS frei programmierbar ist, ist es kein Problem, beliebige Einstellungen zu treffen. Einige Parameter sind dabei von der Batterie her gegeben, andere mussten selbst evaluiert werden. Auf einige Parameter soll in diesem Abschnitt eingegangen werden. Sämtliche Parameter sind jedoch im Anhang unter \ref{anh_bms} zu finden. Um die Wiederfindbarkeit zu erleichtern wurden im Anhang die Titel und die Aufteilung von der Bedienungsanleitung des BMS \cite{bms} übernommen. \begin{itemize}
