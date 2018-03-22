@@ -5,14 +5,14 @@ Als Batteriemanagementsystem (im Folgenden BMS genannt) wird das EMUS BMS des li
 \paragraph{Aufbau}
 Das eingesetzte Batteriemanagementsystem besteht aus mehreren Teilen: \begin{itemize}
 	\item Ein Steuergerät
-	\item Ein Zellmodul mit Temperatursensor pro Zelle, insgesamt also 12
+	\item Ein Zellmodul mit Temperatursensor pro Zelle, insgesamt also 12 \textcolor{blue}{pro Batterie}
 	\item Zwei Isolationsadapter zur Kommunikation
 	\item Ein Strommessmodul
 \end{itemize}
 
 Das \textbf{Steuergerät} ist das Gehirn des BMS. Es verarbeitet sämtliche Informationen der Sensoren und bestimmt damit den Ladezustand der Batterie. Mit diesen Informationen können ebenfalls die Schaltzustände für das Ladegerät sowie für den Hauptschalter bestimmt werden. Ausserdem regelt das Steuergerät die Balancierströme, um sämtliche Zellen auf dem selben Potential zu halten.
 
-Die \textbf{Zellmodule} werden auf jeder Zelle montiert. Sie messen dabei die Spannung und die Temperatur der Einzelzelle. \textcolor{blue}{Bei Bedarf wird ein Balancierstrom durch den Widerstand eingeschaltet}. Die Kommunikation erfolgt dabei seriell durch alle Zellmodule hindurch. Es ist also keine direkte Verbindung vom Zellmodul zum Steuergerät erforderlich.
+Die \textbf{Zellmodule} werden auf jeder Zelle (beziehungsweise auf jeweils einer pro Seriestufe, da die Spannungen der parallelen Zellen identisch ist) montiert. Sie messen dabei die Spannung und die Temperatur der Einzelzelle. \textcolor{blue}{Bei Bedarf wird ein Balancierstrom durch den Widerstand eingeschaltet}. Die Kommunikation erfolgt dabei seriell durch alle Zellmodule hindurch. Es ist also keine direkte Verbindung vom Zellmodul zum Steuergerät erforderlich.
 
 Die \textbf{Isolationsadapter} sorgen dafür, dass die Signale der Zellmodule galvanisch getrennt an das Steuergerät übertragen werden können. Diese galvanische Trennung sorgt dafür, dass nicht mit hohen Spannungen zum Steuergerät gefahren werden muss und dieses folglich einfacher aufgebaut werden kann. Die galvanische Trennung erfolgt mit Optokopplern.
 

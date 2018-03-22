@@ -1,7 +1,7 @@
 \subsection{Aufbau der Batterie mit Schutzschaltung}
 Die beiden originalen Bleibatterien des \textsc{Detroits} hatten einen Nennspannung von $42$ V, was 21 in Serie geschalteten Zellen entspricht. Diese Spannung sollte mit den Lithium Akkus grob erreicht werden, wobei eine Abweichung von $\pm 10$ \% vertreten werden kann. Im Idealfall wäre es dabei möglich, die Zellen in den bereits bestehenden Viererrahmen mit einer Nennspannung von $4\cdot 3.7$ V$=14.8$ V zu belassen.
 
-Mit drei in Serie geschalteten Viererrahmen ergibt sich eine Spannung von $3\cdot 4\cdot 3.7$ V$=44.8$ V, was die Bedingung sehr gut erfüllt. Somit können sämtliche Zellen in den Viererrahmen belassen werden, sodass im Folgenden nur noch die Viererrahmen behandelt werden. Zuerst soll aber Tabelle \ref{tab:bat_vergl} einen Vergleich über die Spannungen der beiden Batterien geben:
+Mit drei in Serie geschalteten Viererrahmen ergibt sich eine Spannung von $3\cdot 4\cdot 3.7$ V$=44.8$ V, was die Bedingung sehr gut erfüllt. Somit können sämtliche Zellen in den Viererrahmen belassen werden, sodass im Folgenden nur noch die Viererrahmen (vier Zellen sind jeweils bereits in einem Gehäuse) behandelt werden. Zuerst soll aber Tabelle \ref{tab:bat_vergl} einen Vergleich über die Spannungen der beiden Batterien geben:
 
 \begin{table}[h]
 \centering
@@ -42,11 +42,11 @@ Insgesamt waren 22 Viererrahmen vorhanden. Mit dem Ziel von zwei Batterien mit j
 \multicolumn{1}{|l|}{BAT113.3} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{BAT123.3} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{BAT133.3} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{BAT243.3} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{BAT253.3} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{BAT263.3} \\ \cline{1-1} \cline{3-3} \cline{5-5} \cline{7-7} \cline{9-9} \cline{11-11} 
 \multicolumn{1}{|l|}{BAT113.4} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{BAT123.4} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{BAT133.4} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{BAT243.4} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{BAT253.4} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{BAT263.4} \\ \cline{1-1} \cline{3-3} \cline{5-5} \cline{7-7} \cline{9-9} \cline{11-11} 
 \end{tabular}
-	\caption{Verschaltung der Batterien}
+	\caption{Aufbau der Batterien; senkrecht = Serieschaltung; waagerecht = Parallelschaltung}
 	\label{fig:schema_batterie}
 \end{figure}
 
-Dabei sind auch die jeweils parallelen Zellen miteinander verbunden, sodass alle Zellen der selben Stufe das selbe Potential besitzen. Damit wird für die gesamte Batterie nur noch ein Batteriemanagementsystem benötigt anstelle von drei. Für ausführlichere Informationen zum Batteriemanagementsystem sei auf das nächste Kapitel verwiesen.
+Dabei sind auch die jeweils parallelen Zellen miteinander verbunden, sodass alle Zellen der selben Stufe das selbe Potential besitzen. Damit wird für die gesamte Batterie nur noch ein Batteriemanagementsystem benötigt anstelle von drei. Für ausführlichere Informationen zum Batteriemanagementsystem sei auf das nächste Unterkapitel verwiesen.
 
 Beide Batterien sind jeweils in einer Metallbox aufgebaut. Ebenfalls in dieser Metallbox sind das Steuergerät \textcolor{blue}{mit Stromsensor} des zugehörigen Batteriemanagementsystemes, eine Sicherung sowie eine Diode eingebaut. Die Sicherung, eine eigentlich für das Wechselspannungsnetz gebaute Niederspannungs-Hochleistungssicherung, ist vom Hersteller ebenfalls für Gleichspannung spezifiziert, jedoch mit deutlich geringeren Maximalwerten. Dies wird auch durch \cite{siba} gestützt. Die Ursache des niedrigeren Ausschaltstromes liegt am fehlenden Nulldurchgang des Stromes, bei welchem ein Lichtbogen abreissen kann. Der Lichtbogen muss also durch die Distanz und die Füllung gelöscht werden können. Vorteile dieses Sicherungstyps sind, dass sie einfach entfernt werden kann und damit die Stromzufuhr sauber unterbricht\textcolor{blue}{, womit sie als Wartungsschalter dient}. Ebenfalls sprechen die einfache Beschaffbarkeit und der niedrige Preis von Sicherungen für diesen Typ.
 
