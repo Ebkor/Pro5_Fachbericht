@@ -2,18 +2,19 @@
 Die Batterie konnte durch diverse Tests auf ihre Funktionstüchtigkeit geprüft werden. Dazu gehört ebenfalls die Steuerplatine, da diese die Informationen von und zur Batterie verarbeitet. Das BMS selbst wurde dabei nicht getestet, da diese Tests bereits vom Hersteller durchgeführt wurden. Es wurde lediglich die korrekte Funktion an der Batterie überprüft.
 
 \subsection{Steuerplatine}
-Um die korrekte Funktion der Steuerplatine sicherzustellen, wurde diese in drei Schritten aufgebaut. Als erstes wurde die Schaltung aufgebaut und im Simulationsprogramm LtSpice überprüft. Anschliessend wurde ein Prototyp gebaut, an welchem die Signale eingespeist und die Ausgänge vermessen wurden. Als auch dies funktionierte, wurde eine Platine bestellt, welche nach der Bestückung ebenfalls getestet wurde.
+Um die korrekte Funktion der Steuerplatine sicherzustellen, wurde diese in drei Schritten aufgebaut. Als erstes wurde die Schaltung aufgebaut und im Simulationsprogramm LtSpice überprüft. Anschliessend wurde ein Prototyp gebaut, an welchem die Signale eingespeist und die Ausgänge vermessen wurden. Als auch dies funktionierte, wurde eine Platine bestellt, welche nach der Bestückung ebenfalls getestet wurde. \color{blue}
 
-Da die einzelnen Schaltungspfade gut voneinander trennbar sind, konnten sie einzeln getestet werden. Dabei wurden die folgenden Punkte überprüft: \begin{itemize}
-	\item Die $12$ V-Einspeisung wird beim Anschluss von $230$ VAC unterbrochen
-	\item An den Einschalt-Anschlüssen liegt bei vorhandener Speisespannung die korrekte Spannung an
-	\item Beide Ladegeräte können einzeln ein- und ausgeschaltet werden
-	\item Der Hauptschalter wird nur eingeschaltet, wenn beide BMS dies erlauben
-	\item Die Lüftergruppen können einzeln ein- und ausgeschaltet werden
-	\item Am Ladezustandsausgang liegt immer die kleinere der beiden Spannungen an
-	\item Das BMS wird auch während dem Ladevorgang mit Spannung versorgt
-	\item Der Anschluss von $230$ VAC wird an das BMS übermittelt
+Da die einzelnen Schaltungspfade gut voneinander trennbar sind, konnten sie einzeln getestet werden. Dabei wurden die folgenden Punkte überprüft (\textit{kursiv} dahinter steht jeweils das erwartete und beobachtete Ergebnis): \begin{itemize}
+	\item Das $230$ VAC-Netz wird angeschlossen. \textit{Das $12$ VDC-Netz sollte ausfallen, was so eingetreten ist.}
+	\item Die Einschalt-Anschlüsse werden getestet. \textit{An den Einschalt-Anschlüssen liegt bei vorhandener Speisespannung die korrekte Spannung an, dies funktionierte ebenfalls.}
+	\item Die beiden Ladegeräte werden einzeln eingeschaltet. \textit{Beide Ladegeräte schalten einzeln ein, beim Test konnten die Ladegeräte unabhängig geschaltet werden.}
+	\item Das Einschaltverhalten des Hauptschalters wird überprüft. \textit{Dieser darf nur einschalten, wenn dies beide BMS erlauben. Nachdem beide BMS den Ausgang geschaltet hatten schaltete sich der Hauptschalter ein.}
+	\item Die Lüftergruppen werden überprüft. \textit{Beide Lüfter sollten voneinander unabhängig schaltbar sein. Dies wurde so bestätigt.}
+	\item Die Spannung am Ladezustandsausgang wird überprüft. \textit{Hier sollte immer die kleinere der beiden Eingangsspannungen anliegen. Bei Tests wurde stets die kleinere der beiden Bingangsspannungen gemessen.}
+	\item Die Spannungsversorgung des BMS funktioniert auch während dem Ladevorgang. \textit{Das BMS sollte auch während dem Ladevorgang mit Spannung versorgt werden, dies Funktioniert fehlerfrei.}
+	\item Das Anschliessen von $230$ VAC sollte im BMS ein Ereignis auslösen. \textit{Das BMS konnte das $230$ VAC-Netz erkennen.}
 \end{itemize}
+\color{black}
 
 Durch diese Tests konnte sichergestellt werden, dass die Steuerplatine wie gewünscht funktioniert. Dabei mussten jedoch Anpassungen gemacht werden, da zuerst davon ausgegangen wurde, dass das Batteriemanagementsystem mit einer Spannung von $24$ VDC arbeitet. Da dies jedoch, aufgrund einer anderen Bezugsquelle, noch geändert hat, wurde der $24$ V Spannungswandler überbrückt.
 
@@ -57,7 +58,7 @@ Der folgende Abschnitt zeigt die Tests, welche ausgeführt wurden, unterteilt in
 \end{itemize}
 
 \paragraph{Batteriemanagement-System:} \begin{itemize}
-	\item Vor dem Ladevorgang wird eine einzelne Zelle etwas tiefer entladen: \textit{Das Batteriemanagementsystem stellt die gleichmässige Ladung aller Zellen mittels Balancing wieder her. Dieser Vorgang fand so statt, dauert allerdings sehr lange, weshalb dieser Parameter im BMS nachträglich angepasst wurde. Das konnte so durch die Testfahrten verifiziert werden.}
+	\item Vor dem Ladevorgang wird eine einzelne Zelle etwas tiefer entladen: \textit{Das Batteriemanagementsystem stellt die gleichmässige Ladung aller Zellen mittels Balancing wieder her. Dieser Vorgang fand so statt, dauert allerdings sehr lange, weshalb dieser Parameter im BMS nachträglich angepasst wurde. Ein weiterer Test hat anschliessend die korrekte Funktion bewiesen.}
 	\item Das Ende des Ladezyklus wird erfasst: \textit{Das Batteriemanagementsystem verhindert ein Überladen der Zellen. Das Ladegerät wurde vom BMS ausgeschaltet.}
 	\item Die Batterie wird möglichst tief entladen: \textit{Das Batteriemanagementsystem öffnet den Hauptschalter, um so eine Tiefentladung der Batterie zu verhindern. Dieses Verhalten wurde bestätigt.}
 \newpage
