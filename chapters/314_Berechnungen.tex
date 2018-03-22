@@ -1,13 +1,13 @@
 \subsection{Berechnungen zur Batterie}
 Bei der Batterie sind vor allem der maximale Kurzschlussstrom sowie die maximale Verlustleistung von Interesse, da diese für die Sicherung und die Kühlung relevant sind.
 
-Mittels $\frac{dU}{dI}$-Messung konnte der Innenwiderstand der Batterie bestimmt werden. Dabei wurde eine Messung im Leerlauf und eine bei einem Strom von ca. $50$ A durchgeführt, wobei diese Messung für zwölf in Serie geschaltete Zellen ohne Parallelschaltung durchgeführt wurde. Die Messung ergab einen Innenwiderstand von $20$ m$\Omega$ (dies korreliert mit der Herstellerangabe von $1.8$ m$\Omega$ pro Zelle \cite{lev50}), deswegen wird zur Sicherheit mit folgenden Werten gerechnet:
+Mittels einer $\frac{dU}{dI}$-Messung konnte der Innenwiderstand der Batterie bestimmt werden. Dabei wurde eine Messung im Leerlauf und eine bei einem Strom von ca. $50$ A durchgeführt, wobei diese Messung für zwölf in Serie geschaltete Zellen ohne Parallelschaltung durchgeführt wurde. Die Messung ergab einen Innenwiderstand von $20$ m$\Omega$ (dies korreliert mit der Herstellerangabe von $1.8$ m$\Omega$ pro Zelle \cite{lev50}), deswegen wird zur Sicherheit mit folgenden Werten gerechnet:
 \begin{itemize}
 	\item $15$ m$\Omega$ als schlimmster Fall für den Kurzschluss (maximaler Kurzschlussstrom)
 	\item $24$ m$\Omega$ als schlimmster Fall für die Verlustleistung (maximale Abwärme)
 \end{itemize}
 
-Da jeweils drei Stränge zu 12 Zellen parallel geschaltet sind ergibt sich ein Widerstand von:
+Da jeweils drei Stränge zu 12 Zellen parallel geschaltet sind, ergibt sich ein Widerstand von:
 \begin{equation*}
 	R_B=\frac{1}{\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}}=\quad 5\text{ m}\Omega\text{ bzw. } 8\text{ m}\Omega
 \end{equation*}
@@ -22,7 +22,7 @@ Für den Fahrstrom ergibt sich eine Abwärme von:
 	P_{V,Max}=\left(100\text{ A}\right)^2\cdot8\text{ m}\Omega=\quad\underline{80\text{ W}}
 \end{equation*}
 
-Bei der Ladung kann die Abwärme der Batterie als irrelevant angesehen werden. Auch bei grosser Belastung entsteht keine grosse Wärme. Trotzdem können durch das Batteriemanagementsystem bei Bedarf Lüfter eingeschaltet werden, um die Batterien zu kühlen. Die sehr geringe Eigenerwärmung der Zellen konnten bei einem Versuch bestätigt werden, bei dem eine Einzelzelle ($3.7$ V, $50$ Ah) ungefähr eine halbe Stunde mit einem Strom von $30$ A belastet wurde und sich nicht fühlbar erwärmte.
+Bei der Ladung kann die Abwärme der Batterie als irrelevant angesehen werden. Auch bei grosser Belastung entsteht keine grosse Wärme. Trotzdem können durch das Batteriemanagementsystem bei Bedarf Lüfter eingeschaltet werden, um die Batterien zu kühlen. Die sehr geringe Eigenerwärmung der Zellen konnte bei einem Versuch bestätigt werden, bei dem eine Einzelzelle ($3.7$ V, $50$ Ah) ungefähr eine halbe Stunde mit einem Strom von $30$ A belastet wurde und sich nicht merklich erwärmte.
 
 Der schlimmste Fall eines Kurzschlusses ist ein Kurzschluss direkt an den Klemmen der Batterie. In diesem Fall wird der Stromfluss nur durch den Innenwiderstand der Batterie beschränkt. Im schlimmsten Fall muss mit der Ladeschlussspannung und einem kleinen Innenwiderstand der Batterie gerechnet werden. Der Kurzschlussstrom berechnet sich gemäss $I=\frac{U}{R}$ zu:
 \begin{equation*}
@@ -32,7 +32,7 @@ Der schlimmste Fall eines Kurzschlusses ist ein Kurzschluss direkt an den Klemme
 \subsection{Kapazität der Batterie}\label{sec:ah}
 \color{blue}Die Batteriekapazität pro Zelle wird mit $50$ Ah angegeben \cite{lev50}, woraus sich bei drei parallel geschalteten Zellen eine theoretische Kapazität von $150$ Ah ergibt. Die Messungen über das BMS haben dann aber gezeigt, dass dieser Wert deutlich zu hoch ist. Realistischer erscheint ein ungefähr halb so grosser Wert, womit auch der Energiegehalt der Zellen deutlich geringer ausfällt. Um diese Diskrepanz zu erklären, wurde nach Gründen für den doch deutlichen Unterschied gesucht: \begin{itemize}
 	\item Die Entladeschlussspannung wurde etwas höher gewählt, die Ladeschlussspannung etwas tiefer. Dadurch lässt sich nicht die gesamte Kapazität entnehmen, dafür wird die Batterie geschont.
-	\item Die Entladung erfolgte mit einem deutlich höheren Strom als bei der Herstellerangabe, wodurch die Entladeschlussspannung schneller erreicht ist (durch den höheren Spannungsabfall am Innenwiderstand der Batterie).
+	\item Die Entladung erfolgte mit einem deutlich höheren Strom als bei der Herstellerangabe, wodurch die Entladeschlussspannung schneller erreicht wurde (durch den höheren Spannungsabfall am Innenwiderstand der Batterie).
 	\item Die Batterien altern mit der Zeit. Bei der Batterie selbst wurde kein Datum für deren Erstellung gefunden, jedoch deuten andere Bauteile auf eine Produktion Anfang 2011 hin, wodurch ein Alter von sieben Jahren resultiert.
 	\item Einige Minuten nach dem Beenden der Entladung steigt die Zellenspannung wieder leicht an.
 \end{itemize}

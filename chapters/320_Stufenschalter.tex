@@ -1,6 +1,6 @@
 \section{Antrieb}
 
-Im \textsc{Detroit} kann die Geschwindigkeit mittels eines Stufenschalters mit fünf Positionen ausgewählt werden. Um die Funktion des Stufenschalters zu verstehen ist es unabdingbar, zu Beginn einen Blick auf die Funktionsweise des Motors zu richten. Anschliessend werden die verschiedenen Schaltungen, die mit dem Stufenschalter realisierbar sind, vorgestellt.
+Im \textsc{Detroit} kann die Geschwindigkeit mittels eines Stufenschalters mit fünf Positionen ausgewählt werden. Um die Funktion des Stufenschalters zu verstehen, ist es unabdingbar, zu Beginn einen Blick auf die Funktionsweise des Motors zu richten. Anschliessend werden die verschiedenen Schaltungen, die mit dem Stufenschalter realisierbar sind, vorgestellt.
 
 \subsection{Funktion des Reihenschlussmotores}\label{gm}
 
@@ -13,7 +13,7 @@ Grundsätzlich ist der verwendete Motor ein Gleichstrommotor. Für diesen Motor 
 	\omega_{me}=\frac{U_i}{k\cdot \Phi_E}
 \label{eq:motor_dc_u}
 \end{equation}
-Wichtig ist die Bemerkung, dass diese Gleichungen für den idealen Anker gelten. Bei einem realen Motor addiert sich zur induzierten Spannung $U_i$ noch die Spannung über dem ohmschen Ankerwiderstand $R_A\cdot I_A$. Ausserdem entstehen im Motor selbst Reibungen, die das verfügbare mechanische Drehmoment reduzieren (beispielsweise Lager oder Lüfter).
+Wichtig ist, dass diese Gleichungen für den idealen Anker gelten. Bei einem realen Motor addiert sich zur induzierten Spannung $U_i$ noch die Spannung über dem ohmschen Ankerwiderstand $R_A\cdot I_A$. Ausserdem entstehen im Motor selbst Reibungen, die das verfügbare mechanische Drehmoment reduzieren (beispielsweise Lager oder Lüfter).
 
 Wird angenommen, dass die Nichtlinearitäten klein sind im Vergleich zum idealen Modell, kann gesagt werden, dass der Strom proportional zum Moment und die Spannung proportional zur Winkelgeschwindigkeit ist. Mit dem Erregerfluss $\Phi_E$ können dabei beide Grössen beeinflusst werden: \begin{itemize}
 	\item Bei erhöhtem Erregerfluss wird das Moment pro Strom grösser, jedoch die Winkelgeschwindigkeit pro Spannung kleiner
@@ -48,7 +48,7 @@ Da durch Anker und Erregerwicklung der selbe Strom fliesst, somit gilt $I_A=I_E$
 \end{equation}
 Da auch bei der Reihenschlussmaschine der ohmsche Spannungsabfall über Anker- und Erregerwicklung einen zum Strom proportionalen Spannungsabfall bewirkt, stellt sich für jede angelegte Spannung automatisch ein Gleichgewicht zwischen Drehzahl und Drehmoment ein. Dies erlaubt jedoch weder eine vernünftige Regelung der Geschwindigkeit, noch ist es in jedem möglichen Arbeitspunkt besonders effizient.
 
-Um diese Probleme anzugehen, wird mit der sogenannten Feldschwächung gearbeitet: Bei niedrigen Drehzahlen, wo hohes Moment gefordert ist, wird die Erregung komplett in Serie zum Anker geschaltet. Sind bei höheren Drehzahlen nicht mehr so hohe Momente benötigt, wird ein Teil des Stromes "`an der Erregerwicklung vorbei"' 
+Um diese Probleme anzugehen, wird mit der sogenannten Feldschwächung gearbeitet: Bei niedrigen Drehzahlen, wo hohes Moment gefordert ist, wird die Erregung komplett in Serie zum Anker geschaltet. Werden bei höheren Drehzahlen nicht mehr so hohe Momente benötigt, wird ein Teil des Stromes "`an der Erregerwicklung vorbei"' 
 geleitet, sodass die Erregung zusätzlich geschwächt wird. Dies wird als Feldschwächung bezeichnet.
 
 \subsection{Funktion des Stufenschalters}
@@ -68,7 +68,7 @@ Diese Effekte, die beim Reihenschlussmotor bereits vorgestellt wurden, werden vo
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
 	\paragraph{Stufe: Eins}
-	In der ersten Fahrstufe werden die beiden Batterien parallel geschaltet, wodurch zum einen die Spannung verringert wird, zum anderen auch der für grosse Momente benötigte Strom geliefert werden kann. Um ein maximales Moment zu erreichen, sind beide Feldwicklungen in Serie angeschlossen, wodurch durch beide der volle Fahrstrom fliesst. Ausserdem ist zur Begrenzung des Anlaufstromes (da im ersten Moment die induzierte Spannung $U_i=0V$ beträgt) der Widerstand $R_1$ in Serie geschaltet.
+	In der ersten Fahrstufe werden die beiden Batterien parallel geschaltet, wodurch zum einen die Spannung verringert wird, zum anderen auch der für grosse Momente benötigte Strom geliefert werden kann. Um ein maximales Moment zu erreichen, sind beide Feldwicklungen in Serie angeschlossen, was bewirkt dass durch beide der volle Fahrstrom fliesst. Ausserdem ist zur Begrenzung des Anlaufstromes (da im ersten Moment die induzierte Spannung $U_i=0V$ beträgt) der Widerstand $R_1$ in Serie geschaltet.
 \end{minipage}
 
 \begin{minipage}{0.49\textwidth}
@@ -76,7 +76,7 @@ Diese Effekte, die beim Reihenschlussmotor bereits vorgestellt wurden, werden vo
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
 	\paragraph{Stufe: Zwei}
-	Die zweite Stufe ist fast gleich aufgebaut wie die erste. Auch hier wird für ein möglichst grosses Moment die Serieschaltung der Erregerwicklungen sowie die Parallelschaltung der Batterien verwendet. Der einzige Unterschied zur ersten Fahrstufe ist, dass der Anfahrwiderstand $R_1$ überbrückt und somit funktionslos ist. Durch den weggefallenen Spannungsabfall über dem Anfahrwiderstand wird die erreichbare induzierte Spannung grösser, ohne dabei das erreichbare Moment zu reduzieren.
+	Die zweite Stufe ist fast gleich aufgebaut wie die erste. Auch hier werden für ein möglichst grosses Moment die Serieschaltung der Erregerwicklungen sowie die Parallelschaltung der Batterien verwendet. Der einzige Unterschied zur ersten Fahrstufe ist, dass der Anfahrwiderstand $R_1$ überbrückt und somit funktionslos ist. Durch den weggefallenen Spannungsabfall über dem Anfahrwiderstand wird die erreichbare induzierte Spannung grösser, ohne dabei das erreichbare Moment zu reduzieren.
 \end{minipage}
 
 \begin{minipage}{0.49\textwidth}
@@ -103,7 +103,7 @@ Diese Effekte, die beim Reihenschlussmotor bereits vorgestellt wurden, werden vo
 	Auch in der fünften und damit höchsten Fahrstufe sind die beiden Batterien für eine höhere Spannung in Serie geschaltet. Hier wird erneut die Feldschwächung angewendet, indem die beiden Erregerwicklungen parallel geschalten werden und damit der Fluss reduziert wird. Im Gegensatz zur Stufe drei, bei welcher die Erregerwicklungen ebenfalls parallel geschaltet werden, wird hier auf die zusätzliche Parallelschaltung des Widerstandes $R_2$ und damit auf die weitere Reduktion des Feldes verzichtet. Dadurch sollten sich auch noch bei hohen Geschwindigkeiten genügende Momente ergeben.
 \end{minipage}
 
-Die Fahrstufen werden dabei vom Stufenschalter mechanisch geschaltet, indem unter den Kontaktfingern mittels Kupferplatten Kontakte verbunden (und damit beispielsweise Widerstände überbrückt) werden. Die Lagen dieser Kupferplatten ist im Originalschema zu finden, wie es im Anhang unter \ref{schema_original} zu finden ist. Ausserdem ist ein Blick in das Innere des Stufenschalters in Abbildung \ref{fig:Stufenschalter} gegeben:
+Die Fahrstufen werden dabei vom Stufenschalter mechanisch geschaltet, indem unter den Kontaktfingern mittels Kupferplatten Kontakte verbunden (und damit beispielsweise Widerstände überbrückt) werden. Die Lagen dieser Kupferplatten sind im Originalschema zu finden, wie es im Anhang unter \ref{schema_original} aufgezeigt ist. Ausserdem ist ein Blick in das Innere des Stufenschalters in Abbildung \ref{fig:Stufenschalter} gegeben:
 
 \begin{figure}[h]
 	\centering
