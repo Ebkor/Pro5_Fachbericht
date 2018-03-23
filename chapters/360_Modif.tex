@@ -28,17 +28,17 @@ Ein Shunt ist ein definierter Widerstand, über dem die Spannung gemessen wird, 
 
 Um den Widerstandswert des Shunts beizubehalten, musste die Empfindlichkeit des Anzeigegerätes bekannt sein. Aus diesem Grund wurde ein Abgleich mit der Skalenanzeige durchgeführt, was zu folgendem Ergebnis führte:
 \begin{equation*}\begin{aligned}
-	100\text{ A}\ &\rightarrow\ 75.6\text{ mV}\\
-	50\text{ A}\ &\rightarrow\ 38.1\text{ mV}
+	100\text{ A}\ &\rightarrow\ 75.3\text{ mV}\\
+	50\text{ A}\ &\rightarrow\ 37.8\text{ mV}
 \end{aligned}\end{equation*}
 Wie man sieht, passen die Werte sehr gut zusammen. Damit lässt sich nun ein Widerstandswert für den Shunt bestimmen, wie Formel \ref{eq:rshunt} zeigt:
 
 \begin{equation}
-R_{Shunt}=\frac{U}{I}=\frac{75.6\text{ mV}}{100\text{ A}}\approx\quad\underline{0.75\text{ m}\Omega}
+R_{Shunt}=\frac{U}{I}=\frac{75.3\text{ mV}}{100\text{ A}}\approx\quad\underline{0.75\text{ m}\Omega}
 \label{eq:rshunt}
 \end{equation}
 
-Zusammen mit diesem Widerstandswert lässt sich die maximale Abwärme des Shunts bestimmen. Dabei wird als Maximalstrom $150$ A angenommen, wie es auf dem alten Shunt eingeprägt war. Formel \ref{eq:shunt_pv} zeigt die Berechnung der Verlustwärme für den maximalen Strom sowie für einen angenommenen durchschnittlichen Strom von $80$ A:
+Zusammen mit diesem Widerstandswert lässt sich die maximale Abwärme des Shunts bestimmen. Dabei wird als Maximalstrom $150$ A angenommen, wie es auf dem alten Shunt eingeprägt war. Formel \ref{eq:shunt_pv} zeigt die Berechnung der Verlustleistung für den maximalen Strom sowie für einen angenommenen durchschnittlichen Strom von $80$ A:
 
 \begin{equation}\begin{aligned}
 	P_{v,max}&=I_{max}^2\cdot R_{Shunt}=\left(150\text{ A}\right)^2\cdot0.75\text{ m}\Omega=\quad\underline{16.9\text{ W}}\\[6pt]
@@ -52,7 +52,7 @@ Daraus resultieren einige Anforderungen an den Shunt bzw. das Material, aus welc
 	\item Um einen stabilen Shunt bauen zu können, sollte die Querschnittsfläche gross sein, was einen hohen spezifischen Widerstand erfordert.
 	\item Der Werkstoff muss -- um die gewünschte Form herstellen zu können -- gut bearbeitbar sein.
 	\item Die Anschlussblöcke sollten vom Widerstandswert her irrelevant sein gegenüber dem Shunt, weswegen sie aus massivem Kupfer vorzusehen sind.
-	\item Die Genauigkeit muss nicht besonders hoch sein, da das Ablesen an einem analogen Instrument erfolgt und nur einen Richtwert liefern soll. Auch eine nicht allzu grosse Nichtlinearität bei Temperaturänderung ist tolerierbar.
+	\item Die Genauigkeit sollte gross genug sein, um die analoge Anzeige nicht zu verschlechtern. Dazu kann eine Genauigkeit von $10$ \% gefordert werden. Auch die Änderung durch Temperaturerhöhung sollte in diesem Bereich liegen.
 \end{itemize}
 
 Aufgrund der genannten Bedingungen wurde ein rostfreier Stahl 1.4301 \cite{4301} gewählt. Dieser Werkstoff ist sehr beständig, sowohl mechanisch als auch chemisch, hat einen hohen spezifischen Widerstand von $0.73\ \frac{\Omega \cdot \text{mm}^2}{\text{m}}$ und ist als Stahl gut bearbeitbar. Die Länge des Widerstandselementes wird beinahe beibehalten. Es wird eine ursprüngliche Länge von 2 Zoll ($50.8$ mm) geschätzt. Die Länge des neuen Shunts beträgt $50$ mm. Damit kann die benötigte Querschnittsfläche bestimmt werden, gezeigt in Formel \ref{eq:shunt_a}:
