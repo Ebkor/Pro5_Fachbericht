@@ -47,7 +47,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagenumbering{gobble}
 {\pagestyle{plain}{
-	\setcounter{tocdepth}{2}
 	\input{chapters/001_Abstract}
 }}
 
@@ -65,7 +64,7 @@
 % Inhaltsverzeichnis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {\pagestyle{plain}{
-\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{1}
 \tableofcontents
 }}
 
@@ -79,6 +78,7 @@
 % Einleitung
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\addtocontents{toc}{\protect\vspace{2cm}}
 \input{chapters/100_Einleitung}
 \clearpage{\pagestyle{empty}\cleardoublepage}
 
@@ -132,7 +132,7 @@
 \clearpage{\pagestyle{empty}\cleardoublepage}
 \bibliographystyle{IEEEtran}
 \bibliography{Bibliographie}
-
+\addtocontents{toc}{\protect\newpage}
 \cleardoublepage
 \appendix
 \pagenumbering{Roman}
@@ -141,7 +141,6 @@
 \pagestyle{plain}
 
 \newpage
-
 \include{chapters/700_Anhang}
 \include{chapters/701_AnhangBMS}
 \include{chapters/702_AnhangBilder}
