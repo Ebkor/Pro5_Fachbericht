@@ -5,15 +5,15 @@ Da am Ende die Batterie in das Fahrzeug eingebaut werden soll, muss auch diese K
 	\item Funktion der Bremse auch bei Gegenmoment durch den Motor
 \end{itemize}
 
-Für die Tests des Antriebs im Normalbetrieb werden nach Absprache mit dem Besitzer, folgende Versuche durchgeführt: \begin{itemize}
+Für die Tests des Antriebs im Normalbetrieb werden nach Absprache mit dem Besitzer folgende Versuche durchgeführt: \begin{itemize}
 	\item Antriebsprüfung des aufgebockten Fahrzeuges
-	\item Antriebsprüfung auf dem Parkplatz der Fachhochschule
-	\item Antriebsprüfung auf einer längeren Strasse, um das Verhalten bei höheren Geschwindigkeiten zu Prüfen
+	\item Antriebsprüfung auf dem Parkplatz der FHNW
+	\item Antriebsprüfung auf einer längeren Strasse, um das Verhalten bei höheren Geschwindigkeiten zu prüfen
 \end{itemize}
 
 Nach dem Abschluss dieser Tests wurden die Zusatzfunktionen der Hilfsspannung überprüft. Diese umfassen die korrekte Funktion des Blinkers sowie der Hupe.
 
-\color{blue} Einige Tests, welche bereits für die Batterie durchgeführt werden, wurden im Fahrzeug wiederholt. Das liegt darin begründet, dass die Verkabelung neu aufgebaut wurde, womit sich auch hier potentiell Fehler einschleichen konnten. Dabei wurden folgende Tests am aufgebockten Fahrzeug (mit dem leerlaufenden Motor als Last) durchgeführt (auch hier steht wieder \textit{kursiv} das erwartete und beobachtete Ergebnis): \begin{itemize}
+\color{blue} Einige Tests, welche bereits für die Batterie durchgeführt wurden, wurden im Fahrzeug wiederholt. Dies kann damit begründet werden, dass die Verkabelung neu aufgebaut wurde, womit sich auch hier potentiell Fehler einschleichen konnten. Dabei wurden folgende Tests am aufgebockten Fahrzeug (mit dem leerlaufenden Motor als Last) durchgeführt (auch hier steht wieder \textit{kursiv} das erwartete und beobachtete Ergebnis): \begin{itemize}
 	\item Betätigung des Hauptschalters bei drehendem Motor: \textit{Die Stromzufuhr zum Motor wird unterbrochen. Trotzdem kann der Motor noch ungehindert auslaufen und befindet sich im Leerlauf. Der Motor lief ohne Spannung langsam aus.}
 	\item Mit einer Wärmebildkamera werden sämtliche Anschlussstellen im Fahrzeug (auch bereits bestehende) untersucht: \textit{Schlechte Kontakte können damit erkannt und behoben werden. Die einzige überdurchschnittlich erwärmte Stelle war der Shunt, was so zu erwarten war.}
 	\item Das $230$ VAC-Netz wird angeschlossen: \textit{Das $12$ VDC-System fällt -- ausser beim BMS -- aus, folglich wird auch der Hauptschalter geöffnet. Beim Einstecken des Ladekabels wurde der Motor ausgeschaltet und die Hinterräder drehten langsam aus.}
@@ -21,14 +21,14 @@ Nach dem Abschluss dieser Tests wurden die Zusatzfunktionen der Hilfsspannung ü
 	\item Eine Überlastsituation wird dargestellt: \textit{Der Hauptschalter sollte die Last nach kurzer Zeit ausschalten, dies wurde so bestätigt.}
 \end{itemize}
 
-Ausserdem können im Fahrzeug einige Tests nun zum ersten Mal durchgeführt werden: \begin{itemize}
-	\item Mit beiden Batterien wird der Stufenschalter durchgegangen: \textit{Die Drehzahl der Hinterräder erhöht sich mit jeder Stufe. Dieses Verhalten konnte grob bestätigt werden. Aufgrund des Leerlaufes des Reihenschlussmotores sind die Werte allerdings mit Vorsicht zu geniessen.}
+Ausserdem konnten im Fahrzeug einige Tests nun zum ersten Mal durchgeführt werden: \begin{itemize}
+	\item Mit beiden Batterien wird der Stufenschalter durch alle fünf Stufen geführt: \textit{Die Drehzahl der Hinterräder erhöht sich mit jeder Stufe. Dieses Verhalten konnte im Ansatz bestätigt werden. Aufgrund des Leerlaufes des Reihenschlussmotores sind die Werte allerdings nicht zwingend in Realität korrekt.}
 	\item Die korrekte Verbindung zwischen den Batterien wird untersucht, das heisst die Zugehörigkeit der Steuerungen und der Ladegeräte: \textit{Die Steuerungen und Ladegeräte überwachen bzw. laden jeweils nur die zugehörige Batterie. Die korrekte Verkabelung wurde bestätigt.}
 \end{itemize}
 
-Für weitere Testfahrten wurde beim Strassenverkehrsamt eine Tagesnummer gelöst. Während dreier Tage wurden Testfahrten unternommen, bei welchen interessante Erkenntnisse gemacht wurden. Die Erfahrungen, welche für den Besitzer relevant sind, sind im Anhang unter \ref{app:quickstart} zu finden. Eine Übersicht über alle Erkenntnisse soll hingegen an dieser Stelle im Fachbericht durchgeführt werden: \begin{itemize}
+Für weitere Testfahrten wurde beim Strassenverkehrsamt eine 3-Tagesnummer gelöst. Während dreier Tage wurden Testfahrten unternommen, bei welchen interessante Erkenntnisse gemacht wurden. Die Erfahrungen, welche für den Besitzer relevant sind, sind im Anhang unter \ref{app:quickstart} zu finden. Eine Zusammenfassung aller Erkenntnisse soll hingegen an dieser Stelle im Fachbericht durchgeführt werden: \begin{itemize}
 	\item Die Funktion des Fahrzeuges ist erfüllt, es lässt sich auf der Strasse fahren.
-	\item Die Höchstgeschwindigkeit auf ebener Strecke beträgt ungefähr $35$-$40$ km/h. In Steigungen sind nur geringere Geschwindigkeiten möglich, da ansonsten der Strom zu hoch wird und der Überstromschutz des BMS anspricht. So ist im dritten Gang bei Steigungen eine Geschwindigkeit von $10$ km/h erreichbar. Allgemein konnte aber auch bemerkt werden, dass der Luftwiderstand stark ins Gewicht fällt (siehe dazu Formel \ref{eq:Luftwiderstand}):
+	\item Die Höchstgeschwindigkeit auf ebener Strecke beträgt ungefähr $35$-$40$ km/h. In Steigungen sind nur geringere Geschwindigkeiten möglich, da ansonsten der Strom zu hoch wird und der Überstromschutz des BMS anspricht. So ist im dritten Gang bei starken Steigungen eine Geschwindigkeit von $10$ km/h erreichbar. Allgemein wurde aber auch bemerkt, dass der Luftwiderstand stark ins Gewicht fällt (siehe dazu Formel \ref{eq:Luftwiderstand}):
 	\begin{equation}
 		P_{Luft}=\frac{\rho}{2}\cdot c_w\cdot A\cdot v^3=\frac{1.29\frac{\text{kg}}{\text{m}^3}}{2}\cdot 0.8\cdot 3\text{ m}^2\cdot\left(10\frac{\text{m}}{\text{s}}\right)^3=\quad\underline{1\ 548\text{ W}}
 	\label{eq:Luftwiderstand}
@@ -41,10 +41,10 @@ Für weitere Testfahrten wurde beim Strassenverkehrsamt eine Tagesnummer gelöst
 	\item Die Rückwärtsfahrstufe lässt sich nicht immer ohne Probleme einlegen. Da dieses Problem beim Test ohne Stufenschalterdeckel und ohne Boden noch nicht aufgetreten ist, wird vermutet, dass unter dem Boden eine Stange der Steuerung beispielsweise am Holzboden ankommt.
 	\item Es wird eine Reichweite von ca. $100$ km erreicht, wobei diese Reichweite stark abhängig vom Fahrstil ist (schnelleres Fahren und häufiges Bremsen verringern die Reichweite stark). Die Batterie konnte innerhalb eines Tages nicht komplett entleert werden, die Reichweite wurde jedoch aufgrund der zurückgelegten Strecke und der (mittels der Lastwiderstände genau ermittelten) entnehmbaren Leistung berechnet. Wichtig ist jedoch die Feststellung, dass die Batterieladung für mindestens einen Tag ausreicht.
 	\item Das Fahrverhalten ist -- auch bei höheren Geschwindigkeiten -- sehr ruhig, wobei jedoch im Bereich von ca. $25$ km/h eine mechanische Resonanz zwischen Blattfederung und Karosseriemasse festgestellt wurde (Feder-Masse-Pendel). Bei weiterer Erhöhung der Geschwindigkeit verschwindet diese komplett und das Fahrzeug fährt überraschend ruhig. Auch akustisch ist -- abgesehen vom Fahrtwind -- nichts festgestellt worden.
-	\item Die Bremswirkung des Fahrzeuges ist grösser als das maximale Moment, welches der Motor erzeugen kann. Bei betätigter Bremse wird allerdings innert kurzer Zeit ($10$ s) der Überstromschutz ansprechen. Von eine längeren Betätigung der Bremse wird -- wenn nicht unbedingt nötig -- abgeraten, da sich die Trommelbremse stark erwärmt (kurze Bergabfahrten sind jedoch problemlos möglich).
+	\item Die Bremswirkung des Fahrzeuges ist grösser als das maximale Moment, welches der Motor erzeugen kann. Bei betätigter Bremse wird allerdings innert kurzer Zeit ($10$ s) der Überstromschutz ansprechen. Von einer längeren Betätigung der Bremse wird -- wenn nicht unbedingt nötig -- abgeraten, da sich die Trommelbremse stark erwärmt (kurze Bergabfahrten sind jedoch problemlos möglich).
 \end{itemize}
 
-Die Erkenntnisse sind als solche zu sehen, Fehler wurden keine gefunden. Damit kann gesagt werden, dass die Tests erfolgreich verlaufen sind. Das Fahrzeug zog viel Aufmerksamkeit auf sich und viele Verkehrsteilnehmer waren überrascht, dass es bereits vor 100 Jahren elektrisch angetriebene Fahrzeuge gegeben hat.
+Die Erkenntnisse werden als gegeben hingenommen, jedoch wurden keine Fehler gefunden. Damit kann gesagt werden, dass die Tests erfolgreich verlaufen sind. Das Fahrzeug zog viel Aufmerksamkeit auf sich und viele Verkehrsteilnehmer waren überrascht, dass es bereits vor 100 Jahren elektrisch angetriebene Fahrzeuge gegeben hat.
 
 \newpage
 \color{black}
