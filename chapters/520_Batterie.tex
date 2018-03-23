@@ -1,8 +1,8 @@
 \section{Test der Batterie}
-Die Batterie konnte durch diverse Tests auf ihre Funktionstüchtigkeit geprüft werden. Dazu gehört ebenfalls die Steuerplatine, da diese die Informationen von und zur Batterie verarbeitet. Das BMS selbst wurde dabei nicht getestet, da diese Tests bereits vom Hersteller durchgeführt wurden. Es wurde lediglich die korrekte Funktion an der Batterie überprüft.
+Die Batterie wurde durch diverse Tests auf ihre Funktionstüchtigkeit geprüft. Dazu gehört ebenfalls die Steuerplatine, da diese die Informationen von und zur Batterie verarbeitet. Das BMS selbst wurde dabei nicht getestet, da diese Tests bereits vom Hersteller durchgeführt wurden. Es wurde lediglich die korrekte Funktion an der Batterie überprüft.
 
 \subsection{Steuerplatine}
-Um die korrekte Funktion der Steuerplatine sicherzustellen, wurde diese in drei Schritten aufgebaut. Als erstes wurde die Schaltung aufgebaut und im Simulationsprogramm LtSpice überprüft. Anschliessend wurde ein Prototyp gebaut, an welchem die Signale eingespeist und die Ausgänge vermessen wurden. Als auch dies funktionierte, wurde eine Platine bestellt, welche nach der Bestückung ebenfalls getestet wurde. \color{blue}
+Um die korrekte Funktion der Steuerplatine sicherzustellen, wurde diese in drei Schritten aufgebaut. Als erstes wurde die Schaltung erstellt und im Simulationsprogramm LTspice überprüft. Anschliessend wurde ein Prototyp gebaut, an welchem die Signale eingespeist und die Ausgänge vermessen wurden. Als dies funktionierte, wurde eine Platine bestellt, welche nach der Bestückung ebenfalls getestet wurde. \color{blue}
 
 Da die einzelnen Schaltungspfade gut voneinander trennbar sind, konnten sie einzeln getestet werden. Dabei wurden die folgenden Punkte überprüft (\textit{kursiv} dahinter steht jeweils das erwartete und beobachtete Ergebnis): \begin{itemize}
 	\item Das $230$ VAC-Netz wird angeschlossen. \textit{Das $12$ VDC-Netz sollte ausfallen, was so eingetreten ist.}
@@ -16,7 +16,7 @@ Da die einzelnen Schaltungspfade gut voneinander trennbar sind, konnten sie einz
 \end{itemize}
 \color{black}
 
-Durch diese Tests konnte sichergestellt werden, dass die Steuerplatine wie gewünscht funktioniert. Dabei mussten jedoch Anpassungen gemacht werden, da zuerst davon ausgegangen wurde, dass das Batteriemanagementsystem mit einer Spannung von $24$ VDC arbeitet. Da dies jedoch, aufgrund einer anderen Bezugsquelle, noch geändert hat, wurde der $24$ V Spannungswandler überbrückt.
+Durch diese Tests konnte sichergestellt werden, dass die Steuerplatine wie gewünscht funktioniert. Dabei mussten jedoch Anpassungen gemacht werden, da zuerst davon ausgegangen wurde, dass das BMS mit einer Spannung von $24$ VDC arbeitet. Da dies jedoch, aufgrund einer anderen Bezugsquelle, noch geändert hat, wurde der $24$ V Spannungswandler überbrückt.
 
 \subsection{Einzelzellen}
 Um Fehler von Beginn an zu realisieren, wurden vor der Verschaltung die einzelnen Zellen getestet. Zu diesem Zweck wurde an jeder Zelle die Spannung gemessen. Da die Zellen vorgängig alle komplett geladen waren wäre eine defekte Zelle durch eine niedrigere Spannung aufgefallen.
