@@ -5,14 +5,14 @@ Als Batteriemanagementsystem (im Folgenden BMS genannt) wird das EMUS BMS des li
 \paragraph{Aufbau}
 Das eingesetzte Batteriemanagementsystem besteht aus folgenden Komponenten: \begin{itemize}
 	\item Ein Steuergerät
-	\item Ein Zellmodul mit Temperatursensor pro Zelle, insgesamt also 12 \textcolor{blue}{pro Batterie}
+	\item Ein Zellmodul mit Temperatursensor pro Zelle, insgesamt also 12 pro Batterie
 	\item Zwei Isolationsadapter zur Kommunikation
 	\item Ein Strommessmodul
 \end{itemize}
 
 Das \textbf{Steuergerät} ist das Gehirn des BMS. Es verarbeitet sämtliche Informationen der Sensoren und bestimmt damit den Ladezustand der Batterie. Damit können ebenfalls die Schaltzustände für das Ladegerät sowie für den Hauptschalter bestimmt werden. Ausserdem regelt das Steuergerät die Balancierströme, um sämtliche Zellen auf dem selben Potential zu halten.
 
-Die \textbf{Zellmodule} werden auf jeder Zelle (beziehungsweise auf jeweils einer pro Seriestufe, da die Spannungen der parallelen Zellen identisch ist) montiert. Sie messen dabei die Spannung und die Temperatur der Einzelzelle. \textcolor{blue}{Bei Bedarf wird ein Balancierstrom durch den Widerstand eingeschaltet}. Die Kommunikation erfolgt dabei seriell durch alle Zellmodule hindurch. Es ist also keine direkte Verbindung vom Zellmodul zum Steuergerät erforderlich.
+Die \textbf{Zellmodule} werden auf jeder Zelle (beziehungsweise auf jeweils einer pro Seriestufe, da die Spannungen der parallelen Zellen identisch ist) montiert. Sie messen dabei die Spannung und die Temperatur der Einzelzelle. Bei Bedarf wird ein Balancierstrom durch den Widerstand eingeschaltet. Die Kommunikation erfolgt dabei seriell durch alle Zellmodule hindurch. Es ist also keine direkte Verbindung vom Zellmodul zum Steuergerät erforderlich.
 
 Die \textbf{Isolationsadapter} sorgen dafür, dass die Signale der Zellmodule galvanisch getrennt an das Steuergerät übertragen werden können. Damit wird ermöglicht, dass nicht mit hohen Spannungen zum Steuergerät gefahren werden muss und dieses folglich einfacher aufgebaut werden kann. Die galvanische Trennung erfolgt mit Optokopplern.
 
@@ -20,7 +20,7 @@ Das \textbf{Strommessmodul} misst, wie der Name bereits sagt, den Strom. Die Mes
 
 \paragraph{Konfiguration}
 Das BMS muss natürlich auf die verwendete Batterie angepasst werden. Da das BMS frei programmierbar ist, ist es kein Problem, beliebige Einstellungen vorzunehmen. Einige Parameter sind dabei von der Batterie vorgegeben, andere wurden selbst evaluiert. Auf einige Parameter soll in diesem Abschnitt eingegangen werden. Sämtliche Parameter sind jedoch im Anhang unter \ref{anh_bms} zu finden. Um die Wiederfindbarkeit zu erleichtern, wurden im Anhang die Titel und die Aufteilung von der Bedienungsanleitung des BMS \cite{bms} übernommen. \begin{itemize}
-	\item \textit{Max Balancing Stage Duration}: \textcolor{blue}{Im Vergleich zum Zellennennstrom ist der Balancierstrom sehr gering. Um trotzdem eine sauber ausgeglichene Batterie zu haben, wurde dieser Wert sehr hoch gewählt.}
+	\item \textit{Max Balancing Stage Duration}: Im Vergleich zum Zellennennstrom ist der Balancierstrom sehr gering. Um trotzdem eine sauber ausgeglichene Batterie zu haben, wurde dieser Wert sehr hoch gewählt.
 	\item \textit{Allowed Disbalance}: Dieser Wert wurde etwas tiefer als empfohlen angesetzt, um eine sehr ähnliche Zellspannung zu ermöglichen.
 	\item \textit{Early Balancing Treshold}: Da die Ladekurve über einen langen Bereich sehr flach ist, kann das Balancing bereits am Anfang dieses flachen Bereichs einsetzen, wo Fehler noch deutlicher erkannt werden können. Am Ende der Ladekurve ist diese jedoch wieder steil und Unterschiede fallen deutlich auf.
 	\item \textit{Cell Charging Parameter}: Da keine Kommunikation zwischen Ladegerät und BMS stattfindet, wurden diese Werte vom Datenblatt des Ladegerätes übernommen \cite{ladegeraet}.

@@ -17,7 +17,7 @@ Die gelb hinterlegten Komponenten bilden die Verbindung zu den weiteren Komponen
 \paragraph{Rot: Spannungsversorgung}
 Die Spannungsversorgung regelt, wie der Name bereits andeutet, die Versorgung der Steuerung mit Spannung. Dabei sind die beiden Fälle für das eingeschaltete Fahrzeug (Zustand "`Fahren"') sowie für den Zustand \grqq Laden"' zu unterscheiden.
 
-Beim Zustand \textbf{Fahren} wird die gesamte Steuerung über den im Fahrzeug eingebauten DC-DC-Wandler versorgt, der ausserdem die Beleuchtung mit Spannung beliefert. In diesem Zustand sind sämtliche Funktionen verfügbar. Ausserdem werden die $24$ V des BMS durch die Diode $D_1$ und den Spannungswandler $U_3$ bereitgestellt, \textcolor{blue}{wobei der Spannungswandler auf $24$ V aufgrund einer Fehllieferung des BMS später wieder ausgebaut wurde}. Die Dioden sorgen dabei für die Trennung der beiden Spannungswandler.
+Beim Zustand \textbf{Fahren} wird die gesamte Steuerung über den im Fahrzeug eingebauten DC-DC-Wandler versorgt, der ausserdem die Beleuchtung mit Spannung beliefert. In diesem Zustand sind sämtliche Funktionen verfügbar. Ausserdem werden die $24$ V des BMS durch die Diode $D_1$ und den Spannungswandler $U_3$ bereitgestellt, wobei der Spannungswandler auf $24$ V aufgrund einer Fehllieferung des BMS später wieder ausgebaut wurde. Die Dioden sorgen dabei für die Trennung der beiden Spannungswandler.
 
 Beim \textbf{Laden} ist es wichtig, dass das Fahrzeug nicht eingeschaltet werden kann. Damit wird verhindert, dass versehentlich mit dem am Ladekabel eingesteckten Fahrzeug losgefahren wird. Dies wird dadurch sichergestellt, dass das Relais $U_4$ beim Anschluss von $230$ VAC automatisch die Spannungszufuhr für die Steuerung unterbricht. Da jedoch auch beim Laden das BMS eingeschaltet sein soll, wird dieses über einen Spannungswandler vom $230$ VAC-Netz versorgt.
 
@@ -32,16 +32,14 @@ Die Signale des BMS sind zu schwach, um damit direkt ein Relais oder die Lüfter
 
 Vom BMS her wird ein Signal zur Verfügung gestellt, welches das erste Ladegerät ein- bzw. ausschaltet. Dieses Signal wird an den Gateanschluss des Transistors angeschlossen. Damit sich dieser nicht zu schnell auflädt, ist der Widerstand $R_7$ in Serie dazu geschaltet. Ein kleinerer Widerstand würde zwar eine höhere Schaltgeschwindigkeit erlauben, dies ist jedoch hier nicht nötig. Der Widerstand $R_8$ sorgt dafür, dass der Gateanschluss in jedem Fall ein Bezugspotential hat. Bei fehlendem Eingangssignal wird das Gate also hochohmig geerdet.
 
-\color{blue}
 Bei den Tests hat sich gezeigt, dass die gewählte Schaltung nicht funktioniert. Ursprünglich wurde vermutet, dass das Invertieren des Signals im BMS ebenfalls den Signalpegel invertiert, was sich als falsch herausstellte, da nur der logische Wert invertiert wurde. Aus diesem Grund wurde eine vorgeschaltete Inverterstufe realisiert, welche die drei Signale pro BMS vorgängig invertiert, um sie so der Schaltung nutzbar zu machen. Diese Schaltung wurde mit einem Schmitt-Trigger realisiert, wobei auch hier die Schaltgeschwindigkeit keine wichtige Rolle spielt. Abbildung \ref{fig:Inverter} zeigt das Schema eines Inverters. Für den Aufbau wurde ein sechsfach-Baustein CD40106B \cite{schmitt} verwendet:
 
 \begin{figure}[h]
 	\centering
 		\includegraphics[width=.60\textwidth]{images/Inverter.png}
-	\caption{\textcolor{blue}{Die Inverterschaltung, welche sechs mal verwendet wurde}}
+	\caption{Die Inverterschaltung, welche sechs mal verwendet wurde}
 	\label{fig:Inverter}
 \end{figure}
-\color{black}
 
 \newpage
 
